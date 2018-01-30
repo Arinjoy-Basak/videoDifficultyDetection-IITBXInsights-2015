@@ -1,0 +1,40 @@
+/* print styles for Everett theme */
+
+body {
+   background: white;
+   font-size: 12pt;
+}
+#everett_container {
+   width: auto;
+   margin: 0 5%;
+   padding: 0;
+   border: 0;
+   float: none !important;
+   color: black;
+   background: transparent none;
+}
+#everett_courtesy_links, 
+#everett_top, 
+#everett_menu, 
+#everett_submenu, 
+#everett_col1, 
+#everett_col3, 
+#everett_footer div.radmenu, 
+#everett_footer span {
+   display: none;
+}
+
+div.submissions, 
+div.Submissions, 
+div.comments, 
+p.postfoot {
+   display: none;
+}
+
+pre, code {
+white-space: pre-wrap; 
+white-space: -moz-pre-wrap !important; 
+white-space: -pre-wrap; 
+white-space: -o-pre-wrap; 
+word-wrap: break-word; 
+}

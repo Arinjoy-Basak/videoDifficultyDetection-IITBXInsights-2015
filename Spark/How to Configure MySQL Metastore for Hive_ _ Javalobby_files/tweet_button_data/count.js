@@ -1,0 +1,1 @@
+/**/__twttr.receiveCount({"count":2,"url":"http:\/\/java.dzone.com\/articles\/how-configure-mysql-metastore\/"});

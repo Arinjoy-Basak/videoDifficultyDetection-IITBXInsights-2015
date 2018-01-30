@@ -1,0 +1,30 @@
+
+ANALYTICS OF THE INTEREST OF THE STUDENTS IN A PARTICULAR COURSE
+
+1) How much time students spent in viewing the videos ?
+2) How much time student spent thinking on a particular 
+   question ? 
+3) How many did he try to attempt a diificult question before
+   giving up ?
+4) How active is a student on discussion boards ?
+5) Are the answers and questions of the students being applauded
+   in the discussion board ?
+6) Is the student also spending equal amount of time with
+   ungraded quizzes, and extra problems that are given to those
+   who want to go a little bit further ?
+
+The analytics for these questions will help figure out the interest shown by the students for a particular course.
+
+And when provided with incentives to be awarded to show the interests, more students will show interest, and increased interest will lead to increased learning.
+
+
+
+
+ANALYTICS TO HELP THE INTROVERTS.
+
+1) Many students hesitate in asking questions or discussing their
+   doubts.
+2) In a classroom scenario, this will help the teachers see these
+   visual analytics, and help such studetns.
+3) Ultimately, this will make sure that no one is left behind in
+   a classroom that has students with different abilities.

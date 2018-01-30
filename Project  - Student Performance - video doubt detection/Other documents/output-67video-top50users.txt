@@ -1,0 +1,296 @@
+Time to play: 976.0
+Number of timeFrameBuckets for this video:244
+Total time spent by AnitaB on this video: 359.876
+Total time spent by SANDIP_JANA on this video: 1421.53086
+Total time spent by firuza on this video: 0.797
+Total time spent by SARA on this video: 0.0
+Total time spent by yashika on this video: 1307.01656
+Total time spent by Ph03n1x on this video: 1130.893
+Total time spent by Shivani1996 on this video: 2809.66263
+Total time spent by ricky on this video: 1697.733
+Total time spent by Smriti on this video: 353.193
+Total time spent by MdAshfaqHussain on this video: 1883.749
+Total time spent by nikhilnj96 on this video: 1954.554
+Total time spent by sanjana9 on this video: 361.434
+Total time spent by RajShah on this video: 2348.655
+Total time spent by sushant on this video: 1346.6691
+Total time spent by VarmaGCS on this video: 4559.7511
+Total time spent by LizaDas on this video: 485.00445
+Total time spent by dewangp5 on this video: 240.398
+Total time spent by GirishB on this video: 980.01198
+Total time spent by akanksha01 on this video: 1932.9517
+Total time spent by Learn2015 on this video: 910.6
+Total time spent by morning on this video: 1276.2895
+Total time spent by koushikreddy on this video: 341.67
+Total time spent by Anitha94 on this video: 659.037
+Total time spent by Preetham1 on this video: 1439.944
+Total time spent by Madhurima540 on this video: 713.0
+Total time spent by SaniaAnjum on this video: 1727.58707
+Total time spent by rehansam21 on this video: 5533.629
+Total time spent by Arun_K on this video: 174.95211
+Total time spent by deepak_kumar on this video: 1574.959
+Total time spent by SupriyaSankpal on this video: 38.0
+Total time spent by Janvhi on this video: 3645.828
+Total time spent by AnandAlok on this video: 1159.897
+Total time spent by udaypatil on this video: 1240.727
+Total time spent by loose on this video: 404.569
+Total time spent by krishna_bagaria on this video: 1066.732
+Total time spent by rusty3699 on this video: 838.593
+Total time spent by subramanyamr on this video: 1079.21192
+Total time spent by manojsewak on this video: 999.561
+Total time spent by dbp on this video: 399.249
+Total time spent by prabaht123 on this video: 1246.40585
+Total time spent by sandeepvarma on this video: 189.305
+Total time spent by ayushsomani on this video: 1434.775
+Total time spent by canon on this video: 284.77
+Total time spent by AvinashP on this video: 876.934
+Total time spent by vanitha on this video: 307.793
+Total time spent by vigy123 on this video: 2121.228
+Total time spent by ashishmalik on this video: 3432.961
+Total time spent by meghanabuddharaju on this video: 821.929
+Total time spent by adi on this video: 777.629
+Total time spent by rachitb08 on this video: 2986.156
+Time Frame 0 to 3	:: count:  57	  time spent:  8.0
+Time Frame 4 to 7	:: count:  70	  time spent:  71.0
+Time Frame 8 to 11	:: count:  70	  time spent:  286.243
+Time Frame 12 to 15	:: count:  72	  time spent:  100.0
+Time Frame 16 to 19	:: count:  74	  time spent:  18.0
+Time Frame 20 to 23	:: count:  76	  time spent:  111.52
+Time Frame 24 to 27	:: count:  80	  time spent:  321.0
+Time Frame 28 to 31	:: count:  80	  time spent:  319.0617
+Time Frame 32 to 35	:: count:  80	  time spent:  222.1101
+Time Frame 36 to 39	:: count:  80	  time spent:  322.0
+Time Frame 40 to 43	:: count:  81	  time spent:  93.858
+Time Frame 44 to 47	:: count:  82	  time spent:  327.8555
+Time Frame 48 to 51	:: count:  80	  time spent:  320.0
+Time Frame 52 to 55	:: count:  80	  time spent:  316.96
+Time Frame 56 to 59	:: count:  78	  time spent:  311.9928
+Time Frame 60 to 63	:: count:  81	  time spent:  320.6291
+Time Frame 64 to 67	:: count:  80	  time spent:  320.0
+Time Frame 68 to 71	:: count:  79	  time spent:  318.9278
+Time Frame 72 to 75	:: count:  79	  time spent:  314.9937
+Time Frame 76 to 79	:: count:  78	  time spent:  312.0
+Time Frame 80 to 83	:: count:  78	  time spent:  313.984
+Time Frame 84 to 87	:: count:  78	  time spent:  316.3654
+Time Frame 88 to 91	:: count:  82	  time spent:  329.7814
+Time Frame 92 to 95	:: count:  81	  time spent:  325.0
+Time Frame 96 to 99	:: count:  82	  time spent:  328.0
+Time Frame 100 to 103	:: count:  82	  time spent:  326.619
+Time Frame 104 to 107	:: count:  77	  time spent:  47.533
+Time Frame 108 to 111	:: count:  77	  time spent:  310.267
+Time Frame 112 to 115	:: count:  79	  time spent:  323.645
+Time Frame 116 to 119	:: count:  84	  time spent:  55.93
+Time Frame 120 to 123	:: count:  81	  time spent:  12.0
+Time Frame 124 to 127	:: count:  80	  time spent:  323.17
+Time Frame 128 to 131	:: count:  80	  time spent:  24.0
+Time Frame 132 to 135	:: count:  85	  time spent:  336.422
+Time Frame 136 to 139	:: count:  82	  time spent:  141.389
+Time Frame 140 to 143	:: count:  80	  time spent:  279.459
+Time Frame 144 to 147	:: count:  80	  time spent:  322.0
+Time Frame 148 to 151	:: count:  81	  time spent:  324.817
+Time Frame 152 to 155	:: count:  83	  time spent:  333.0
+Time Frame 156 to 159	:: count:  89	  time spent:  358.648
+Time Frame 160 to 163	:: count:  88	  time spent:  157.103
+Time Frame 164 to 167	:: count:  89	  time spent:  356.0
+Time Frame 168 to 171	:: count:  87	  time spent:  196.636
+Time Frame 172 to 175	:: count:  85	  time spent:  150.0
+Time Frame 176 to 179	:: count:  89	  time spent:  192.959
+Time Frame 180 to 183	:: count:  89	  time spent:  189.551
+Time Frame 184 to 187	:: count:  88	  time spent:  196.8
+Time Frame 188 to 191	:: count:  89	  time spent:  195.0
+Time Frame 192 to 195	:: count:  89	  time spent:  355.767
+Time Frame 196 to 199	:: count:  87	  time spent:  348.381
+Time Frame 200 to 203	:: count:  81	  time spent:  205.64
+Time Frame 204 to 207	:: count:  81	  time spent:  212.0
+Time Frame 208 to 211	:: count:  81	  time spent:  325.24
+Time Frame 212 to 215	:: count:  80	  time spent:  321.087
+Time Frame 216 to 219	:: count:  78	  time spent:  176.024
+Time Frame 220 to 223	:: count:  80	  time spent:  250.277
+Time Frame 224 to 227	:: count:  80	  time spent:  318.697
+Time Frame 228 to 231	:: count:  82	  time spent:  197.068
+Time Frame 232 to 235	:: count:  82	  time spent:  182.0
+Time Frame 236 to 239	:: count:  84	  time spent:  192.0
+Time Frame 240 to 243	:: count:  82	  time spent:  89.0
+Time Frame 244 to 247	:: count:  80	  time spent:  324.012
+Time Frame 248 to 251	:: count:  81	  time spent:  194.0
+Time Frame 252 to 255	:: count:  79	  time spent:  181.198
+Time Frame 256 to 259	:: count:  78	  time spent:  312.88
+Time Frame 260 to 263	:: count:  78	  time spent:  179.0
+Time Frame 264 to 267	:: count:  77	  time spent:  57.0
+Time Frame 268 to 271	:: count:  75	  time spent:  302.985
+Time Frame 272 to 275	:: count:  79	  time spent:  69.707
+Time Frame 276 to 279	:: count:  81	  time spent:  326.119
+Time Frame 280 to 283	:: count:  81	  time spent:  268.132
+Time Frame 284 to 287	:: count:  80	  time spent:  160.566
+Time Frame 288 to 291	:: count:  78	  time spent:  257.04
+Time Frame 292 to 295	:: count:  81	  time spent:  270.088
+Time Frame 296 to 299	:: count:  82	  time spent:  273.661
+Time Frame 300 to 303	:: count:  78	  time spent:  165.732
+Time Frame 304 to 307	:: count:  81	  time spent:  269.913
+Time Frame 308 to 311	:: count:  81	  time spent:  322.918
+Time Frame 312 to 315	:: count:  83	  time spent:  177.892
+Time Frame 316 to 319	:: count:  78	  time spent:  169.161
+Time Frame 320 to 323	:: count:  81	  time spent:  81.911
+Time Frame 324 to 327	:: count:  83	  time spent:  330.264
+Time Frame 328 to 331	:: count:  84	  time spent:  336.74
+Time Frame 332 to 335	:: count:  86	  time spent:  200.912
+Time Frame 336 to 339	:: count:  90	  time spent:  111.93
+Time Frame 340 to 343	:: count:  95	  time spent:  264.281
+Time Frame 344 to 347	:: count:  93	  time spent:  69.405
+Time Frame 348 to 351	:: count:  88	  time spent:  272.74
+Time Frame 352 to 355	:: count:  89	  time spent:  15.161
+Time Frame 356 to 359	:: count:  85	  time spent:  16.0
+Time Frame 360 to 363	:: count:  82	  time spent:  63.032
+Time Frame 364 to 367	:: count:  80	  time spent:  16.0
+Time Frame 368 to 371	:: count:  78	  time spent:  313.81
+Time Frame 372 to 375	:: count:  77	  time spent:  311.0
+Time Frame 376 to 379	:: count:  78	  time spent:  314.0
+Time Frame 380 to 383	:: count:  79	  time spent:  179.59
+Time Frame 384 to 387	:: count:  77	  time spent:  264.197
+Time Frame 388 to 391	:: count:  77	  time spent:  307.0
+Time Frame 392 to 395	:: count:  76	  time spent:  306.18
+Time Frame 396 to 399	:: count:  74	  time spent:  300.05
+Time Frame 400 to 403	:: count:  72	  time spent:  287.255
+Time Frame 404 to 407	:: count:  70	  time spent:  250.824
+Time Frame 408 to 411	:: count:  70	  time spent:  51.471
+Time Frame 412 to 415	:: count:  71	  time spent:  63.647
+Time Frame 416 to 419	:: count:  64	  time spent:  261.748
+Time Frame 420 to 423	:: count:  63	  time spent:  252.456
+Time Frame 424 to 427	:: count:  61	  time spent:  78.773
+Time Frame 428 to 431	:: count:  63	  time spent:  250.0
+Time Frame 432 to 435	:: count:  63	  time spent:  88.461
+Time Frame 436 to 439	:: count:  62	  time spent:  128.21
+Time Frame 440 to 443	:: count:  65	  time spent:  186.0
+Time Frame 444 to 447	:: count:  66	  time spent:  264.0
+Time Frame 448 to 451	:: count:  67	  time spent:  68.0
+Time Frame 452 to 455	:: count:  66	  time spent:  264.0
+Time Frame 456 to 459	:: count:  67	  time spent:  270.46
+Time Frame 460 to 463	:: count:  69	  time spent:  276.653
+Time Frame 464 to 467	:: count:  71	  time spent:  284.487
+Time Frame 468 to 471	:: count:  74	  time spent:  263.152
+Time Frame 472 to 475	:: count:  78	  time spent:  309.124
+Time Frame 476 to 479	:: count:  80	  time spent:  326.601
+Time Frame 480 to 483	:: count:  83	  time spent:  62.505
+Time Frame 484 to 487	:: count:  87	  time spent:  12.0
+Time Frame 488 to 491	:: count:  78	  time spent:  75.017
+Time Frame 492 to 495	:: count:  77	  time spent:  98.303
+Time Frame 496 to 499	:: count:  76	  time spent:  235.496
+Time Frame 500 to 503	:: count:  73	  time spent:  13.388
+Time Frame 504 to 507	:: count:  67	  time spent:  268.998
+Time Frame 508 to 511	:: count:  64	  time spent:  256.734
+Time Frame 512 to 515	:: count:  63	  time spent:  185.161
+Time Frame 516 to 519	:: count:  62	  time spent:  248.544
+Time Frame 520 to 523	:: count:  62	  time spent:  247.085
+Time Frame 524 to 527	:: count:  63	  time spent:  252.0
+Time Frame 528 to 531	:: count:  63	  time spent:  252.0
+Time Frame 532 to 535	:: count:  62	  time spent:  248.75
+Time Frame 536 to 539	:: count:  63	  time spent:  252.071
+Time Frame 540 to 543	:: count:  62	  time spent:  248.0
+Time Frame 544 to 547	:: count:  62	  time spent:  248.0
+Time Frame 548 to 551	:: count:  62	  time spent:  254.0
+Time Frame 552 to 555	:: count:  65	  time spent:  185.482
+Time Frame 556 to 559	:: count:  65	  time spent:  259.0
+Time Frame 560 to 563	:: count:  67	  time spent:  267.42
+Time Frame 564 to 567	:: count:  69	  time spent:  60.4
+Time Frame 568 to 571	:: count:  72	  time spent:  8.0
+Time Frame 572 to 575	:: count:  77	  time spent:  300.181
+Time Frame 576 to 579	:: count:  74	  time spent:  298.476
+Time Frame 580 to 583	:: count:  71	  time spent:  8.0
+Time Frame 584 to 587	:: count:  71	  time spent:  252.001
+Time Frame 588 to 591	:: count:  72	  time spent:  291.92
+Time Frame 592 to 595	:: count:  74	  time spent:  274.95
+Time Frame 596 to 599	:: count:  73	  time spent:  291.121
+Time Frame 600 to 603	:: count:  73	  time spent:  290.844
+Time Frame 604 to 607	:: count:  71	  time spent:  37.738
+Time Frame 608 to 611	:: count:  71	  time spent:  287.0
+Time Frame 612 to 615	:: count:  75	  time spent:  295.24
+Time Frame 616 to 619	:: count:  73	  time spent:  293.374
+Time Frame 620 to 623	:: count:  74	  time spent:  297.843
+Time Frame 624 to 627	:: count:  75	  time spent:  301.32
+Time Frame 628 to 631	:: count:  75	  time spent:  209.151
+Time Frame 632 to 635	:: count:  73	  time spent:  293.0
+Time Frame 636 to 639	:: count:  73	  time spent:  290.498
+Time Frame 640 to 643	:: count:  73	  time spent:  144.0
+Time Frame 644 to 647	:: count:  73	  time spent:  76.0
+Time Frame 648 to 651	:: count:  74	  time spent:  16.0
+Time Frame 652 to 655	:: count:  73	  time spent:  292.721
+Time Frame 656 to 659	:: count:  73	  time spent:  256.0
+Time Frame 660 to 663	:: count:  69	  time spent:  118.021
+Time Frame 664 to 667	:: count:  70	  time spent:  72.512
+Time Frame 668 to 671	:: count:  68	  time spent:  67.294
+Time Frame 672 to 675	:: count:  69	  time spent:  48.821
+Time Frame 676 to 679	:: count:  63	  time spent:  252.0
+Time Frame 680 to 683	:: count:  62	  time spent:  248.771
+Time Frame 684 to 687	:: count:  62	  time spent:  248.0
+Time Frame 688 to 691	:: count:  63	  time spent:  117.016
+Time Frame 692 to 695	:: count:  64	  time spent:  147.565
+Time Frame 696 to 699	:: count:  62	  time spent:  248.14
+Time Frame 700 to 703	:: count:  60	  time spent:  240.851
+Time Frame 704 to 707	:: count:  60	  time spent:  240.0
+Time Frame 708 to 711	:: count:  58	  time spent:  234.347
+Time Frame 712 to 715	:: count:  57	  time spent:  230.405
+Time Frame 716 to 719	:: count:  57	  time spent:  213.301
+Time Frame 720 to 723	:: count:  54	  time spent:  217.573
+Time Frame 724 to 727	:: count:  53	  time spent:  212.634
+Time Frame 728 to 731	:: count:  53	  time spent:  212.0
+Time Frame 732 to 735	:: count:  52	  time spent:  208.532
+Time Frame 736 to 739	:: count:  52	  time spent:  208.0
+Time Frame 740 to 743	:: count:  52	  time spent:  208.0
+Time Frame 744 to 747	:: count:  53	  time spent:  210.032
+Time Frame 748 to 751	:: count:  52	  time spent:  206.48
+Time Frame 752 to 755	:: count:  48	  time spent:  195.724
+Time Frame 756 to 759	:: count:  49	  time spent:  195.158
+Time Frame 760 to 763	:: count:  48	  time spent:  44.555
+Time Frame 764 to 767	:: count:  45	  time spent:  86.0
+Time Frame 768 to 771	:: count:  45	  time spent:  116.0
+Time Frame 772 to 775	:: count:  46	  time spent:  185.126
+Time Frame 776 to 779	:: count:  46	  time spent:  185.289
+Time Frame 780 to 783	:: count:  45	  time spent:  182.148
+Time Frame 784 to 787	:: count:  48	  time spent:  120.0
+Time Frame 788 to 791	:: count:  46	  time spent:  185.14
+Time Frame 792 to 795	:: count:  46	  time spent:  186.0
+Time Frame 796 to 799	:: count:  47	  time spent:  187.783
+Time Frame 800 to 803	:: count:  45	  time spent:  183.786
+Time Frame 804 to 807	:: count:  46	  time spent:  147.741
+Time Frame 808 to 811	:: count:  45	  time spent:  185.955
+Time Frame 812 to 815	:: count:  47	  time spent:  186.983
+Time Frame 816 to 819	:: count:  46	  time spent:  184.552
+Time Frame 820 to 823	:: count:  47	  time spent:  160.001
+Time Frame 824 to 827	:: count:  47	  time spent:  188.0
+Time Frame 828 to 831	:: count:  46	  time spent:  185.163
+Time Frame 832 to 835	:: count:  46	  time spent:  184.0
+Time Frame 836 to 839	:: count:  45	  time spent:  182.885
+Time Frame 840 to 843	:: count:  46	  time spent:  185.917
+Time Frame 844 to 847	:: count:  46	  time spent:  52.009
+Time Frame 848 to 851	:: count:  46	  time spent:  184.0
+Time Frame 852 to 855	:: count:  46	  time spent:  184.0
+Time Frame 856 to 859	:: count:  47	  time spent:  176.0
+Time Frame 860 to 863	:: count:  45	  time spent:  180.852
+Time Frame 864 to 867	:: count:  46	  time spent:  184.76
+Time Frame 868 to 871	:: count:  48	  time spent:  158.154
+Time Frame 872 to 875	:: count:  51	  time spent:  48.0
+Time Frame 876 to 879	:: count:  53	  time spent:  107.314
+Time Frame 880 to 883	:: count:  55	  time spent:  71.0
+Time Frame 884 to 887	:: count:  56	  time spent:  126.578
+Time Frame 888 to 891	:: count:  57	  time spent:  228.0
+Time Frame 892 to 895	:: count:  57	  time spent:  110.973
+Time Frame 896 to 899	:: count:  50	  time spent:  28.0
+Time Frame 900 to 903	:: count:  45	  time spent:  8.0
+Time Frame 904 to 907	:: count:  43	  time spent:  172.406
+Time Frame 908 to 911	:: count:  42	  time spent:  8.0
+Time Frame 912 to 915	:: count:  41	  time spent:  164.0
+Time Frame 916 to 919	:: count:  41	  time spent:  165.0
+Time Frame 920 to 923	:: count:  41	  time spent:  164.72
+Time Frame 924 to 927	:: count:  41	  time spent:  164.0
+Time Frame 928 to 931	:: count:  40	  time spent:  158.568
+Time Frame 932 to 935	:: count:  37	  time spent:  150.0
+Time Frame 936 to 939	:: count:  37	  time spent:  39.762
+Time Frame 940 to 943	:: count:  38	  time spent:  37.0
+Time Frame 944 to 947	:: count:  37	  time spent:  137.287
+Time Frame 948 to 951	:: count:  34	  time spent:  137.757
+Time Frame 952 to 955	:: count:  35	  time spent:  113.316
+Time Frame 956 to 959	:: count:  37	  time spent:  148.0
+Time Frame 960 to 963	:: count:  34	  time spent:  69.028
+Time Frame 964 to 967	:: count:  31	  time spent:  116.61
+Time Frame 968 to 971	:: count:  28	  time spent:  112.564
+Time Frame 972 to 975	:: count:  27	  time spent:  3.76

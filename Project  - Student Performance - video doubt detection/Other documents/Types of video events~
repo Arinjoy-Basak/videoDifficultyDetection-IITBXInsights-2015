@@ -1,0 +1,31 @@
+| video                | hide_transcript         |
+| video                | load_video              |
+| video                | pause_video             |
+| video                | play_video              |
+| video                | save_user_state         |
+| video                | seek_video              |
+| video                | show_transcript         |
+| video                | speed_change_video      |
+| video                | stop_video              |
+| video                | transcript_download     |
+| video                | transcript_translation  |
+
+mysql> select distinct eventType, eventName from UserSessionOldLog where eventType='video';
++-----------+------------------------+
+| eventType | eventName              |
++-----------+------------------------+
+| video     | save_user_state        |
+| video     | transcript_translation |
+| video     | load_video             |
+| video     | pause_video            |
+| video     | stop_video             |
+| video     | show_transcript        |
+| video     | seek_video             |
+| video     | play_video             |
+| video     | speed_change_video     |
+| video     | hide_transcript        |
+| video     | transcript_download    |
++-----------+------------------------+
+11 rows in set (8.49 sec)
+
+

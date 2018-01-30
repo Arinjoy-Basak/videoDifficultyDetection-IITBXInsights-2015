@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html dir="ltr" class="client-js" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Data Synchronization for Distributed edX Platform - Fundamental Research Group</title>
+<meta charset="UTF-8">
+<meta name="generator" content="MediaWiki 1.19.1">
+<link rel="shortcut icon" href="http://www.it.iitb.ac.in/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.it.iitb.ac.in/frg/wiki/opensearch_desc.php" title="Fundamental Research Group (en)">
+<link rel="EditURI" type="application/rsd+xml" href="http://www.it.iitb.ac.in/frg/wiki/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Fundamental Research Group Atom feed" href="http://www.it.iitb.ac.in/frg/wiki/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="stylesheet" href="Data%20Synchronization%20for%20Distributed%20edX%20Platform%20-%20Fundamental%20Research%20Group_files/load.css">
+<style type="text/css" media="all">.js-messagebox{margin:1em 5%;padding:0.5em 2.5%;border:1px solid #ccc;background-color:#fcfcfc;font-size:0.8em}.js-messagebox .js-messagebox-group{margin:1px;padding:0.5em 2.5%;border-bottom:1px solid #ddd}.js-messagebox .js-messagebox-group:last-child{border-bottom:thin none transparent}
+
+/* cache key: arndg_wiki:resourceloader:filter:minify-css:7:8b08bdc91c52a9ffba396dccfb5b473c */
+
+
+.mw-collapsible-toggle{float:right} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+
+/* cache key: arndg_wiki:resourceloader:filter:minify-css:7:4250852ed2349a0d4d0fc6509a3e7d4c */
+
+
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px -1px 0 0} html > body .suggestions{margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;font-size:0.8em;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;font-size:0.8em;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{font-size:0.8em;color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.autoellipsis-matched,.highlight{font-weight:bold}
+
+/* cache key: arndg_wiki:resourceloader:filter:minify-css:7:d3d0fccf9f8cf3b31866dd3fd3326a6a */
+
+
+#mw-panel.collapsible-nav .portal{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAABCAMAAAA7MLYKAAAAS1BMVEXb29vy8vLv7+/c3NzZ2dni4uLr6+vt7e3s7Ozw8PDn5+fj4+Ph4eHd3d3f39/o6Ojl5eXp6enx8fHa2trg4ODq6urk5OTz8/PY2NjolWftAAAAO0lEQVR4XrXAhwGAMAgEQB5I71X3n9QpPHqAGZidt2e02G8yedciQkv1/YPqIpFSdzbp9tjGsd4xhwl8yuMKHhkJhm8AAAAASUVORK5CYII=) left top no-repeat;background:url(http://www.it.iitb.ac.in/frg/wiki/extensions/Vector/modules/images/portal-break.png?2012-08-13T04:38:20Z) left top no-repeat!ie;padding:0.25em 0 !important;margin:-11px 9px 10px 11px}#mw-panel.collapsible-nav .portal h5{color:#4D4D4D;font-weight:normal;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAD1BMVEX////d3d2ampqxsbF5eXmCtCYvAAAAAXRSTlMAQObYZgAAADBJREFUeF6dzNEJACAMA1HdINQJCp1Ebv+ZlLYLaD4f4cbnDNi6MAO8KCHJ+7X02j3mzgMQe93HcQAAAABJRU5ErkJggg==) left center no-repeat;background:url(http://www.it.iitb.ac.in/frg/wiki/extensions/Vector/modules/images/open.png?2012-08-13T04:38:20Z) left center no-repeat!ie;padding:4px 0 3px 1.5em;margin-bottom:0}#mw-panel.collapsible-nav .portal h5:hover{cursor:pointer;text-decoration:none}#mw-panel.collapsible-nav .portal h5 a{color:#4D4D4D;text-decoration:none}#mw-panel.collapsible-nav .portal .body{background:none !important;padding-top:0;display:none}#mw-panel.collapsible-nav .portal .body ul li{padding:0.25em 0} #mw-panel.collapsible-nav .portal.first h5{display:none}#mw-panel.collapsible-nav .portal.first{background-image:none;margin-top:0} #mw-panel.collapsible-nav .portal.persistent .body{display:block}#mw-panel.collapsible-nav .portal.persistent h5{background:none !important;padding-left:0.7em;cursor:default}#mw-panel.collapsible-nav .portal.persistent .body{margin-left:0.5em} #mw-panel.collapsible-nav .portal.collapsed h5{color:#0645AD;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAADFBMVEX///95eXnd3d2dnZ3aAo3QAAAAAXRSTlMAQObYZgAAADFJREFUeF5dyzEKACAMA0CXolNe2Id09Kl5igZahWY4AiGjZwmIuS9GEcJfY63Ix88Bol4EYP1O7JMAAAAASUVORK5CYII=) left center no-repeat;background:url(http://www.it.iitb.ac.in/frg/wiki/extensions/Vector/modules/images/closed-ltr.png?2012-08-13T04:38:20Z) left center no-repeat!ie;margin-bottom:0}#mw-panel.collapsible-nav .portal.collapsed h5 a{color:#0645AD}#mw-panel.collapsible-nav .portal.collapsed h5:hover{text-decoration:underline}
+
+/* cache key: arndg_wiki:resourceloader:filter:minify-css:7:e9a19268daabd130b7d004eec869f228 */
+</style><meta name="ResourceLoaderDynamicStyles" content="">
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: arndg_wiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="Data%20Synchronization%20for%20Distributed%20edX%20Platform%20-%20Fundamental%20Research%20Group_files/load_006.php"></script><script src="Data%20Synchronization%20for%20Distributed%20edX%20Platform%20-%20Fundamental%20Research%20Group_files/load_005.php"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Data_Synchronization_for_Distributed_edX_Platform","wgTitle":"Data Synchronization for Distributed edX Platform","wgCurRevisionId":8377,"wgArticleId":1624,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Data_Synchronization_for_Distributed_edX_Platform","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVectorEnabledModules":{"collapsiblenav":true,"collapsibletabs":true,"editwarning":false,"expandablesearch":false,"footercleanup":false,"sectioneditlinks":false,"simplesearch":true,"experiments":true},"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"upwiz_deflicense":"default","upwiz_def3rdparty":"default","upwiz_deflicensetype":"default","searchNs121707":true,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: arndg_wiki:resourceloader:filter:minify-js:7:1a654b85f09fa6ec4d7453cb5cfcd1f0 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script><script type="text/javascript" src="Data%20Synchronization%20for%20Distributed%20edX%20Platform%20-%20Fundamental%20Research%20Group_files/load_004.php"></script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/frg/wiki/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Data_Synchronization_for_Distributed_edX_Platform skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div class="js-messagebox" id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Data Synchronization for Distributed edX Platform</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">From Fundamental Research Group</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Jump to: <a href="#mw-head">navigation</a>,
+					<a href="#p-search">search</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><p><b>File Synchronization:</b>&nbsp;:
+ File synchronization is all about keeping two different locations on 
+same or different storing devices synchronized with each other. There 
+are two types of file synchronizations:
+</p><p>1. Keeping one location sync'ed with another so that if some 
+changes are made on one location, they are reflected on the other end, 
+but NOT vice versa. This basically means that if files are added or 
+changed at one location these changes are reflected back on another 
+location. Such synchronization is commonly known as "Mirroring". 
+Mirroring is mostly used in cases when one needs to keep backup of their
+ files on some remote server, so that if their local machine crashes or 
+looses their important work, they have got it backed-up on the server.
+</p><p>2. In the second type, two locations are sync'ed two-way, so that
+ both of them are exactly identical if you open them any day. This means
+ if some file is added, deleted or modified at one place, changes get 
+reflected back on the other location and vice-versa. Such 
+synchronizations are not commonly used for backup purposes because if 
+somebody tampers with the files at your backing-up location, the files 
+at the other locations end up getting tampered as well.
+</p><p>There is also an addition to above techniques which may be 
+required in some cases and not in other. If a file is deleted at one 
+location, is it really required to delete it from the other location as 
+well? Since deleting is an operation that is little more destructive, 
+such a synchronization in which deletion of files is propagated to the 
+other location as well might not be required all the time.
+</p><p><b>File Synchronization Techniques:</b>:
+</p><p>Although File synchronization may sound little too easy, it 
+definitely has its own complexities and tricks in the bag. Following are
+ some things which are generally taken care while talking about file 
+synchronization as a whole:
+</p><p>1. Delta Differencing: Delta differencing is a technique which 
+actually makes file synchronization a whole lot more than doing FTP 
+between two remote machines. It means that if there is a change in one 
+file at one location, its just the change that travels down the network 
+and other file is up-to-date'd based upon the changes alone. If we were 
+to send whole file owing to changes of a degree of one or two 
+characters, it might seize the network bandwidth big time.
+</p><p>2. Security and encryption: Security is in itself one very 
+important issue when it comes down to synchronizing files over two 
+separately located machines connected through at least one router that 
+links them to the Internet.
+</p><p>3. Compression: If delta differencing is being performed by the 
+underlying utility doing synchronization, it is already saving a lot of 
+network bandwidth. But when it comes to adding big files and making 
+bigger changes all the time, compressing the data before sending it 
+across the network saves some bandwidth.
+</p><p>4. Multiple locations syncing: There may be situations when one 
+needs to replicate one location on more than one other locations. One 
+way to achieve this is to perform pair-wise synchronization between 
+every combination of machines possible. But this may lead to 
+inconsistencies among different pairs. Another way, which is adapted by 
+tools like Unison is to follow a star schema. In such schema, there is 
+one central machine with which every other machine synchronizes. This 
+solves the inconsistency problem.
+</p><p>Above are listed some of the critical things that may decide a 
+lot about file synchronization technique. In addition to those, there 
+are some points that are lesser critical but may be more of aesthetics 
+for the synchronization tool. These things include the tool being able 
+to show its progress, failures, successes, performance, bandwidth 
+utilization, etc.
+</p><p><b>Tools for File Synchronization:</b>:
+There are some file synchronization tools which are available, some of them are:
+</p><p>1. Unison: Unison is open source (under GNU licence) and works 
+over both windows and linux platforms. It allows synchronization from 
+both directions, i.e., two-way synchronizations and key features like 
+star schema for synchronizing multiple machines.
+</p><p>2. RSync: RSync is more commonly used file synchronization tool 
+which is also available with IBM AIX distribution. RSync was initially 
+launched for Linux platform but now has been ported for Windows as well.
+ It is a very flexibly configurable utility software with an array of 
+options to configure it to work according to one's requirements. RSync 
+has also got some tools which are built on top of it to provide GUI for 
+the same. But most of them are not stable.
+</p><p><b>The RSync Tool and Algorithm:</b>:
+RSync is one of the most widely used tool for synchronizing files over 
+various directories locally or remotely. For synchronization over 
+network to remote sites, RSync can be configured with SSH public keys so
+ that communication between the two nodes can be set up without 
+authentication every time.
+</p><p>RSync Algorithm: The RSync Algorithm was proposed by Andrew 
+Tridgell and Paul Mackerras in June 1996. The problem that the algorithm
+ tries to solve is that if there are two versions of a file X and Y on 
+two different nodes A and B (respectively) that are connected over 
+(slow) network, then what is the most optimized way of bringing the two 
+versions of files X and Y to identical state ( let's say Y is to be 
+updated to be equal to X ).
+</p><p>Now, brute force technique would say just copy the file X over 
+the network on B and replace Y. But the problem is if the network is 
+slow enough and if it is choppy in nature, then copying whole file at 
+once and with all its content to be copied may not be very efficient. 
+Worst case being that the network link becomes unavailable after 99% of 
+file getting copied. One solution is to chunk the file down into pieces.
+ Then send only those chunk those are not yet copied. But still we are 
+copying the whole file over.
+The RSync algorithm given by Tridgell and Paul Mackerras is very 
+efficient for network bandwidth since it transfers only those parts of 
+files which have been updated and not the complete file. The major 
+problem in such technique is that if we need to find difference between 
+two files, they need to be physically present on the same machine. And 
+if they are located on the same machine they do not need to be copied 
+further, because the file has already been copied from remote server to 
+make it available locally for finding the difference. Thus, the purpose 
+is lost. For this problem, the RSync algorithm uses following technique:
+</p><p><b>Setup:</b>:
+</p><p>1. File X on node A has to be made consistent with file Y on node B
+</p><p>2. Node A and B are connected over (slow) network.
+</p><p><b>Algorithm:</b>:
+</p><p>1. B splits the file Y into a series of non-overlapping fixed-sized chunks of size s. Last chunk need not be size s.
+</p><p>2. B finds two checksums of each chunk, a weak checksum, i.e., rolling 32 bit checksum and a strong 128 bit MD5 checksum.
+</p><p>3. B sends checksums to A.
+</p><p>4. A finds checksums for every possible chunk if file X of size 
+s. It compares weak checksum for every chunk with list of checksums sent
+ over by B. Once a chunk (of X) is qualified for having same checksum 
+with another chunk sent by B then it has to qualify for strong checksum 
+with the same chunk. If both weak and strong checksum match, then the 
+chunk is considered to be the same. Although, matching the checksums 
+does not guarantee the blocks to be same, but there is negligible 
+chances that two different chunks have same weak as well as strong 
+checksums.
+</p><p>5. Based upon above comparisons, A sends (to B) the offsets of 
+chunks which matched and at what place those chunks are to be fit in Y. 
+In addition to matched blocks, A also sends "literal" data, which is the
+ data which did not match any block sent by B.
+</p><p>6. B, upon receiving the chunks with their corresponding offsets (
+ there where the chunk is to be inserted ) and the literal data with 
+their corresponding offsets reconstructs the file Y, which is now same 
+as X on A.
+</p><p><b>Rolling Checksum And Its Properties:</b>
+</p><p>Major time consuming step in above step is comparing the 
+checksums sent over by B for every possible combination of chunks of 
+size s on A. But, if the rolling checksum used in the algorithm has 
+following property then this comparison step boils down to one parse of 
+the file X:
+</p><p>Calculating the checksum for a buffer X(2)...X(n+1) is a cheap operation given checksum for buffer X(1)...X(n), X(1) and X(n+1).
+</p><p><b>Implementation:</b>
+</p><p>For implementing file synchronization for EDX platform, we need 
+to facilitate one admin who should be able to configure various 
+directories that are to be synchronized and the admin should be able to 
+monitor what are all the directories that are in progress of synching 
+and which are pending to be synched, etc. For such functionalities, 
+following method would be used:
+</p><p>1. Admin is authenticated for username and password for logging 
+into the system.This would be normal HTML page which will call a servlet
+ running on the server to find out if the credentials are correct.
+</p><p>2. Once the admin has logged in successfully, he should be able 
+to see a list of servers that he is controlling for file 
+synchronization. Here admin can select any server to work with. This is 
+another HTML page.
+</p><p>3. After selecting a server to monitor or make changes to, admin 
+would see all the directories on the server which are being synchronized
+ and what are their current status. This status would be updated every 5
+ seconds. For this, the HTML page displaying all these status will fire 
+Ajax queries to backend server and call one of its REST APIs to get 
+status of all directories. For REST I will be using Spring REST APIs.
+</p><p>4. Admin should be able to see progress of any running 
+synchronization. This can again be accomplished through REST call to 
+server.
+</p><p><b>Progress:</b>
+</p><p>Till now I have been able to make an HTML page which asks for 
+authentication and a servlet which authenticates the admin. Once admin 
+has been authenticated, he is sent to home page where he can supply the 
+addresses of the directories which need to be synched. Once configured, 
+admin can click a button to start synchronizing the configured 
+directories. For this the HTML page calls a servlet which executes 
+"rsync" command and starts synchronizing the directories.
+</p><p><b>Phase 2:</b>
+</p><p><b>Phase 1 review:</b>
+</p><p>In phase 1 I had done the research over what is data 
+synchronization, what are various algorithms available for 
+synchronizing, etc. Brief points are as belows:
+</p><p>1. Rsync is used widely for file synchronization.
+</p><p>2. Rsync uses Rsync algorighm.
+</p><p>3. Rsync comes as a command with Linux distributions.
+</p><p>4. I will be developing a web application that will use above 
+mentioned Rsync command to sync various servers distributed across 
+country with others (edX servers particularly).
+</p><p>5. This web application should give the flexibility for admins of
+ colleges to define various "source-destination" pairs of various 
+servers.
+</p><p>6. Once admin sets up sources and destinations (i.e., server ips 
+and directory paths which need to be synched), he should be able to 
+schedule sync, view progress, etc.
+</p><p><b>Questions that arose during phase 1 presentation</b>:
+</p><p>Question 1. What about versioning?
+</p><p>Answer: Versioning is particularly not required in such case 
+because if there is a change in some file it is intended to be changed 
+and professors will not be keeping 2 different versions of may be 
+assignement file (questions) or videos or ppts that they share over 
+time. Therefore complex softwares which provide versioning like SVN, 
+Git, etc. are not solution.
+</p><p>Question 2. What about parallelizing the task of synching?
+</p><p>Answer: This can be thought of and we can try to figure out if 
+there is a file that is present on more than one server then can we 
+parallelize the process of synching third server with these two servers 
+working parallel.
+</p><p>But there are a couple of issues, like, if a file is present on 2
+ servers then we need to make sure that this file is already in sync 
+before using both these servers to sync with third server. Secondly, if 
+we are synching one server with file that is kept on 2 different 
+servers, then the server that is on the receiving end will become 
+bottleneck if we try to parallelize the process of synching from 2 
+different sources.
+</p><p>Question 3. Can we provide Rsync facility over android devices?
+</p><p>Answer: Yes we can, but the issue is that for Rsync command to 
+work, one needs to boot the device which seizes the android device's 
+warranty.
+</p><p><b>Progress</b>
+</p><p>1. User Management: <b>Done</b>
+</p><p>For user management, I have kept different types of roles, ie., 
+"admin" or "user". This will provide flexibility of which type of user 
+is accessing the web application.
+</p><p>2. Server Management: <b>Done</b>
+</p><p>For Server management, I have prepared tables in MySql which can be used to add, remove or edit various servers.
+</p><p>3. Directories Management: <b>Done</b>
+</p><p>For Directories management, I have prepared tables in MySql which can be used to add, remove or edit various directories.
+</p><p>4. RSync Command execution: <b>Done</b>
+</p><p>For RSync command execution, I have called RSync command through a
+ .sh file because calling the RSync command directly sometimes did not 
+work. I'm still trying to figure out why did the RSync command not work 
+if called directly from Java. If found I will call it directly, 
+otherwise the workaround will do.
+</p><p>5. Front end and Back end basics: <b>Done</b>
+</p><p>Basic front end and back end, like, Spring framework for web 
+application over Maven is done, which involves, making at least one 
+Spring MVC Dispatcher servlet mapping for normal JSP page request, one 
+for AJAX request ( returning JSON from POJO ) and front end side calling
+ at least one .js, .css from back end Spring MVC.
+</p><p>6. Scheduling RSync command: <b>In Progress</b>
+</p><p>I'm currently working on making a backend service that will keep 
+on checking the database for scheduled syncs that are pending and will 
+execute them when time comes.
+</p><p>7. Progress of sync: <b>Remaining</b>
+</p><p>This will include parsing the output stream of RSync command and displaying the progress to the user accordingly.
+</p><p>8. Extra facilities like map management etc: <b>Remaining</b>
+</p><p>These things will be done at the end when basic web application 
+is ready and time permits (most probably I will be able to accomplish 
+these things as well).
+</p><p><b>Progress Status 2:</b>
+</p><p>1. Worked on maintaining Synchronization history in database. 
+Needed because we need to store information about which directories have
+ been called for synchronization and when did the synchronization start 
+and when it ended, so that browser can retrieve these information 
+through AJAX calls to server and display to admin status of various 
+synchronizations going on or which have completed or failed.
+</p><p>For this, created following table in database:
+</p><p>synchistory(syncid, directoriesrelationid, syncstarttime, syncendtime)
+</p><p>where, directoriesrelaionid is a foreign key to a table where 
+relation between various directories is stored in a format that which 
+directories are paired and which is source and which is destination.
+</p><p>Currently, I have successfully handled inserting into this table values when a new sync process starts.
+</p><p>2. Module that spawns a new process for synchronizing two 
+directories has been implemented for basic synchronization. Java creates
+ a new process using Runtime.getRuntime().exec() command. Java method 
+that calls this method takes two araguments, i.e., source directory path
+ and destination directory path. Upon receiving these two parameters, it
+ spawns a new process that calls a batch file which in turn takes two 
+arguments which is same as above directory paths. This batch file then 
+calls "rsync" command on these two directories to start the sync 
+process.
+</p><p>Once the process has started, Java module takes input stream of 
+the batch file's process as one of the variables in itself. This is done
+ through Process.getInputStream() method so that input stream of the 
+process gets attached to one of the InputStream variable in Java. Once 
+we attach InputStream variable with Process's input stream, whatever 
+output of process is generated gets streamed into the java InputStream 
+variable. Next we use BufferedReader to collect output of the process to
+ collect stream's data into one line of string. Advantage of using 
+BufferedReader is that we can perform operations on each line of 
+process's output instead of each character and also the output of 
+process does not need to be read in real time thus buffering and reading
+ will not hamper performance or functionality by any means.
+</p><p>Additionally, I have created a new thread for every request that 
+comes for synchronizing a directory. Purpose of such approach is that if
+ there is a big directory for which we start synchronization process, it
+ will take a lot of time to complete. If such synchronization process 
+was started through AJAX request from browser, then this request will 
+take a lot of time to complete. Hence, if we do not spawn a new thread, 
+request will keep on waiting for the synchronization to complete. Such a
+ request that takes lot of time to complete are not good practice and 
+also there are request time outs that may occur if synchronization takes
+ very long to complete. This affects user experience.
+</p><p>Therefore, main controller servlet takes the request and spawns a
+ new thread that takes care of spawning a new process of synchronization
+ and also takes care of logging, etc. The main servlet, after spawning 
+the thread returns back the response to the user which is id of 
+"synchistory" table's new entry.
+</p><p><b>Progress Status 3:</b>
+</p><p><b>SSH Checker:</b>
+</p><p>Written a module in spring controller which is basically a 
+RESTful service and serves the purpose of telling the client whether a 
+server (ip-address) is 'ssh-reachable' or not.
+</p><p><b>SSH-Reachable:</b>
+</p><p>Calling a server 'ssh-reachable' if current server can talk to remote server through ssh. This includes 3 parameters:
+</p><p>1. Current server should have ssh enabled.
+</p><p>2. Remote server should have ssh enabled.
+</p><p>3. Remote server's public ssh key should be included in the "~/.ssh/authorized_keys" file in current server.
+</p><p>ssh is required because "rsync" works over ssh to communicate 
+between master and slave servers. Point 3 is essential because if remote
+ server's public ssh key is not included in above mentioned file, then, 
+slave will not be able to login through ssh without master's password, 
+and if the key is authorized then slave can login into master through 
+ssh without entering passowrd. Therefore, in order for "rsync" to 
+communicate over ssh, remote server's public key must be included in the
+ list of authorized_keys of current server. Multiple keys can be entered
+ in "~/.ssh/authorized_keys" file, where each key is entered in new 
+line.
+</p><p>Hence the job of "ssh-checker" is to get the ip-address of a 
+server (or hostname), try to connect to that server through ssh and 
+return 0 or 1 based upon whether it was able to connect to server or 
+not. But this involves some complexities. First of all, there is some 
+latency involved in trying to connect to the server through ssh. So, we 
+cannot be sure if the server is unreachable therefore no output is 
+coming from "ssh" command or if it is because of the latency. For 
+solving this, following strategy is used:
+</p><p>1. When a request for "ssh-checker" comes, "ssh-checker" spawns a new thread "SshChecker".
+</p><p>2. "SshChecker" thread launches a new process (through 
+Runtime.getRuntime()) and establishes IPC to this process through 
+InputStream and OutputStream.
+</p><p>3. After spawning new thread, main thread of "ssh-checker" calls 
+join(int millis) method on this newly created thread. join() method 
+makes the main thread to wait for child thread to finish its job. But if
+ we specify "millis" argument in join() method, then main thread will 
+wait for only that many milliseconds. So, by default main thread is 
+waiting for 10 seconds (this can be configured) for child thread to 
+finish.
+</p><p>4. Child thread reads InputStream of spawned process which in 
+turn calls "ssh" on specified server. "ssh" command does following:
+</p><p>i. If public ssh key of local server is included in authorized 
+keys of remote server, then it gives some output on it's output stream 
+(which is generally displayed on terminal when it                is 
+called from terminal.
+</p><p>ii. Java thread that spawned this process waits for at least 2 
+lines to appear in Process's input stream. If lines appear, it can 
+return that ssh connection is possible to remote server.
+</p><p>iii. But if ssh key of local server is not included in the 
+authorized keys of remote server, then ssh waits of user to enter 
+password of remote server. And in such case, there is no output on the 
+output stream of the process. Thus the child thread keeps waiting for 
+input to come on process's input stream.
+</p><p>iv. Main thread after spawning the child thread waits for 10 
+seconds (configurable) to return. But if ssh is not able to connect, 
+child thread cannot return and after 10 seconds main thread calls 
+interrupt() method on child thread and returns 0, which means remote 
+server cannot be reached through ssh.
+</p><p>5. Based upon the result of "ssh-checker" service call (0/1), web
+ UI renders server as green (successful in connecting through ssh) or 
+red (unsuccessful in connecting through ssh).
+</p><p><b>Progress Status 4:</b>
+</p><p>Completed "ssh-checker" functionality. Now working on "Schedule-handler" module. This module's responsibility is as follows:
+</p><p>1. It scans all the directory pairs which need to be synched. 
+After getting the ids of all relations, it looks for latest entry of 
+each id in "synchistory" table.
+</p><p>2. For each entry in "synchistory", it checks if end time of the 
+sync is NULL or not. If it is NULL, that means sync is still in 
+progress.
+</p><p>3. If the end time value is not NULL, then it retrieves the end 
+time value from "synchistory" and matches it with the "syncinterval" of 
+current pair and finds out if current time has surpassed the interval at
+ which it needed to sync current pair of directories. If yes, it 
+launches a new thread which starts synching two directories, if not, it 
+simply discards current pair and continues the same for other pairs of 
+directories.
+</p><p>4. It performs these steps at an interval of 1 minute. This is 
+accomplished by using Thread.sleep(60000) method on the 
+"ScheduleHandler" thread.
+</p><p><br>
+<b>Progress Status 5: </b>
+</p><p>1. Completed SSHChecer and scheduling components. "Sync Now" 
+facility first checks if SSH connection to remote server is possible or 
+not. If the connection is not possible, it does not try to sync two 
+directories. On the other hand if SSH connection to remote server is 
+possible then it starts the sync process as normal.
+</p><p>2. Added a button on the UI which says "Check SSH" and upon 
+clicking the button an AJAX call is made to spring restful service which
+ tries to make SSH connection to remote server and returns whether it 
+was able to make SSH connection properly or not. Accordingly, UI 
+displays green arrow or red cross against the server.
+</p><p>3. Started working on "View History" component, wherein if admin 
+selects two directories and clicks "View History" button, he should be 
+able to see at what times these directories were synched and what were 
+their corresponding logs.
+</p><p><b>Progress Status 6:</b>
+</p><p>1. Completed "View History" module.
+</p><p><b>Reverse Ssh Checker Module:</b>
+</p><p>This module checks if reverse ssh works for remote server to 
+local server or not. For this, I have created a restful server 
+"reverseSshChecker" which accepts an ipaddress and a port. For this 
+ipAddress and port, this service uses Apache HttpClient library to fire 
+call on the "Synchronization" application running on the remote server 
+for "sshChecker". So, "reverseSshChecker" in turn calls "sshChecker" of 
+remote server and forwards the results as it is to the browser. However,
+ "sshChecker" itself needs the ipAddress of the server with which ssh 
+connection needs to be checked. For this ipAddress, "reverseSshChecker" 
+takes local ip and sends it to "sshChecker" of remote server. This 
+ipAddress can be taken via NetworkInterfaces.getNetworkInterfaces() 
+method and then applying isSiteLocal() method on returned interfaces.
+</p><p><b>Progress Status 7:</b>
+</p><p>Changed the implementation of "reverseSshChecker" module such 
+that it now passes local machine's hostname instead of ip-address. Still
+ trying to figure out pros and cons of using ip-address vs hostname. The
+ hostname is achieved by creating a new process through 
+Runtime.getRuntime().exec("hostname"). This will call "hostname" command
+ which returns hostname of the local system. The returned hostname is 
+received using newly created process's inputStream. This hostname is 
+then passed as argument to remote server's "sshChecker" service which 
+returns whether it was able to make proper connection to the passed 
+server's hostname.
+</p><p><b>Progress Status 8:</b>
+</p><p>"Check Availability" module completed.
+</p><p><b>"Check Availability" Module:</b>
+</p><p>This module checks availability of local and/or remote 
+directories. Admin has rights to create directory pairs which need to be
+ synched and which may be present locally or remotely. Once a directory 
+pair is created there are two possibilities:
+</p><p>1. Selected directory is present locally: In such cases, while 
+sending the list of directories which are present locally it checks if 
+the directory exists or not and if it is a directory and not a file.
+</p><p>2. Selected directory is present remotely: In such cases, there's
+ a button "Check Availability" on UI which when clicked calls a service 
+"/isRemoteDirectoryExist" for every such directory and pass their 
+corresponding directory path. This service then takes the directory path
+ and composes a new HttpClient request with the directory path and calls
+ "/isLocalDirectoryExist" service on remote server. This service checks 
+if given directory path exists and is directory and returns the results.
+</p><p><b>Progress Status 9:</b>
+</p><p>Rsync command status Module completed.
+</p><p><b>Rsync command status Module:</b>
+</p><p>This module is responsible for checking if a rsync process was 
+stated by the application then is it still running or something went 
+wrong with it. For this following strategy is applied:
+</p><p>1. Whenever a new process is initiated (for rsync), a new entry 
+is added in the "synchistory" table with a new id and "syncstarttime" as
+ current time and other entries null.
+</p><p>2. For every process that is initiated (for rsync), a new thread (PrcossStatusChecker Thread) is launched.
+</p><p>3. "ProcessStatusChecker" Thread loops through and for every 
+iteration (with a time delay of 10 seconds) it checks if the process's 
+"syncendtime" entry exists in the "synchistory" table or not. If it does
+ that means the process has completed and it simply kills itself.
+</p><p>4. IF "syncendtime" entry does not exist that means the process is still running.
+</p><p>5. Rsync process launcher module keeps reading the outputs 
+generated from the process and keeps updating the new line in "synclog" 
+column of "synchistory" table for that process's row. Along with the 
+"synclog", it also updates "lastupdated" column to current timestamp so 
+that we keep track of when was last input available from corresonding 
+process. Rsync command's property is that it keeps writing to standard 
+output every second and updates what is the file being transferred and 
+how much of it has been transferred in percentage. So, if a process is 
+running successfully then "lastupdated" column for that process will 
+never cross 1 second or so from current time.
+</p><p>6. If "ProcessStatusChecker" thread finds "syncendtime" column 
+null then it looks for "lastupdated" column. If "lastupdated" column is 
+null that means no output has been given by the process yet. In such 
+case it calculates the difference between current time and 
+"syncstarttime" and if it exceeds 120 seconds, it kills the process and 
+itself along with making the entry for "iskilled" column as "true" in 
+"synchistory" table's row for that process.
+</p><p>7. Similarly, if "ProcessStatusChecker" thread finds 
+"syncendtime" column null and "lastupdated" column is not null then it 
+finds difference between current time and "lastupdated" time and 
+proceeds as defined in step 6.
+</p><p>8. At the end of process, p.exitValue() is checked which is 0 if 
+the process is successful and non-zero if there was some error. "Process
+ Launcher" module checks exitValue() and if it is 0 then it sets 
+"processstatus" column's value as "Successful" in the "synchistory" 
+table's corresponding row and sets the value to "Failed: 
+&lt;exitValue&gt;" if exitValue() is not 0.
+</p><p><b>Progress Status 10:</b>
+</p><p>Completed Notifications Module
+</p><p><b>Notifications Module:</b>
+</p><p>Whenever a process fails (rsync command fails and returns a 
+non-zero exitValue()), an entry is made into the "notificationinfo" 
+table in the database. Schema of "notificationinfo" table is as follows:
+</p><p>notificationinfo(notificationid int primary key autogenerated, 
+synchistoryid int, notificationtext varchar(100), notificationcreated 
+datetime, isread boolean, notificationcode int);
+</p><p>"notificationid" is auto-generated primary key. "synchistoryid" 
+is foreign key to "synchistory" table's primary key. This column will 
+link each notification to the process which it corresponds to. 
+"notificationtext" is the text that is to be displayed in "Notifications
+ Box" on UI. This contains the source and destination directory paths 
+along with the remote server's name and date at which this notification 
+was created.
+</p><p><b>Progress Status 11:</b>
+</p><p>Working on couple of additional things. Will update Wiki as soon as it is complete.
+</p><p><b>Progress Status 12</b>
+</p><p>Android Application has been developed which does the following:
+</p><p>1. User inputs login id and password which gets verified from the server.
+</p><p>2. In next activity user can select the college and the server which he/she wishes to monitor.
+</p><p>3. In next activity user can select the local directory (source 
+or destination) and the remote directory which he wishes to monitor.
+</p><p>4. History of the directory pair selected is shown in the next 
+screen. This shows various "start-times" of sync processes that happened
+ for selected directory pair. User can select any one from the list and 
+logs for that particular instance of sync process are displayed below 
+the list.
+</p><p>5. User can also select "Sync Now" option in order to start sync process instantly.
+</p><p><b>Remaining:</b>
+</p><p>1. Configurable server domain name or ip-address: This requires 
+adding the server name to database and allowing user to change this over
+ time (if required).
+</p><p>2. Notification Manager Module: This module will have a service 
+running in the background which keeps polling server for any unread 
+notifications and will generate one notification for all the unread 
+logs.
+</p><p><b>Progress Status 13:</b>
+</p><p>1. Notifications Module to check for notifications completed.
+</p><p>This module contains a service that runs in the background and 
+every 20 seconds it connects to the server and finds out what are the 
+notifications and creates notifications for every notification sent over
+ by server if it is not read yet. Notification created contains all the 
+data that needs to be displayed along with other information. When user 
+clicks on the notification, the notification clears off and opens up the
+ "ManageServer" activity along with the server on which that particular 
+sync activity failed. User can then select the directories and view logs
+ to know what went wrong.
+</p><p>This module also makes sure that a notification that is already 
+shown to user does not get repeated. For this, an 
+ArrayList&lt;NotificationInfo&gt; notificationsShown is maintained which
+ keeps on adding those notifications that have been already notified to 
+the user. Upon receiving notifications from the server, module scans 
+over all the notifications and first checks if "isRead" property of 
+current notification is set to true or false. If it is true, then it 
+discards that notification and if it is false it continues further. If 
+"isRead" property is false, module then checks if the "notificationId" 
+property of current notification is already present in 
+"notificationsShown" variable or not. If it is already present then 
+module discards that notification and if it is not present then a 
+notification is generated for the notification.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 1/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key arndg_wiki:pcache:idhash:1624-0!*!*!*!*!*!* and timestamp 20150516113517 -->
+<br><br><br><br><table class="whos_here" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+                        <td class="whos_here_header" width="100%">
+                        <a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Special:AWCforum/whoshere"><i>Whos here now:</i></a>  
+                        &nbsp; <b>Members</b> 0
+                        &nbsp; <b>Guests</b> 0
+                        &nbsp; <b>Bots &amp; Crawlers</b>  1
+                        </td>
+         </tr><tr><td class="whos_here_row"> &nbsp;   </td></tr></tbody></table></div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Retrieved from "<a href="http://www.it.iitb.ac.in/frg/wiki/index.php?title=Data_Synchronization_for_Distributed_edX_Platform&amp;oldid=8377">http://www.it.iitb.ac.in/frg/wiki/index.php?title=Data_Synchronization_for_Distributed_edX_Platform&amp;oldid=8377</a>"				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id="catlinks" class="catlinks catlinks-allhidden"></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Personal tools</h5>
+	<ul>
+		<li id="pt-login"><a href="http://www.it.iitb.ac.in/frg/wiki/index.php?title=Special:UserLogin&amp;returnto=Data+Synchronization+for+Distributed+edX+Platform" title="You are encouraged to log in; however, it is not mandatory [alt-shift-o]" accesskey="o">Log in</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namespaces</h5>
+	<ul>
+					<li id="ca-nstab-main" class="selected"><span><a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Data_Synchronization_for_Distributed_edX_Platform" title="View the content page [alt-shift-c]" accesskey="c">Page</a></span></li>
+					<li id="ca-talk" class="new"><span><a href="http://www.it.iitb.ac.in/frg/wiki/index.php?title=Talk:Data_Synchronization_for_Distributed_edX_Platform&amp;action=edit&amp;redlink=1" title="Discussion about the content page [alt-shift-t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Variants</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Views</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Data_Synchronization_for_Distributed_edX_Platform">Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="http://www.it.iitb.ac.in/frg/wiki/index.php?title=Data_Synchronization_for_Distributed_edX_Platform&amp;action=edit" title="This page is protected.
+You can view its source [alt-shift-e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://www.it.iitb.ac.in/frg/wiki/index.php?title=Data_Synchronization_for_Distributed_edX_Platform&amp;action=history" title="Past revisions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Actions</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Search</label></h5>
+	<form action="/frg/wiki/index.php" id="searchform">
+				<div>
+			<input autocomplete="off" tabindex="1" name="search" title="Search Fundamental Research Group [alt-shift-f]" accesskey="f" id="searchInput" type="search">			<input name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" type="submit">			<input name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" type="submit">					<input name="title" value="Special:Search" type="hidden">
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint collapsible-nav">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(/frg/wiki/skins/common/images/wiki.png);" href="http://www.it.iitb.ac.in/frg/wiki/index.php/Fundamental_Research_Group" title="Visit the main page"></a></div>
+				<!-- /logo -->
+				
+<!-- Forum Menu -->
+<div class="portal first persistent" id="p-Forum_Menu">
+	<h5>Forum Menu</h5>
+	<div class="body">
+		<ul>
+			<li id="n-awc-forum-urls"><a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Special:AWCforum/">Forum</a></li>
+			<li id="n-awc-forum-urls"><a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Special:AWCforum/search">Search</a></li>
+			<li id="n-awc-forum-urls"><a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Special:AWCforum/search/todate">Today's Posts</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Forum Menu -->
+
+<!-- navigation -->
+<div class="portal expanded" id="p-navigation">
+	<h5 tabindex="2"><a href="#">Navigation</a></h5>
+	<div style="display: block;" class="body">
+		<ul>
+			<li id="n-Main-Page"><a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Fundamental_Research_Group">Main Page</a></li>
+			<li id="n-recentchanges"><a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li>
+			<li id="n-Upload-Multiple-Files"><a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Special:UploadWizard">Upload Multiple Files</a></li>
+			<li id="n-Upload-Single-File"><a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Special:Upload">Upload Single File</a></li>
+			<li id="n-Upload-Logs"><a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Special:Log">Upload Logs</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- TOOLBOX -->
+<div class="portal collapsed" id="p-tb">
+	<h5 tabindex="3"><a href="#">Toolbox</a></h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Special:WhatLinksHere/Data_Synchronization_for_Distributed_edX_Platform" title="A list of all wiki pages that link here [alt-shift-j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Special:RecentChangesLinked/Data_Synchronization_for_Distributed_edX_Platform" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li>
+			<li><a href="http://www.it.iitb.ac.in/frg/wiki/index.php?title=Data_Synchronization_for_Distributed_edX_Platform&amp;printable=yes" rel="alternate">Printable version</a></li>
+			<li id="t-permalink"><a href="http://www.it.iitb.ac.in/frg/wiki/index.php?title=Data_Synchronization_for_Distributed_edX_Platform&amp;oldid=8377" title="Permanent link to this revision of the page">Permanent link</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 12 May 2015, at 10:51.</li>
+											<li id="footer-info-viewcount">This page has been accessed 388 times.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Fundamental_Research_Group:Privacy_policy" title="Fundamental Research Group:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Fundamental_Research_Group:About" title="Fundamental Research Group:About">About Fundamental Research Group</a></li>
+											<li id="footer-places-disclaimer"><a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Fundamental_Research_Group:General_disclaimer" title="Fundamental Research Group:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="Data%20Synchronization%20for%20Distributed%20edX%20Platform%20-%20Fundamental%20Research%20Group_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" height="31" width="88"></a>
+					</li>
+					<li id="footer-partnerBannersico">
+						<a href="http://www.it.iitb.ac.in/frg/wiki/"><img src="Data%20Synchronization%20for%20Distributed%20edX%20Platform%20-%20Fundamental%20Research%20Group_files/IITB_logo.png" alt="My banner"></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="Data%20Synchronization%20for%20Distributed%20edX%20Platform%20-%20Fundamental%20Research%20Group_files/load_002.php"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready","ext.vector.collapsibleNav","ext.vector.collapsibleTabs","ext.vector.simpleSearch"], null, true);
+}</script><script type="text/javascript" src="Data%20Synchronization%20for%20Distributed%20edX%20Platform%20-%20Fundamental%20Research%20Group_files/load.php"></script><script type="text/javascript" src="Data%20Synchronization%20for%20Distributed%20edX%20Platform%20-%20Fundamental%20Research%20Group_files/load_003.php"></script>
+<style type="text/css">.poll_display_table {
+ 
+border: 1px solid #aaa;
+    
+    padding: 1px;
+ 
+} 
+.poll_displayheader {
+ 
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_row {
+ 
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+ 
+} 
+.poll_display_vote_total {
+ 
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_vote_numbers_header {
+ 
+border: 1px solid #aaa;
+border-bottom: 0;
+ 
+} 
+.poll_display_vote_percent_header {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option_header {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_numbers {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_percent {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_percent_color_op10 {
+ background-color: #7FFF00; 
+} 
+.poll_percent_color_op1 {
+ background-color: #CD5555; 
+} 
+.poll_percent_color_op2 {
+ background-color: #5CACEE; 
+} 
+.poll_percent_color_op3 {
+ background-color: #FFCC11; 
+} 
+.poll_percent_color_op4 {
+ background-color: #668014; 
+} 
+.poll_percent_color_op5 {
+ background-color: #A0522D; 
+} 
+.poll_percent_color_op6 {
+ background-color: #9F79EE; 
+} 
+.poll_percent_color_op7 {
+ background-color: #EE00EE; 
+} 
+.poll_percent_color_op8 {
+ background-color: #DC143C; 
+} 
+.poll_percent_color_op9 {
+ background-color: #551011; 
+} 
+.whos_here_header {
+ 
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+ 
+} 
+.whos_here_row {
+ 
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+ 
+} 
+.whos_here {
+ 
+border: 1px solid #aaa;
+            border-bottom: 0;
+ 
+} 
+.pagejumps_PostOnForumPage {
+ 
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+ 
+} 
+
+ .nothing {font-size: 0%;
+                                margin: .0em;
+                                border: 0;
+                                margin: 0;
+                                padding: 0;
+                                width: 0;}
+</style>
+
+<!-- Served in 0.228 secs. -->
+	
+
+</body></html>

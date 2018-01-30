@@ -1,0 +1,5 @@
+Project to get video length:
+ project ID: erudite-marker-97317
+ Youtube API key: AIzaSyBcCNeaGSZR-FNyC5xl0028uFLVRJVcurE
+ 
+Got creds... installing python api for google through pip install --upgrade google-api-python-client

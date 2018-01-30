@@ -1,0 +1,92 @@
+Contents: newline space between the start of topic and subtopic.
+
+Contents: further division of use cases into individual use case etnries on contents page.
+
+page 3 : 1.1 " The views presented in this document are in keeping with the issues that " change to "The views presented in this document are in correspondence with the issues that"
+
+Use Cases: Please see the formatting we followed of indenting in the original document submitted.
+
+Maintain one standard for writing edX all over the document: either edX, EdX, or something else.
+
+page 3: 1.2 "Users can provide their personal as well as courses enrolled information using the web-portal." change to "Users can provide their personal information as well as information regarding the courses enrolled in using the web-portal."
+
+page 3: 1.2 "perform insertion, update as well as deletion as directed by the user." change to "perform insertion, update and deletion to these databases as directed by the user."
+
+page 3: 1.3 "own curriculum about syllabus". --> curriculum and syllabus mean the same thing. change to "own syllabus" or "own curriculum"
+
+page 3: 1.3 "and that too from best colleges" change to "and that too from the best colleges"
+
+page 3: 1.3  "MOOCs also have limitation" change to "MOOCs also have the limitation"
+
+page 3: 1.3 "To overcome these issues we have overcome with the idea of blended MOOCs" change to "To overcome these issues, we provide the idea of blended MOOCs"
+
+page 3: 1.3 "In the classes the teachers should engage students into group discussions and problem solving" change "into" to "to"
+
+page 4: 2.1.2 "If username already exist or if required field is not filled or if information is wrong show error and submission fails." change to "2. If the username already exists, or if required field is not filled, or if information filled is wrong, then an error message is shown and submission fails."
+
+page 4: 2.1.2 change to "A confirmation mail goes to..."
+
+page 4: 2.1.2 change "4." to "The user clicks on the activation link in the email to register himself, and his account gets created."
+
+page 4: 2.2.1 "with a page to login to IITBombayX" change to "with a page to log into IITBombayX"
+
+page 5: 
+
+
+
+
+
+
+page 20 : the order of the use cases should be "Student", "Assistant Teacher", "Course Coordinator", "Program Coordinator", "Head of the Institute", "Admin"
+
+For each of the use cases, the order of the use case descriptions should be in the same order as appearing in the use cases, from top to bottom.
+
+page 20 : Use case --> add "Actor: Course Coordinator" to the Use Cases.
+
+page 21 : " The Course Coordinator need to login into the system,by clicking the “ Login button”." change to " The Course Coordinator need to login into the system,by clicking the “Log in" button.".
+
+page 21 : "2. He need to look for the.." change to "2. He needs to look for the..."
+
+page 22 : is it possible to add the 'send notification' tab to the course coordinator dashboard now?
+
+page 22 : indent 5. |_> 1.
+
+page 23 : " a particular course, such as changing his course allotted, and personal emotion." change to " a particular course, such as changing his course allotted, and personal information."
+
+page 23 : "Post condition: The course coordinator is able to view and manipulate the information about the assistant teachers." remove extra space.
+
+page 24 : "(in case of the generic student)" change to "(in case of the independent student)"
+
+page 27 : "(in case of the generic student)" change to "(in case of the independent student)"
+
+page 27 : "3. 1. " change 'associate teacher' to 'HOI'
+
+page 28 : "2. The details may include the institutes address, website, contact details, head of institute details, etc." change 'institutes' to 'institute's'
+
+page 29 : "1. Course Wise" change the text " HOI selects any course " to " HOI selects any course from the links on the page "
+
+page 31 : " The Course Coordinator need to login into the system,by clicking the “ Login button”." change to " The Course Coordinator need to login into the system,by clicking the “Log in" button.".
+
+page 32 : "(in case of the generic student)" change to "(in case of the independent student)"
+
+page 33 : top, "Postcondition" line space between point and topic.
+
+page 35 :  " a particular course, such as changing his course allotted, and personal emotion." change to " a particular course, such as changing his course allotted, and personal information."
+
+page 35 : single point divided between point 1 and 2 by mistake (see bottom). semester is continuation of 1.
+
+page 37 : add in "precondition: " for add institute : " the Admin must be logged into his account on IITBombayX".
+
+page 37 : "add institute" change point 3 to following: "The administrator provides his proper credentials, and then fires the commands and directives for creating the tables for the institute internally, and initializing other internal tables and making updates as necessary to tables, until the changes are made to incorporate the new institute into IITBombayX."
+
+page 38 : Renumber the first points, starting from 4.
+
+page 41 : "1. Course Wise" change the text " Admin selects any course " to " Admin selects any course from the links on the page "
+
+
+
+page 40: Note: Use Case of Admin: Dump to quiz --> depends on quiz_table to be included or removed. Include this or not??
+
+Maintain one style and size of fonts throughout the document - variation ob served in the use-cases section.
+
+Include coordinators' names. (Check list)

@@ -1,0 +1,106 @@
+\begin{thebibliography}{10}
+
+\bibitem{IITBombayX}
+``{IITBombayX launched on Republic Day -
+  \url{http://www.iitb.ac.in/en/breaking-news/iitbombayx-launched-republic-day}}.''
+
+\bibitem{OPENedXofficialarch}
+``{OPENedX official site -
+  \url{https://open.edx.org/contributing-to-edx/architecture}}.''
+
+\bibitem{Mako}
+``{Mako, the template library written in Python,
+  \url{http://www.makotemplates.org/}}.''
+
+\bibitem{Django}
+``{Django, the web-development framework for perfectionists with deadlines,
+  \url{https://www.djangoproject.com/}}.''
+
+\bibitem{WhatIsBIPlatform}
+``{What is a BI Platform?,
+  \url{http://www.covaligroup.com/blog/bid/54927/What-is-a-Business-Intelligence-platform}}.''
+
+\bibitem{ma2015examining}
+J.~Ma, X.~Han, J.~Yang, and J.~Cheng, ``Examining the necessary condition for
+  engagement in an online learning environment based on learning analytics
+  approach: The role of the instructor,'' {\em The Internet and Higher
+  Education}, vol.~24, pp.~26--34, 2015.
+
+\bibitem{Morris2005221}
+L.~V. Morris, C.~Finnegan, and S.-S. Wu, ``Tracking student behavior,
+  persistence, and achievement in online courses,'' {\em The Internet and
+  Higher Education}, vol.~8, no.~3, pp.~221 -- 231, 2005.
+
+\bibitem{falakmasir2010using}
+M.~H. Falakmasir and J.~Habibi, ``Using educational data mining methods to
+  study the impact of virtual classroom in e-learning.,'' in {\em EDM},
+  pp.~241--248, 2010.
+
+\bibitem{edXInsightsCompRef}
+``{Computation reference of edX Insights,
+  \url{http://edx-insights.readthedocs.org/en/latest/Reference.html#reference}}.''
+
+\bibitem{edXInsights}
+``{edX Insights - Overview,
+  \url{http://edx-insights.readthedocs.org/en/latest/Overview.html}}.''
+
+\bibitem{Openstack}
+``{OpenStack, \url{http://www.openstack.org/}}.''
+
+\bibitem{OpenstackCompute}
+``{OpenStack Compute,
+  \url{http://www.openstack.org/software/openstack-compute/}}.''
+
+\bibitem{OpenstackStorage}
+``{OpenStack Storage,
+  \url{http://www.openstack.org/software/openstack-storage/}}.''
+
+\bibitem{OpenstackNW}
+``{OpenStack Networking,
+  \url{http://www.openstack.org/software/openstack-networking/}}.''
+
+\bibitem{JBopenstack}
+``{Cloud Founders: The Importance Of OpenStack,
+  \url{http://www.rackspace.com/blog/cloud-founders-the-importance-of-openstack/}}.''
+
+\bibitem{Swift}
+``{Swift - an OpenStack Object Store project,
+  \url{https://wiki.openstack.org/wiki/Swift}}.''
+
+\bibitem{SwiftAPIcomp}
+``{Swift API feature comparison,
+  \url{https://wiki.openstack.org/wiki/Swift/APIFeatureComparison}}.''
+
+\bibitem{pavlo2009comparison}
+A.~Pavlo, E.~Paulson, A.~Rasin, D.~J. Abadi, D.~J. DeWitt, S.~Madden, and
+  M.~Stonebraker, ``A comparison of approaches to large-scale data analysis,''
+  in {\em Proceedings of the 2009 ACM SIGMOD International Conference on
+  Management of data}, pp.~165--178, ACM, 2009.
+
+\bibitem{pavlobenchmark}
+``{Big Data benchmark, \url{https://amplab.cs.berkeley.edu/benchmark/}}.''
+
+\bibitem{apachejmeter}
+``{Apache JMeter, \url{http://jmeter.apache.org/}}.''
+
+\bibitem{fan2003efficient}
+R.~Fan and N.~Lynch, {\em Efficient replication of large data objects}.
+\newblock Springer, 2003.
+
+\bibitem{tridgell1996rsync}
+A.~Tridgell, P.~Mackerras, {\em et~al.}, ``The rsync algorithm,'' 1996.
+
+\bibitem{rsync}
+``rsync linux man page, "\url{http://linux.die.net/man/1/rsync}.''
+
+\bibitem{Moodle}
+``{Moodle - about Moodle, \url{https://docs.moodle.org/28/en/About_Moodle}}.''
+
+\bibitem{MoodlePhilosophy}
+``{Moodle - The Philosophy, \url{https://docs.moodle.org/28/en/Philosophy}}.''
+
+\bibitem{siemens2011penetrating}
+G.~Siemens and P.~Long, ``Penetrating the fog: Analytics in learning and
+  education.,'' {\em EDUCAUSE review}, vol.~46, no.~5, p.~30, 2011.
+
+\end{thebibliography}

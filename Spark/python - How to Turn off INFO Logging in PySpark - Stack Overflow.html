@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html itemscope="" itemtype="http://schema.org/QAPage"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<title>python - How to Turn off INFO Logging in PySpark - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico?v=6cd6089ee7f6">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png?v=41f6e13ade69">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=ea71a5211a91&amp;a">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="How to Turn off INFO Logging in PySpark">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I installed spark using the AWS EC2 guide and I can launch the program fine using the bin/pyspark script to get to the spark prompt and can also do the Quick Start quide successfully but I cannot f...">
+    <meta property="og:url" content="http://stackoverflow.com/questions/25193488/how-to-turn-off-info-logging-in-pyspark">
+    <link rel="canonical" href="http://stackoverflow.com/questions/25193488/how-to-turn-off-info-logging-in-pyspark">
+
+    
+    
+    <script src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/ados_002.js" async="" type="text/javascript"></script><script src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/quant.js" async=""></script><script src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/beacon.js" async=""></script><script src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/analytics.js" async=""></script><script src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/ados.js" async="" type="text/javascript"></script><script src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/jquery.js"></script>
+    <script src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/stub.js"></script>
+    <link rel="stylesheet" type="text/css" href="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/all.css">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question 'How to Turn off INFO Logging in PySpark'" href="http://stackoverflow.com/feeds/question/25193488">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/25193488/how-to-turn-off-info-logging-in-pyspark">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/25193488/how-to-turn-off-info-logging-in-pyspark">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/25193488/how-to-turn-off-info-logging-in-pyspark">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:25193488});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '25193488');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1435044320,"networkMetaHostname":"meta.stackexchange.com","routeName":"Questions/Show","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":true,"domain":"stacksnippets.net"},"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"nonAsciiTags":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"a198ed0a89be5325a9c3a40786500d98","isAnonymous":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"7d65afcc40d6","js/moderator.en.js":"ab2aabcee6b3","js/full-anon.en.js":"6206c0c83e71","js/full.en.js":"a4dff6716486","js/wmd.en.js":"79b8f1f405b1","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"55c034d46f82","js/help.en.js":"ce2977cf4348","js/tageditor.en.js":"c84618a71b61","js/tageditornew.en.js":"8e1df47ef8ed","js/inline-tag-editing.en.js":"48f13b102998","js/revisions.en.js":"9e897f24d78d","js/review.en.js":"a71ccc354fb3","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"7f3122b8d3cf","js/explore-qlist.en.js":"4e6f969d97ee","js/events.en.js":"23f28beeec62","js/keyboard-shortcuts.en.js":"9d95a81b10e2","js/external-editor.en.js":"1eb5c5c11526","js/external-editor.en.js":"1eb5c5c11526","js/snippet-javascript.en.js":"d732a649ed0f","js/snippet-javascript-codemirror.en.js":"874da28c68e4"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+    
+    
+<script src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/full-anon.js" async=""></script><script src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/snippet-javascript.js" async=""></script><script src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/post-validation.js" async=""></script><script src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/prettify-full.js" async=""></script><script src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/external-editor.js" async=""></script><script src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/adFeedback.js" type="text/javascript"></script><link href="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/adFeedback.css" rel="stylesheet"><link href="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/jobs.css" rel="stylesheet" type="text/css"></head>
+<body class="question-page new-topbar">
+    <noscript><div id="noscript-padding"></div></noscript>
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="http://stackoverflow.com/">current community</a></h3>
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+                    <a href="http://blog.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:7 })">blog</a>
+            </div>
+
+
+
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    
+
+
+
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="
+            site.switch({ target_site:552, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                </li>
+                            <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    <a class="site-link js-gps-track" href="http://careers.stackoverflow.com/?utm_source=stackoverflow.com&amp;utm_medium=site-ui&amp;utm_campaign=multicollider" data-gps-track="site_switcher.click({ item_type:9 })">
+                        <div class="site-icon favicon favicon-careers" title="Stack Overflow Careers"></div>
+                        Stack Overflow Careers
+                    </a>
+                </li>
+        </ul>
+    </div>
+    
+    <div class="header" id="your-communities-header">
+        <h3>
+your communities        </h3>
+            
+    </div>
+    <div class="modal-content" id="your-communities-section">
+            
+            <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f25193488%2fhow-to-turn-off-info-logging-in-pyspark" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f25193488%2fhow-to-turn-off-info-logging-in-pyspark" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+            </div>
+    </div>
+    
+    <div class="header">
+        <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a></h3>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+        </div>
+
+        <div class="network-items">
+
+            <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 145 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+
+        </div>
+
+        <div class="topbar-links">
+
+                <div class="links-container">
+                <span class="topbar-menu-links">
+                                <a href="https://stackoverflow.com/users/signup?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f25193488%2fhow-to-turn-off-info-logging-in-pyspark" class="login-link">sign up</a>
+                                <a href="https://stackoverflow.com/users/login?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f25193488%2fhow-to-turn-off-info-logging-in-pyspark" class="login-link">log in</a>
+
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                            <a href="http://careers.stackoverflow.com/?utm_source=stackoverflow.com&amp;utm_medium=site-ui&amp;utm_campaign=anon-topbar">stack overflow careers</a>
+                    </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" placeholder="search" tabindex="1" autocomplete="off" maxlength="240" type="text">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+                        <li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://stackoverflow.com/help/badges">Badges</a></li>
+                        <li><a id="nav-unanswered" href="http://stackoverflow.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content" class="snippet-hidden">
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png?v=41f6e13ade69">
+			<div id="question-header">
+                <h1 itemprop="name"><a href="http://stackoverflow.com/questions/25193488/how-to-turn-off-info-logging-in-pyspark" class="question-hyperlink">How to Turn off INFO Logging in PySpark</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="25193488" id="question">
+
+    <script>
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk817501690",4).setZone(43) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk817501690"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjoxODc5NTQsImNoIjoxMTc4LCJjciI6NjY0NDI0LCJkaSI6Ijc2MTkxNzBlY2EzNzQzNTE4NThjMmI0NGU0YThmMjRkIiwiZG0iOjEsImZjIjo2ODYyODMsImZsIjo0MTU0ODUsImlwIjoiMTAuMTA1LjMzLjEyOCIsImt3IjoicHl0aG9uLGFwYWNoZS1zcGFyayIsIm53IjoyMiwicGMiOjAsInByIjoxNjA0LCJydCI6MSwicmYiOiJodHRwOi8vd3d3Lmdvb2dsZS5jby5pbi91cmw_c2E9dCZyY3Q9aiZxPSZlc3JjPXMmc291cmNlPXdlYiZjZD0yJnZlZD0wQ0NVUUZqQUImdXJsPWh0dHA6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvMjUxOTM0ODgvaG93LXRvLXR1cm4tb2ZmLWluZm8tbG9nZ2luZy1pbi1weXNwYXJrJmVpPTJnbUpWWkRiS0lPZXVnUy11N093RHcmdXNnPUFGUWpDTkU0RWFWbENNSG9DdDN3N2xxYUVINmpJOVVWdEEmc2lnMj1xTmRqNkQybnNTOU03NTRCUEliS2pnJmJ2bT1idi45NjMzOTM1MixkLmMyRSIsInN0Ijo4Mjc3LCJ1ayI6InVlMS1hN2I0OWMwYzEzMjc0MmJlODg0YmI1YmU0ZmZiYWQ1OCIsInpuIjo0MywidHMiOjE0MzUwNDQzMjE3NTEsImJmIjp0cnVlLCJwbiI6ImFkemVyazgxNzUwMTY5MCIsInVyIjoiaHR0cDovL3d3dy5mYWNlYm9vay5jb20vc3RhY2tleGNoYW5nZSJ9&amp;s=lJhIPgLe5TaN35hlxgOKF4gPEhQ" rel="nofollow" target="_blank" title=""><img src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/08eaa5c81e4346a58bf2cc7e601baf4d.png" title="" alt="" border="0" height="90" width="728"></a><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input value="12" name="downvoteReason" type="radio">Uninteresting</label></li><li><label><input value="13" name="downvoteReason" type="radio">Misleading</label></li><li><label><input value="14" name="downvoteReason" type="radio">Offensive</label></li><li><label><input value="15" name="downvoteReason" type="radio">Repetitive</label></li><li><label><input value="16" name="downvoteReason" type="radio">Other</label></li></ul><a href="#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/i_003.gif" style="position:absolute;" border="0" height="0px" width="0px"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="25193488" type="hidden">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">14</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="#" title="This is a favorite question (click again to undo)">favorite</a>
+        <div class="favoritecount"><b>5</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>I installed spark using the AWS EC2 guide and I can launch the 
+program fine using the bin/pyspark script to get to the spark prompt and
+ can also do the Quick Start quide successfully but I cannot for the 
+life of me figure out how to stop all of the verbose INFO logging after 
+each command. I have tried nearly every possible scenrio in the below 
+code (commenting out, setting to OFF) within my log4j.properties file in
+ the conf folder in where I launch the application from as well as on 
+each node and nothing is doing anything. I still get the logging INFO 
+statements printing after executing each statement. I am very confused 
+with how this is supposed to work. </p>
+
+<pre style="" class="lang-py prettyprint prettyprinted"><code><span class="com">#Set everything to be logged to the console log4j.rootCategory=INFO, console                                                                        </span><span class="pln">
+log4j</span><span class="pun">.</span><span class="pln">appender</span><span class="pun">.</span><span class="pln">console</span><span class="pun">=</span><span class="pln">org</span><span class="pun">.</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">log4j</span><span class="pun">.</span><span class="typ">ConsoleAppender</span><span class="pln"> 
+log4j</span><span class="pun">.</span><span class="pln">appender</span><span class="pun">.</span><span class="pln">console</span><span class="pun">.</span><span class="pln">target</span><span class="pun">=</span><span class="typ">System</span><span class="pun">.</span><span class="pln">err     
+log4j</span><span class="pun">.</span><span class="pln">appender</span><span class="pun">.</span><span class="pln">console</span><span class="pun">.</span><span class="pln">layout</span><span class="pun">=</span><span class="pln">org</span><span class="pun">.</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">log4j</span><span class="pun">.</span><span class="typ">PatternLayout</span><span class="pln"> 
+log4j</span><span class="pun">.</span><span class="pln">appender</span><span class="pun">.</span><span class="pln">console</span><span class="pun">.</span><span class="pln">layout</span><span class="pun">.</span><span class="typ">ConversionPattern</span><span class="pun">=%</span><span class="pln">d</span><span class="pun">{</span><span class="pln">yy</span><span class="pun">/</span><span class="pln">MM</span><span class="pun">/</span><span class="pln">dd HH</span><span class="pun">:</span><span class="pln">mm</span><span class="pun">:</span><span class="pln">ss</span><span class="pun">}</span><span class="pln"> </span><span class="pun">%</span><span class="pln">p </span><span class="pun">%</span><span class="pln">c</span><span class="pun">{</span><span class="lit">1</span><span class="pun">}:</span><span class="pln"> </span><span class="pun">%</span><span class="pln">m</span><span class="pun">%</span><span class="pln">n
+
+</span><span class="com"># Settings to quiet third party logs that are too verbose</span><span class="pln">
+log4j</span><span class="pun">.</span><span class="pln">logger</span><span class="pun">.</span><span class="pln">org</span><span class="pun">.</span><span class="pln">eclipse</span><span class="pun">.</span><span class="pln">jetty</span><span class="pun">=</span><span class="pln">WARN
+log4j</span><span class="pun">.</span><span class="pln">logger</span><span class="pun">.</span><span class="pln">org</span><span class="pun">.</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">spark</span><span class="pun">.</span><span class="pln">repl</span><span class="pun">.</span><span class="typ">SparkIMain$exprTyper</span><span class="pun">=</span><span class="pln">INFO
+log4j</span><span class="pun">.</span><span class="pln">logger</span><span class="pun">.</span><span class="pln">org</span><span class="pun">.</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">spark</span><span class="pun">.</span><span class="pln">repl</span><span class="pun">.</span><span class="typ">SparkILoop$SparkILoopInterpreter</span><span class="pun">=</span><span class="pln">INFO</span></code></pre>
+
+<p>Here is my full classpath:
+<code>Spark Command: /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/bin/java -cp    :/root/spark-1.0.1-bin-hadoop2/conf:/root/spark-1.0.1-bin-hadoop2/conf:/root/spark-1.0.1-bin-hadoop2/lib/spark-assembly-1.0.1-hadoop2.2.0.jar:/root/spark-1.0.1-bin-hadoop2/lib/datanucleus-api-jdo-3.2.1.jar:/root/spark-1.0.1-bin-hadoop2/lib/datanucleus-core-3.2.2.jar:/root/spark-1.0.1-bin-hadoop2/lib/datanucleus-rdbms-3.2.1.jar -XX:MaxPermSize=128m -Djava.library.path= -Xms512m -Xmx512m org.apache.spark.deploy.SparkSubmit spark-shell --class org.apache.spark.repl.Main</code></p>
+
+<p>contents of spark-env.sh:</p>
+
+<pre style="" class="lang-py prettyprint prettyprinted"><code><span class="com">#!/usr/bin/env bash</span><span class="pln">
+
+</span><span class="com"># This file is sourced when running various Spark programs.</span><span class="pln">
+</span><span class="com"># Copy it as spark-env.sh and edit that to configure Spark for your site.</span><span class="pln">
+
+</span><span class="com"># Options read when launching programs locally with </span><span class="pln">
+</span><span class="com"># ./bin/run-example or ./bin/spark-submit</span><span class="pln">
+</span><span class="com"># - HADOOP_CONF_DIR, to point Spark towards Hadoop configuration files</span><span class="pln">
+</span><span class="com"># - SPARK_LOCAL_IP, to set the IP address Spark binds to on this node</span><span class="pln">
+</span><span class="com"># - SPARK_PUBLIC_DNS, to set the public dns name of the driver program</span><span class="pln">
+</span><span class="com"># - SPARK_CLASSPATH=/root/spark-1.0.1-bin-hadoop2/conf/</span><span class="pln">
+
+</span><span class="com"># Options read by executors and drivers running inside the cluster</span><span class="pln">
+</span><span class="com"># - SPARK_LOCAL_IP, to set the IP address Spark binds to on this node</span><span class="pln">
+</span><span class="com"># - SPARK_PUBLIC_DNS, to set the public DNS name of the driver program</span><span class="pln">
+</span><span class="com"># - SPARK_CLASSPATH, default classpath entries to append</span><span class="pln">
+</span><span class="com"># - SPARK_LOCAL_DIRS, storage directories to use on this node for shuffle and RDD data</span><span class="pln">
+</span><span class="com"># - MESOS_NATIVE_LIBRARY, to point to your libmesos.so if you use Mesos</span><span class="pln">
+
+</span><span class="com"># Options read in YARN client mode</span><span class="pln">
+</span><span class="com"># - HADOOP_CONF_DIR, to point Spark towards Hadoop configuration files</span><span class="pln">
+</span><span class="com"># - SPARK_EXECUTOR_INSTANCES, Number of workers to start (Default: 2)</span><span class="pln">
+</span><span class="com"># - SPARK_EXECUTOR_CORES, Number of cores for the workers (Default: 1).</span><span class="pln">
+</span><span class="com"># - SPARK_EXECUTOR_MEMORY, Memory per Worker (e.g. 1000M, 2G) (Default: 1G)</span><span class="pln">
+</span><span class="com"># - SPARK_DRIVER_MEMORY, Memory for Master (e.g. 1000M, 2G) (Default: 512 Mb)</span><span class="pln">
+</span><span class="com"># - SPARK_YARN_APP_NAME, The name of your application (Default: Spark)</span><span class="pln">
+</span><span class="com"># - SPARK_YARN_QUEUE, The hadoop queue to use for allocation requests (Default: ‘default’)</span><span class="pln">
+</span><span class="com"># - SPARK_YARN_DIST_FILES, Comma separated list of files to be distributed with the job.</span><span class="pln">
+</span><span class="com"># - SPARK_YARN_DIST_ARCHIVES, Comma separated list of archives to be distributed with the job.</span><span class="pln">
+
+</span><span class="com"># Options for the daemons used in the standalone deploy mode:</span><span class="pln">
+</span><span class="com"># - SPARK_MASTER_IP, to bind the master to a different IP address or hostname</span><span class="pln">
+</span><span class="com"># - SPARK_MASTER_PORT / SPARK_MASTER_WEBUI_PORT, to use non-default ports for the master</span><span class="pln">
+</span><span class="com"># - SPARK_MASTER_OPTS, to set config properties only for the master (e.g. "-Dx=y")</span><span class="pln">
+</span><span class="com"># - SPARK_WORKER_CORES, to set the number of cores to use on this machine</span><span class="pln">
+</span><span class="com"># - SPARK_WORKER_MEMORY, to set how much total memory workers have to give executors (e.g. 1000m, 2g)</span><span class="pln">
+</span><span class="com"># - SPARK_WORKER_PORT / SPARK_WORKER_WEBUI_PORT, to use non-default ports for the worker</span><span class="pln">
+</span><span class="com"># - SPARK_WORKER_INSTANCES, to set the number of worker processes per node</span><span class="pln">
+</span><span class="com"># - SPARK_WORKER_DIR, to set the working directory of worker processes</span><span class="pln">
+</span><span class="com"># - SPARK_WORKER_OPTS, to set config properties only for the worker (e.g. "-Dx=y")</span><span class="pln">
+</span><span class="com"># - SPARK_HISTORY_OPTS, to set config properties only for the history server (e.g. "-Dx=y")</span><span class="pln">
+</span><span class="com"># - SPARK_DAEMON_JAVA_OPTS, to set config properties for all daemons (e.g. "-Dx=y")</span><span class="pln">
+</span><span class="com"># - SPARK_PUBLIC_DNS, to set the public dns name of the master or workers</span><span class="pln">
+
+export SPARK_SUBMIT_CLASSPATH</span><span class="pun">=</span><span class="str">"$FWDIR/conf"</span></code></pre>
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/python" class="post-tag js-gps-track" title="show questions tagged 'python'" rel="tag">python</a> <a href="http://stackoverflow.com/questions/tagged/apache-spark" class="post-tag js-gps-track" title="show questions tagged 'apache-spark'" rel="tag">apache-spark</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/25193488" title="short permalink to this question" class="short-link" id="link-post-25193488">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/25193488/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td class="post-signature" align="right">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/25193488/revisions" title="show all edits to this post">edited <span title="2014-08-08 20:04:17Z" class="relativetime">Aug 8 '14 at 20:04</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        <br>
+        
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-08-07 22:48:58Z" class="relativetime">Aug 7 '14 at 22:48</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2329714/prometheus2305"><div class="gravatar-wrapper-32"><img src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/01f5f1c008f1221b3d5f8090751c13b1.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2329714/prometheus2305">prometheus2305</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">346</span><span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span><span title="21 bronze badges"><span class="badge3"></span><span class="badgecount">21</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-25193488" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-25193488" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								4 Answers
+                                <span style="display:none;" itemprop="answerCount">4</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/25193488/how-to-turn-off-info-logging-in-pyspark?answertab=active#tab-top" title="Answers with the latest activity first">active</a>
+        <a href="http://stackoverflow.com/questions/25193488/how-to-turn-off-info-logging-in-pyspark?answertab=oldest#tab-top" title="Answers in the order they were provided">oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/25193488/how-to-turn-off-info-logging-in-pyspark?answertab=votes#tab-top" title="Answers with the highest score first">votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="27815462"></a>
+<div id="answer-27815462" class="answer accepted-answer" data-answerid="27815462" itemscope="" itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="27815462" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">8</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Edit your conf/log4j.properties file and Change the following line:</p>
+
+<pre style="" class="lang-py prettyprint prettyprinted"><code><span class="pln">   log4j</span><span class="pun">.</span><span class="pln">rootCategory</span><span class="pun">=</span><span class="pln">INFO</span><span class="pun">,</span><span class="pln"> console</span></code></pre>
+
+<p>to</p>
+
+<pre style="" class="lang-py prettyprint prettyprinted"><code><span class="pln">    log4j</span><span class="pun">.</span><span class="pln">rootCategory</span><span class="pun">=</span><span class="pln">ERROR</span><span class="pun">,</span><span class="pln"> console</span></code></pre>
+
+<p>Another approach would be to :</p>
+
+<p>Fireup spark-shell and type in the following:</p>
+
+<pre style="" class="lang-py prettyprint prettyprinted"><code><span class="kwd">import</span><span class="pln"> org</span><span class="pun">.</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">log4j</span><span class="pun">.</span><span class="typ">Logger</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> org</span><span class="pun">.</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">log4j</span><span class="pun">.</span><span class="typ">Level</span><span class="pln">
+
+</span><span class="typ">Logger</span><span class="pun">.</span><span class="pln">getLogger</span><span class="pun">(</span><span class="str">"org"</span><span class="pun">).</span><span class="pln">setLevel</span><span class="pun">(</span><span class="typ">Level</span><span class="pun">.</span><span class="pln">OFF</span><span class="pun">)</span><span class="pln">
+</span><span class="typ">Logger</span><span class="pun">.</span><span class="pln">getLogger</span><span class="pun">(</span><span class="str">"akka"</span><span class="pun">).</span><span class="pln">setLevel</span><span class="pun">(</span><span class="typ">Level</span><span class="pun">.</span><span class="pln">OFF</span><span class="pun">)</span></code></pre>
+
+<p>You won't see any logs after that.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/27815462" title="short permalink to this answer" class="short-link" id="link-post-27815462">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/27815462/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2015-01-07 08:44:50Z" class="relativetime">Jan 7 at 8:44</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2527207/akhld"><div class="gravatar-wrapper-32"><img src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/G2peN.jpg" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2527207/akhld">AkhlD</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">176</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-27815462" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-50005730" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">In the pyspark shell it looks like you can do something like: <code>import logging logging.getLogger('py4j').setLevel(logging.WARN) logging.getLogger('Cloud').setLevel(logging.WARN)</code></span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/2336373/patricksurry" title="687 reputation" class="comment-user">patricksurry</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment50005730_27815462"><span title="2015-06-22 19:08:24Z" class="relativetime-clean">12 hours ago</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-27815462" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk1485009358",4).setZone(44) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1485009358"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjoxODY2MjQsImNoIjoxMTc4LCJjciI6NzI0Mjk4LCJkaSI6ImY2NjFhZmM4ZTJiYjQ1ZGFhZDI4ZTFkYjAyZjEwODRmIiwiZG0iOjEsImZjIjo3NTQwOTIsImZsIjo0MTAxODMsImlwIjoiMTAuMTA1LjMzLjEyOCIsImt3IjoicHl0aG9uLGFwYWNoZS1zcGFyayIsIm53IjoyMiwicGMiOjAsInByIjoxNTY4LCJydCI6MSwicmYiOiJodHRwOi8vd3d3Lmdvb2dsZS5jby5pbi91cmw_c2E9dCZyY3Q9aiZxPSZlc3JjPXMmc291cmNlPXdlYiZjZD0yJnZlZD0wQ0NVUUZqQUImdXJsPWh0dHA6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvMjUxOTM0ODgvaG93LXRvLXR1cm4tb2ZmLWluZm8tbG9nZ2luZy1pbi1weXNwYXJrJmVpPTJnbUpWWkRiS0lPZXVnUy11N093RHcmdXNnPUFGUWpDTkU0RWFWbENNSG9DdDN3N2xxYUVINmpJOVVWdEEmc2lnMj1xTmRqNkQybnNTOU03NTRCUEliS2pnJmJ2bT1idi45NjMzOTM1MixkLmMyRSIsInN0Ijo4Mjc3LCJ1ayI6InVlMS1hN2I0OWMwYzEzMjc0MmJlODg0YmI1YmU0ZmZiYWQ1OCIsInpuIjo0NCwidHMiOjE0MzUwNDQzMjE3NTMsImJmIjp0cnVlLCJwbiI6ImFkemVyazE0ODUwMDkzNTgiLCJ1ciI6Imh0dHA6Ly9jYXJlZXJzLnN0YWNrb3ZlcmZsb3cuY29tL2N2L2dldC1vbmU_dXRtX3NvdXJjZT1zdGFja292ZXJmbG93LmNvbSZ1dG1fbWVkaXVtPWFkJnV0bV9jYW1wYWlnbj1jYW5kaWRhdGVzLWFkZC1jdiZ1dG1fY29udGVudD1sYi1jYXJlZXJzLWdpdHB1c2gifQ&amp;s=Mu-_Cv1he2YRdwUIxOjBHvnBCvc" rel="nofollow" target="_blank" title=""><img src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/8bb266973e664d288a7f217d15d31d41.png" title="" alt="" border="0" height="90" width="728"></a><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input value="12" name="downvoteReason" type="radio">Uninteresting</label></li><li><label><input value="13" name="downvoteReason" type="radio">Misleading</label></li><li><label><input value="14" name="downvoteReason" type="radio">Offensive</label></li><li><label><input value="15" name="downvoteReason" type="radio">Repetitive</label></li><li><label><input value="16" name="downvoteReason" type="radio">Other</label></li></ul><a href="#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/i_004.gif" style="position:absolute;" border="0" height="0px" width="0px"></div>
+  
+<a name="26123496"></a>
+<div id="answer-26123496" class="answer" data-answerid="26123496" itemscope="" itemtype="http://schema.org/Answer">
+
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="26123496" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">15</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Just execute this command in the spark directory:</p>
+
+<pre style="" class="lang-py prettyprint prettyprinted"><code><span class="pln">cp conf</span><span class="pun">/</span><span class="pln">log4j</span><span class="pun">.</span><span class="pln">properties</span><span class="pun">.</span><span class="pln">template conf</span><span class="pun">/</span><span class="pln">log4j</span><span class="pun">.</span><span class="pln">properties</span></code></pre>
+
+<p>Edit log4j.properties:</p>
+
+<pre style="" class="lang-py prettyprint prettyprinted"><code><span class="com"># Set everything to be logged to the console</span><span class="pln">
+log4j</span><span class="pun">.</span><span class="pln">rootCategory</span><span class="pun">=</span><span class="pln">INFO</span><span class="pun">,</span><span class="pln"> console
+log4j</span><span class="pun">.</span><span class="pln">appender</span><span class="pun">.</span><span class="pln">console</span><span class="pun">=</span><span class="pln">org</span><span class="pun">.</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">log4j</span><span class="pun">.</span><span class="typ">ConsoleAppender</span><span class="pln">
+log4j</span><span class="pun">.</span><span class="pln">appender</span><span class="pun">.</span><span class="pln">console</span><span class="pun">.</span><span class="pln">target</span><span class="pun">=</span><span class="typ">System</span><span class="pun">.</span><span class="pln">err
+log4j</span><span class="pun">.</span><span class="pln">appender</span><span class="pun">.</span><span class="pln">console</span><span class="pun">.</span><span class="pln">layout</span><span class="pun">=</span><span class="pln">org</span><span class="pun">.</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">log4j</span><span class="pun">.</span><span class="typ">PatternLayout</span><span class="pln">
+log4j</span><span class="pun">.</span><span class="pln">appender</span><span class="pun">.</span><span class="pln">console</span><span class="pun">.</span><span class="pln">layout</span><span class="pun">.</span><span class="typ">ConversionPattern</span><span class="pun">=%</span><span class="pln">d</span><span class="pun">{</span><span class="pln">yy</span><span class="pun">/</span><span class="pln">MM</span><span class="pun">/</span><span class="pln">dd HH</span><span class="pun">:</span><span class="pln">mm</span><span class="pun">:</span><span class="pln">ss</span><span class="pun">}</span><span class="pln"> </span><span class="pun">%</span><span class="pln">p </span><span class="pun">%</span><span class="pln">c</span><span class="pun">{</span><span class="lit">1</span><span class="pun">}:</span><span class="pln"> </span><span class="pun">%</span><span class="pln">m</span><span class="pun">%</span><span class="pln">n
+
+</span><span class="com"># Settings to quiet third party logs that are too verbose</span><span class="pln">
+log4j</span><span class="pun">.</span><span class="pln">logger</span><span class="pun">.</span><span class="pln">org</span><span class="pun">.</span><span class="pln">eclipse</span><span class="pun">.</span><span class="pln">jetty</span><span class="pun">=</span><span class="pln">WARN
+log4j</span><span class="pun">.</span><span class="pln">logger</span><span class="pun">.</span><span class="pln">org</span><span class="pun">.</span><span class="pln">eclipse</span><span class="pun">.</span><span class="pln">jetty</span><span class="pun">.</span><span class="pln">util</span><span class="pun">.</span><span class="pln">component</span><span class="pun">.</span><span class="typ">AbstractLifeCycle</span><span class="pun">=</span><span class="pln">ERROR
+log4j</span><span class="pun">.</span><span class="pln">logger</span><span class="pun">.</span><span class="pln">org</span><span class="pun">.</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">spark</span><span class="pun">.</span><span class="pln">repl</span><span class="pun">.</span><span class="typ">SparkIMain$exprTyper</span><span class="pun">=</span><span class="pln">INFO
+log4j</span><span class="pun">.</span><span class="pln">logger</span><span class="pun">.</span><span class="pln">org</span><span class="pun">.</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">spark</span><span class="pun">.</span><span class="pln">repl</span><span class="pun">.</span><span class="typ">SparkILoop$SparkILoopInterpreter</span><span class="pun">=</span><span class="pln">INFO</span></code></pre>
+
+<p>Replace at the first line:</p>
+
+<pre style="" class="lang-py prettyprint prettyprinted"><code><span class="pln">log4j</span><span class="pun">.</span><span class="pln">rootCategory</span><span class="pun">=</span><span class="pln">INFO</span><span class="pun">,</span><span class="pln"> console</span></code></pre>
+
+<p>by</p>
+
+<pre style="" class="lang-py prettyprint prettyprinted"><code><span class="pln">log4j</span><span class="pun">.</span><span class="pln">rootCategory</span><span class="pun">=</span><span class="pln">WARN</span><span class="pun">,</span><span class="pln"> console</span></code></pre>
+
+<p>Save and restart your shell. It works for me for Spark 1.1.0 on OS X.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/26123496" title="short permalink to this answer" class="short-link" id="link-post-26123496">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/26123496/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-09-30 14:36:29Z" class="relativetime">Sep 30 '14 at 14:36</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/112976/poiuytrez"><div class="gravatar-wrapper-32"><img src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/a953d215fc4985cbc72a27c6f6323b64.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/112976/poiuytrez">poiuytrez</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">3,906</span><span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span><span title="38 silver badges"><span class="badge2"></span><span class="badgecount">38</span></span><span title="64 bronze badges"><span class="badge3"></span><span class="badgecount">64</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-26123496" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-49873221" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">This helped, important to 
+realise that log4j.properties doesn't exist unless you create it. On 
+ubuntu, I didn't need to restart for these changes to take affect.</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/673600/navonod" title="365 reputation" class="comment-user">Navonod</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment49873221_26123496"><span title="2015-06-18 14:19:43Z" class="relativetime-clean">Jun 18 at 14:19</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-26123496" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="25194212"></a>
+<div id="answer-25194212" class="answer" data-answerid="25194212" itemscope="" itemtype="http://schema.org/Answer">
+
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="25194212" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">5</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>This may be due to how Spark computes its classpath.  My hunch is that Hadoop's <code>log4j.properties</code> file is appearing ahead of Spark's on the classpath, preventing your changes from taking effect.</p>
+
+<p>If you run </p>
+
+<pre style="" class="lang-py prettyprint prettyprinted"><code><span class="pln">SPARK_PRINT_LAUNCH_COMMAND</span><span class="pun">=</span><span class="lit">1</span><span class="pln"> bin</span><span class="pun">/</span><span class="pln">spark</span><span class="pun">-</span><span class="pln">shell</span></code></pre>
+
+<p>then Spark will print the full classpath used to launch the shell; in my case, I see </p>
+
+<pre style="" class="lang-py prettyprint prettyprinted"><code><span class="typ">Spark</span><span class="pln"> </span><span class="typ">Command</span><span class="pun">:</span><span class="pln"> </span><span class="pun">/</span><span class="pln">usr</span><span class="pun">/</span><span class="pln">lib</span><span class="pun">/</span><span class="pln">jvm</span><span class="pun">/</span><span class="pln">java</span><span class="pun">/</span><span class="pln">bin</span><span class="pun">/</span><span class="pln">java </span><span class="pun">-</span><span class="pln">cp </span><span class="pun">:::/</span><span class="pln">root</span><span class="pun">/</span><span class="pln">ephemeral</span><span class="pun">-</span><span class="pln">hdfs</span><span class="pun">/</span><span class="pln">conf</span><span class="pun">:/</span><span class="pln">root</span><span class="pun">/</span><span class="pln">spark</span><span class="pun">/</span><span class="pln">conf</span><span class="pun">:/</span><span class="pln">root</span><span class="pun">/</span><span class="pln">spark</span><span class="pun">/</span><span class="pln">lib</span><span class="pun">/</span><span class="pln">spark</span><span class="pun">-</span><span class="pln">assembly</span><span class="pun">-</span><span class="lit">1.0</span><span class="pun">.</span><span class="lit">0</span><span class="pun">-</span><span class="pln">hadoop1</span><span class="pun">.</span><span class="lit">0.4</span><span class="pun">.</span><span class="pln">jar</span><span class="pun">:/</span><span class="pln">root</span><span class="pun">/</span><span class="pln">spark</span><span class="pun">/</span><span class="pln">lib</span><span class="pun">/</span><span class="pln">datanucleus</span><span class="pun">-</span><span class="pln">api</span><span class="pun">-</span><span class="pln">jdo</span><span class="pun">-</span><span class="lit">3.2</span><span class="pun">.</span><span class="lit">1.jar</span><span class="pun">:/</span><span class="pln">root</span><span class="pun">/</span><span class="pln">spark</span><span class="pun">/</span><span class="pln">lib</span><span class="pun">/</span><span class="pln">datanucleus</span><span class="pun">-</span><span class="pln">core</span><span class="pun">-</span><span class="lit">3.2</span><span class="pun">.</span><span class="lit">2.jar</span><span class="pun">:/</span><span class="pln">root</span><span class="pun">/</span><span class="pln">spark</span><span class="pun">/</span><span class="pln">lib</span><span class="pun">/</span><span class="pln">datanucleus</span><span class="pun">-</span><span class="pln">rdbms</span><span class="pun">-</span><span class="lit">3.2</span><span class="pun">.</span><span class="lit">1.jar</span><span class="pln"> </span><span class="pun">-</span><span class="pln">XX</span><span class="pun">:</span><span class="typ">MaxPermSize</span><span class="pun">=</span><span class="lit">128m</span><span class="pln"> </span><span class="pun">-</span><span class="typ">Djava</span><span class="pun">.</span><span class="pln">library</span><span class="pun">.</span><span class="pln">path</span><span class="pun">=:/</span><span class="pln">root</span><span class="pun">/</span><span class="pln">ephemeral</span><span class="pun">-</span><span class="pln">hdfs</span><span class="pun">/</span><span class="pln">lib</span><span class="pun">/</span><span class="pln">native</span><span class="pun">/</span><span class="pln"> </span><span class="pun">-</span><span class="typ">Xms512m</span><span class="pln"> </span><span class="pun">-</span><span class="typ">Xmx512m</span><span class="pln"> org</span><span class="pun">.</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">spark</span><span class="pun">.</span><span class="pln">deploy</span><span class="pun">.</span><span class="typ">SparkSubmit</span><span class="pln"> spark</span><span class="pun">-</span><span class="pln">shell </span><span class="pun">--</span><span class="kwd">class</span><span class="pln"> org</span><span class="pun">.</span><span class="pln">apache</span><span class="pun">.</span><span class="pln">spark</span><span class="pun">.</span><span class="pln">repl</span><span class="pun">.</span><span class="typ">Main</span></code></pre>
+
+<p>where <code>/root/ephemeral-hdfs/conf</code> is at the head of the classpath.</p>
+
+<p>I've opened <a href="https://issues.apache.org/jira/browse/SPARK-2913">an issue [SPARK-2913]</a> to fix this in the next release (I should have a patch out soon).</p>
+
+<p>In the meantime, here's a couple of workarounds:</p>
+
+<ul>
+<li>Add <code>export SPARK_SUBMIT_CLASSPATH="$FWDIR/conf"</code> to <code>spark-env.sh</code>.</li>
+<li>Delete (or rename) <code>/root/ephemeral-hdfs/conf/log4j.properties</code>.</li>
+</ul>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/25194212" title="short permalink to this answer" class="short-link" id="link-post-25194212">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/25194212/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2014-08-08 00:11:41Z" class="relativetime">Aug 8 '14 at 0:11</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/590203/josh-rosen"><div class="gravatar-wrapper-32"><img src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/784145e31736d98de13959d0ffe3cde6.jpeg" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/590203/josh-rosen">Josh Rosen</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">4,079</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="12 silver badges"><span class="badge2"></span><span class="badgecount">12</span></span><span title="31 bronze badges"><span class="badge3"></span><span class="badgecount">31</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-25194212" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-39259551" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thank you. I tried to add 
+that to my spark-env.sh file and also tried deleting the 
+log4j.properties file but still getting the INFO output. I have added my
+ full classpath to question.</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/2329714/prometheus2305" title="346 reputation" class="comment-user owner">prometheus2305</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment39259551_25194212"><span title="2014-08-08 16:32:04Z" class="relativetime-clean">Aug 8 '14 at 16:32</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-39262023" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thanks for the extra info.  Could you also post the contents of spark-env.sh (you can redact private info, like hostnames)?</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/590203/josh-rosen" title="4079 reputation" class="comment-user">Josh Rosen</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment39262023_25194212"><span title="2014-08-08 17:58:14Z" class="relativetime-clean">Aug 8 '14 at 17:58</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-39265789" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">thank you. posted 
+spark-env.sh. Sorry if I am mis-understanding how to get a base setup 
+going. I just left everything as default as possible for now just to try
+ some testing.</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/2329714/prometheus2305" title="346 reputation" class="comment-user owner">prometheus2305</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment39265789_25194212"><span title="2014-08-08 20:05:29Z" class="relativetime-clean">Aug 8 '14 at 20:05</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-25194212" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="28858796"></a>
+<div id="answer-28858796" class="answer" data-answerid="28858796" itemscope="" itemtype="http://schema.org/Answer">
+
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="28858796" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>I used this with Amazon EC2 with 1 master and 2 slaves and Spark 1.2.1.</p>
+
+<pre style="" class="lang-py prettyprint prettyprinted"><code><span class="com"># Step 1. Change config file on the master node</span><span class="pln">
+nano </span><span class="pun">/</span><span class="pln">root</span><span class="pun">/</span><span class="pln">ephemeral</span><span class="pun">-</span><span class="pln">hdfs</span><span class="pun">/</span><span class="pln">conf</span><span class="pun">/</span><span class="pln">log4j</span><span class="pun">.</span><span class="pln">properties
+
+</span><span class="com"># Before</span><span class="pln">
+hadoop</span><span class="pun">.</span><span class="pln">root</span><span class="pun">.</span><span class="pln">logger</span><span class="pun">=</span><span class="pln">INFO</span><span class="pun">,</span><span class="pln">console
+</span><span class="com"># After</span><span class="pln">
+hadoop</span><span class="pun">.</span><span class="pln">root</span><span class="pun">.</span><span class="pln">logger</span><span class="pun">=</span><span class="pln">WARN</span><span class="pun">,</span><span class="pln">console
+
+</span><span class="com"># Step 2. Replicate this change to slaves</span><span class="pln">
+</span><span class="pun">~/</span><span class="pln">spark</span><span class="pun">-</span><span class="pln">ec2</span><span class="pun">/</span><span class="pln">copy</span><span class="pun">-</span><span class="pln">dir </span><span class="pun">/</span><span class="pln">root</span><span class="pun">/</span><span class="pln">ephemeral</span><span class="pun">-</span><span class="pln">hdfs</span><span class="pun">/</span><span class="pln">conf</span><span class="pun">/</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/28858796" title="short permalink to this answer" class="short-link" id="link-post-28858796">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/28858796/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2015-03-04 15:49:26Z" class="relativetime">Mar 4 at 15:49</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/706456/oleksii"><div class="gravatar-wrapper-32"><img src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/91f2ffdf28b40c8571dfd79709497c72.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/706456/oleksii">oleksii</a><br>
+        <span class="reputation-score" title="reputation score 20321" dir="ltr">20.3k</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="41 silver badges"><span class="badge2"></span><span class="badgecount">41</span></span><span title="85 bronze badges"><span class="badge3"></span><span class="badgecount">85</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-28858796" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-28858796" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="/questions/25193488/answer/submit" method="post" class="post-form">
+						    <input id="post-id" value="25193488" type="hidden">
+                            <input id="qualityBanWarningShown" name="qualityBanWarningShown" value="false" type="hidden">
+                            <input name="referrer" value="http://www.google.co.in/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CCUQFjAB&amp;url=http%3A%2F%2Fstackoverflow.com%2Fquestions%2F25193488%2Fhow-to-turn-off-info-logging-in-pyspark&amp;ei=2gmJVZDbKIOeugS-u7OwDw&amp;usg=AFQjCNE4EaVlCMHoCt3w7lqaEH6jI9UVtA&amp;sig2=qNdj6D2nsS9M754BPIbKjg&amp;bvm=bv.96339352,d.c2E" type="hidden">
+							<h2 class="space">Your Answer</h2>
+
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+            // Have to fire editor after snippets, if snippets enabled
+            if (StackExchange.options.snippets.enabled) {
+                StackExchange.using("snippets", function() {
+                    createEditor();
+                });
+            }
+            else {
+                createEditor();
+            }
+        });
+
+        function createEditor() {
+            prepareEditor({
+                heartbeatType: 'answer',
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                ,immediatelyShowMarkdownHelp:true
+                });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li style="left: 0px;" class="wmd-button" id="wmd-bold-button"><span style="background-position: 0px -20px;"></span></li><li style="left: 25px;" class="wmd-button" id="wmd-italic-button"><span style="background-position: -20px -20px;"></span></li><li style="left: 50px;" class="wmd-spacer" id="wmd-spacer1"><span style="background-position: -40px -20px;"></span></li><li style="left: 75px;" class="wmd-button" id="wmd-link-button"><span style="background-position: -40px -20px;"></span></li><li style="left: 100px;" class="wmd-button" id="wmd-quote-button"><span style="background-position: -60px -20px;"></span></li><li style="left: 125px;" class="wmd-button" id="wmd-code-button"><span style="background-position: -80px -20px;"></span></li><li style="left: 150px;" class="wmd-button" id="wmd-image-button"><span style="background-position: -100px -20px;"></span></li><li style="left: 175px;" class="wmd-spacer" id="wmd-spacer2"><span style="background-position: -120px -20px;"></span></li><li style="left: 200px;" class="wmd-button" id="wmd-olist-button"><span style="background-position: -120px -20px;"></span></li><li style="left: 225px;" class="wmd-button" id="wmd-ulist-button"><span style="background-position: -140px -20px;"></span></li><li style="left: 250px;" class="wmd-button" id="wmd-heading-button"><span style="background-position: -160px -20px;"></span></li><li style="left: 275px;" class="wmd-button" id="wmd-hr-button"><span style="background-position: -180px -20px;"></span></li><li style="left: 300px;" class="wmd-spacer" id="wmd-spacer3"><span style="background-position: -200px -20px;"></span></li><li style="left: 325px;" class="wmd-button" id="wmd-undo-button"><span style="background-position: -200px -20px;"></span></li><li style="left: 350px;" class="wmd-button" id="wmd-redo-button"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" value="a198ed0a89be5325a9c3a40786500d98" type="hidden">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+							<div style="position: relative;">
+								
+            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="http://stackoverflow.com/users/login?returnurl=%2fquestions%2f25193488%2fhow-to-turn-off-info-logging-in-pyspark%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Stack Exchange</span></p>
+                        </div>
+                    </div>
+                    <input name="manual-openid" class="manual-openid" type="hidden">
+                    <input name="use-facebook" class="use-facebook" value="false" type="hidden">
+                    <input name="use-google" class="use-google" value="false" type="hidden">
+                    <input class="submit-openid" value="Submit" style="display:none" type="button">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" size="30" maxlength="30" tabindex="105" type="text">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" size="30" maxlength="100" tabindex="106" placeholder="required, but never shown" type="email">
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', '%2fquestions%2f25193488%2fhow-to-turn-off-info-logging-in-pyspark%23new-answer');
+                    }
+                );
+            </script>
+            <noscript>
+                        <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" />
+                </div>
+            </td>
+        </tr>
+        </table>
+    </div>
+
+            </noscript>
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" value="Post Your Answer" tabindex="110" type="submit">
+									<a href="#" class="discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p>
+<input name="legalLinksShown" value="1" type="hidden">								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/python" class="post-tag" title="show questions tagged 'python'" rel="tag">python</a> <a href="http://stackoverflow.com/questions/tagged/apache-spark" class="post-tag" title="show questions tagged 'apache-spark'" rel="tag">apache-spark</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2014-08-07 22:48:58Z"><b>10 months ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>5653 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/25193488/how-to-turn-off-info-logging-in-pyspark?lastactivity" class="lastactivity-link" title="2015-03-04 15:49:26Z">3 months ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<script>
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk164728910",[17,2221]).setZone(45) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk164728910">
+            <iframe scrolling="no" id="ados_frame_adzerk164728910_403209" frameborder="0" height="250" width="220"></iframe><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input value="12" name="downvoteReason" type="radio">Uninteresting</label></li><li><label><input value="13" name="downvoteReason" type="radio">Misleading</label></li><li><label><input value="14" name="downvoteReason" type="radio">Offensive</label></li><li><label><input value="15" name="downvoteReason" type="radio">Repetitive</label></li><li><label><input value="16" name="downvoteReason" type="radio">Other</label></li></ul><a href="#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/i_002.gif" style="position:absolute;" border="0" height="0px" width="0px"></div>  
+        <div class="tag-themed java tagged" id="hireme"><a href="http://careers.stackoverflow.com/jobs/tag/java" target="_blank" data-hf="h" class="top"> <span>Want a <span class="header-tag">java</span> job?</span></a><ul class="jobs"><li><a data-cid="169602" href="http://careers.stackoverflow.com/jobs/83331/software-engineer-srsoftware-engineer-java-seclore-technology-pvt-ltd" target="_blank" title="Software Engineer / Sr.Software Engineer Java at Seclore Technology Pvt Ltd. Click to learn more.">Software Engineer / Sr.Software Engineer Java<br><div class="company">Seclore Technology Pvt</div><div class="location" title="Mumbai, India / relocation">Mumbai, India / relocation</div><span class="post-tag highlight">java</span><span class="post-tag">jquery</span></a></li><li><a data-cid="152119" href="http://careers.stackoverflow.com/jobs/65648/application-developer-pune-thoughtworks-technologies" target="_blank" title="Application Developer, Pune at ThoughtWorks Technologies. Click to learn more.">Application Developer, Pune<br><div class="company">ThoughtWorks Technologies</div><div class="location" title="Pune, India">Pune, India</div><span class="post-tag highlight">java</span><span class="post-tag">scala</span></a></li></ul><img class="impression" src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/i.gif" style="display:none;"></div>
+			  
+    
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/28920874?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">0</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/28920874/logging-from-pyspark?lq=1" class="question-hyperlink">Logging from pyspark</a>
+</div>			</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/19851053?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">3
+    </div>
+</a><a href="http://stackoverflow.com/questions/19851053/spark-clusters-worker-info-doesnt-show-on-web-ui?rq=1" class="question-hyperlink">Spark Clusters: worker info doesn't show on web UI</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/23256536?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">8
+    </div>
+</a><a href="http://stackoverflow.com/questions/23256536/importing-pyspark-in-python-shell?rq=1" class="question-hyperlink">importing pyspark in python shell</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/23353477?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">3
+    </div>
+</a><a href="http://stackoverflow.com/questions/23353477/trouble-installing-pyspark?rq=1" class="question-hyperlink">Trouble installing Pyspark</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/24398938?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">2
+    </div>
+</a><a href="http://stackoverflow.com/questions/24398938/cogroup-in-pyspark?rq=1" class="question-hyperlink">cogroup IN PySpark</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/24513440?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">3
+    </div>
+</a><a href="http://stackoverflow.com/questions/24513440/creating-a-large-dictionary-in-pyspark?rq=1" class="question-hyperlink">Creating a large dictionary in pyspark</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/25205264?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">3
+    </div>
+</a><a href="http://stackoverflow.com/questions/25205264/how-do-i-install-pyspark-for-use-in-standalone-scripts?rq=1" class="question-hyperlink">How do I install pyspark for use in standalone scripts?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/26530771?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/26530771/how-to-spark-yarn-cluster?rq=1" class="question-hyperlink">how to : spark yarn cluster</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/27145031?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">1
+    </div>
+</a><a href="http://stackoverflow.com/questions/27145031/how-does-pyspark-broadcast-variables-work?rq=1" class="question-hyperlink">how does pyspark broadcast variables work</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/27644525?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">1
+    </div>
+</a><a href="http://stackoverflow.com/questions/27644525/pyspark-py-files-doesnt-work?rq=1" class="question-hyperlink">Pyspark --py-files doesn't work</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/30787635?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">5
+    </div>
+</a><a href="http://stackoverflow.com/questions/30787635/takeordered-descending-pyspark?rq=1" class="question-hyperlink">takeOrdered descending Pyspark</a>
+</div>
+
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/80443/placement-of-donecheckbox-button" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:102 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Placement of "done"checkbox button
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/47683/what-is-the-rationale-for-not-allowing-auditing-students-to-participate-in-class" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the rationale for not allowing auditing students to participate in class discussions?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/63845/action-surge-confusion" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Action surge confusion
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-buddhism" title="Buddhism Stack Exchange"></div><a href="http://buddhism.stackexchange.com/questions/9728/how-should-i-understand-stored-up-kamma" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:565 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How should i understand "Stored up kamma"?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/47680/phd-course-grade-impact-on-postdoc-and-fellowship-applications" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    PhD course grade impact on postdoc and fellowship applications?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/51984/stretching-words" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Stretching Words
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1335879/infinity-indeterminate-form-that-lhopitals-rule-cannot-help" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Infinity indeterminate form that L'Hopital's Rule cannot help
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/224888/what-do-the-hero-categories-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What do the hero categories mean?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1334369/do-other-trigonometric-functions-other-than-tan-sin-cos-and-their-derivatives" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Do "other" trigonometric functions other than Tan Sin Cos and their derivatives exist?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/94390/parsing-huge-data-coming-from-a-url" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:196 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Parsing huge data coming from a URL
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/254086/alternative-for-manning-a-station" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Alternative for "manning" a station
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-russian" title="Russian Language Stack Exchange"></div><a href="http://russian.stackexchange.com/questions/8967/been-learning-russian-for-10-years-still-cant-understand-my-wife-when-she-talk" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:451 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Been learning russian for 10 years, still can't 
+understand my wife when she talks with her friends, what to do?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/49851/how-reliable-is-the-man-from-seat-61" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How reliable is the man from seat 61?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/80463/what-do-3-horizontal-bars-represent-ux-wise-and-when-did-it-start-doing-so" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:102 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What do 3 horizontal bars represent UX-wise and when did it start doing so?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/700845/is-it-safe-to-boot-a-linux-server-from-a-usb-drive" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it safe to boot a linux server from a USB drive?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/30898566/xcode-6-crashes-on-submitting-archive" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Xcode 6 crashes on submitting Archive
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/176488/why-do-microcontrollers-need-a-clock" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why do Microcontrollers need a Clock
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/16796/math-do-you-enjoy-it-really" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Math - Do you enjoy it, really?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/16790/new-yet-ubiquitous-what-am-i-getting-at" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    New yet ubiquitous ... what am I getting at?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/49152/how-can-this-be-enough-to-fund-a-scholarship-in-perpetuity" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can this be enough to fund a scholarship in perpetuity?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/47646/how-to-deal-with-people-judging-your-overproductiveness" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to deal with people judging your 'overproductiveness'?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/93368/how-did-wolverine-manage-to-approach-phoenix" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How did Wolverine manage to approach Phoenix?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/93341/where-did-the-dwarves-get-their-food-from" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Where did the Dwarves get their food from?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-magento" title="Magento Stack Exchange"></div><a href="http://magento.stackexchange.com/questions/71813/magento-change-product-details-in-packing-slip-printing" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:479 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Magento change product details in packing slip printing
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://stackoverflow.com/feeds/question/25193488" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/25193488/ivc/4f01');});
+</script>
+<noscript>
+    <div><img src="/posts/25193488/ivc/4f01" class="dno" alt="" width="0" height="0"></div>
+</noscript><div style="display:none" id="prettify-lang">lang-py</div></div>
+
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://blog.stackoverflow.com/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackexchange.com/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems.">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="Information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (14)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (10)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (21)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://careers.stackoverflow.com/">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+
+            <div id="copyright">
+                site design / logo © 2015 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2015.6.23.2670
+            </div>
+            
+        </div>
+    </div>
+    <noscript>
+        <div id="noscript-warning">Stack Overflow works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
+    </noscript>
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    ados.run.push(function () { ados_setKeywords('python,apache-spark');; ados_load(); });         
+</script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-1');        
+        
+        ga('set', 'dimension2', '|python|apache-spark|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>            
+    
+<script src="python%20-%20How%20to%20Turn%20off%20INFO%20Logging%20in%20PySpark%20-%20Stack%20Overflow_files/p" type="text/javascript"></script></body></html>

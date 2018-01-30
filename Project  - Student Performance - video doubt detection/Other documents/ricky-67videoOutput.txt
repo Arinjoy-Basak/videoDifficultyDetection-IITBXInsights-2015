@@ -1,0 +1,1437 @@
+Time to play: 976.0
+Number of timeFrameBuckets for this video:244
+(u'video', u'load_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 0.0, datetime.datetime(2015, 2, 8, 11, 50, 46))
+0.0  0.0  0.0  0.0
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 0.0, datetime.datetime(2015, 2, 8, 11, 50, 50))
+0.0  0.0  0.0  0.0
+(u'video', u'show_transcript', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 0.0, datetime.datetime(2015, 2, 8, 11, 50, 52))
+0.0  0.0  0.0  0.0
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 15.2828, datetime.datetime(2015, 2, 8, 11, 51, 6))
+0.0  15.2828  15.2828  15.2828
+(u'video', u'save_user_state', None, 0.0, 15.0, datetime.datetime(2015, 2, 8, 11, 51, 7))
+0.0  15.2828  15.2828  15.2828
+(u'video', u'save_user_state', None, 0.0, 119.0, datetime.datetime(2015, 2, 8, 11, 53, 18))
+0.0  15.2828  15.2828  15.2828
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 131.633, datetime.datetime(2015, 2, 8, 11, 54, 9))
+0.0  131.633  131.633  131.633
+(u'video', u'save_user_state', None, 0.0, 131.0, datetime.datetime(2015, 2, 8, 11, 54, 19))
+0.0  131.633  131.633  131.633
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 131.633, datetime.datetime(2015, 2, 8, 11, 54, 28))
+0.0  131.633  131.633  131.633
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 204.138, datetime.datetime(2015, 2, 8, 11, 55, 46))
+0.0  204.138  204.138  204.138
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 204.138, datetime.datetime(2015, 2, 8, 11, 56, 34))
+0.0  204.138  204.138  204.138
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 249.716, datetime.datetime(2015, 2, 8, 11, 56, 43))
+0.0  249.716  249.716  249.716
+(u'video', u'save_user_state', None, 0.0, 280.0, datetime.datetime(2015, 2, 8, 11, 58, 59))
+0.0  249.716  249.716  249.716
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 280.914, datetime.datetime(2015, 2, 8, 11, 59, 6))
+0.0  280.914  280.914  249.716
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 311.678, datetime.datetime(2015, 2, 8, 11, 59, 37))
+0.0  311.678  311.678  280.48
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 311.678, datetime.datetime(2015, 2, 8, 11, 59, 52))
+0.0  311.678  311.678  280.48
+(u'video', u'seek_video', u'67a8559582864d6a8148e2ef5c997e8f', 423.321, 386.0, datetime.datetime(2015, 2, 8, 12, 1, 50))
+0.0  386.0  311.678  280.48
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 388.288, datetime.datetime(2015, 2, 8, 12, 1, 55))
+0.0  388.288  388.288  280.48
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 423.321, datetime.datetime(2015, 2, 8, 12, 1, 56))
+0.0  423.321  423.321  280.48
+(u'video', u'seek_video', u'67a8559582864d6a8148e2ef5c997e8f', 388.02, 353.0, datetime.datetime(2015, 2, 8, 12, 2, 3))
+0.0  353.0  423.321  280.48
+(u'video', u'seek_video', u'67a8559582864d6a8148e2ef5c997e8f', 680.48, 642.0, datetime.datetime(2015, 2, 8, 12, 7, 35))
+0.0  642.0  423.321  280.48
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 680.748, datetime.datetime(2015, 2, 8, 12, 7, 36))
+0.0  680.748  680.748  280.48
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 732.532, datetime.datetime(2015, 2, 8, 12, 8, 47))
+0.0  732.532  732.532  280.48
+(u'video', u'seek_video', u'67a8559582864d6a8148e2ef5c997e8f', 718.184, 611.0, datetime.datetime(2015, 2, 8, 12, 9, 8))
+0.0  611.0  732.532  280.48
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 618.084, datetime.datetime(2015, 2, 8, 12, 9, 11))
+0.0  618.084  618.084  394.928
+(u'video', u'seek_video', u'67a8559582864d6a8148e2ef5c997e8f', 732.532, 700.0, datetime.datetime(2015, 2, 8, 12, 9, 13))
+0.0  700.0  618.084  394.928
+(u'video', u'seek_video', u'67a8559582864d6a8148e2ef5c997e8f', 678.378, 642.0, datetime.datetime(2015, 2, 8, 12, 11))
+0.0  642.0  618.084  394.928
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 968.702, datetime.datetime(2015, 2, 8, 12, 16, 28))
+0.0  968.702  968.702  394.928
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 252.0, datetime.datetime(2015, 2, 8, 12, 16, 29))
+0.0  252.0  252.0  1111.63
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 254.955, datetime.datetime(2015, 2, 8, 12, 16, 32))
+0.0  254.955  254.955  1111.63
+(u'video', u'save_user_state', None, 0.0, 282.0, datetime.datetime(2015, 2, 8, 12, 16, 34))
+0.0  254.955  254.955  1111.63
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 282.949, datetime.datetime(2015, 2, 8, 12, 17, 39))
+0.0  282.949  282.949  1139.624
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 283.39, datetime.datetime(2015, 2, 8, 12, 17, 40))
+0.0  283.39  283.39  1139.624
+(u'video', u'save_user_state', None, 0.0, 283.0, datetime.datetime(2015, 2, 8, 12, 17, 42))
+0.0  283.39  283.39  1139.624
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 283.557, datetime.datetime(2015, 2, 8, 12, 17, 42))
+0.0  283.557  283.557  1139.791
+(u'video', u'save_user_state', None, 0.0, 282.0, datetime.datetime(2015, 2, 8, 12, 17, 42))
+0.0  283.557  283.557  1139.791
+(u'video', u'save_user_state', None, 0.0, 283.0, datetime.datetime(2015, 2, 8, 12, 17, 42))
+0.0  283.557  283.557  1139.791
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 283.69, datetime.datetime(2015, 2, 8, 12, 17, 43))
+0.0  283.69  283.69  1139.924
+(u'video', u'save_user_state', None, 0.0, 283.0, datetime.datetime(2015, 2, 8, 12, 17, 43))
+0.0  283.69  283.69  1139.924
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 283.62, datetime.datetime(2015, 2, 8, 12, 17, 43))
+0.0  283.62  283.62  1139.924
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 283.32, datetime.datetime(2015, 2, 8, 12, 17, 44))
+0.0  283.32  283.32  1139.924
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 283.39, datetime.datetime(2015, 2, 8, 12, 17, 44))
+0.0  283.39  283.39  1139.994
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 283.761, datetime.datetime(2015, 2, 8, 12, 17, 44))
+0.0  283.761  283.761  1139.994
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 283.761, datetime.datetime(2015, 2, 8, 12, 17, 44))
+0.0  283.761  283.761  1139.994
+(u'video', u'save_user_state', None, 0.0, 283.0, datetime.datetime(2015, 2, 8, 12, 17, 44))
+0.0  283.761  283.761  1139.994
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 283.69, datetime.datetime(2015, 2, 8, 12, 17, 44))
+0.0  283.69  283.69  1140.065
+(u'video', u'save_user_state', None, 0.0, 283.0, datetime.datetime(2015, 2, 8, 12, 17, 44))
+0.0  283.69  283.69  1140.065
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 283.761, datetime.datetime(2015, 2, 8, 12, 17, 44))
+0.0  283.761  283.761  1140.065
+(u'video', u'save_user_state', None, 0.0, 283.0, datetime.datetime(2015, 2, 8, 12, 17, 45))
+0.0  283.761  283.761  1140.065
+(u'video', u'save_user_state', None, 0.0, 284.0, datetime.datetime(2015, 2, 8, 12, 17, 45))
+0.0  283.761  283.761  1140.065
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.101, datetime.datetime(2015, 2, 8, 12, 17, 45))
+0.0  284.101  284.101  1140.065
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.028, datetime.datetime(2015, 2, 8, 12, 17, 45))
+0.0  284.028  284.028  1140.138
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.101, datetime.datetime(2015, 2, 8, 12, 17, 45))
+0.0  284.101  284.101  1140.211
+(u'video', u'save_user_state', None, 0.0, 284.0, datetime.datetime(2015, 2, 8, 12, 17, 46))
+0.0  284.101  284.101  1140.211
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.184, datetime.datetime(2015, 2, 8, 12, 17, 46))
+0.0  284.184  284.184  1140.294
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.184, datetime.datetime(2015, 2, 8, 12, 17, 46))
+0.0  284.184  284.184  1140.294
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.229, datetime.datetime(2015, 2, 8, 12, 17, 46))
+0.0  284.229  284.229  1140.294
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.285, datetime.datetime(2015, 2, 8, 12, 17, 46))
+0.0  284.285  284.285  1140.35
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.028, datetime.datetime(2015, 2, 8, 12, 17, 47))
+0.0  284.028  284.028  1140.35
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.351, datetime.datetime(2015, 2, 8, 12, 17, 47))
+0.0  284.351  284.351  1140.673
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.437, datetime.datetime(2015, 2, 8, 12, 17, 47))
+0.0  284.437  284.437  1140.759
+(u'video', u'save_user_state', None, 0.0, 284.0, datetime.datetime(2015, 2, 8, 12, 17, 47))
+0.0  284.437  284.437  1140.759
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.351, datetime.datetime(2015, 2, 8, 12, 17, 47))
+0.0  284.351  284.351  1140.845
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.529, datetime.datetime(2015, 2, 8, 12, 17, 48))
+0.0  284.529  284.529  1141.023
+(u'video', u'save_user_state', None, 0.0, 284.0, datetime.datetime(2015, 2, 8, 12, 17, 48))
+0.0  284.529  284.529  1141.023
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.611, datetime.datetime(2015, 2, 8, 12, 17, 48))
+0.0  284.611  284.611  1141.023
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.529, datetime.datetime(2015, 2, 8, 12, 17, 48))
+0.0  284.529  284.529  1141.105
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.611, datetime.datetime(2015, 2, 8, 12, 17, 48))
+0.0  284.611  284.611  1141.187
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.723, datetime.datetime(2015, 2, 8, 12, 17, 49))
+0.0  284.723  284.723  1141.187
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.823, datetime.datetime(2015, 2, 8, 12, 17, 49))
+0.0  284.823  284.823  1141.187
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.897, datetime.datetime(2015, 2, 8, 12, 17, 49))
+0.0  284.897  284.897  1141.261
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.723, datetime.datetime(2015, 2, 8, 12, 17, 49))
+0.0  284.723  284.723  1141.261
+(u'video', u'save_user_state', None, 0.0, 284.0, datetime.datetime(2015, 2, 8, 12, 17, 49))
+0.0  284.723  284.723  1141.261
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.965, datetime.datetime(2015, 2, 8, 12, 17, 50))
+0.0  284.965  284.965  1141.503
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.965, datetime.datetime(2015, 2, 8, 12, 17, 50))
+0.0  284.965  284.965  1141.503
+(u'video', u'save_user_state', None, 0.0, 285.0, datetime.datetime(2015, 2, 8, 12, 17, 50))
+0.0  284.965  284.965  1141.503
+(u'video', u'save_user_state', None, 0.0, 284.0, datetime.datetime(2015, 2, 8, 12, 17, 50))
+0.0  284.965  284.965  1141.503
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 284.897, datetime.datetime(2015, 2, 8, 12, 17, 50))
+0.0  284.897  284.897  1141.571
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.04, datetime.datetime(2015, 2, 8, 12, 17, 51))
+0.0  285.04  285.04  1141.571
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.117, datetime.datetime(2015, 2, 8, 12, 17, 51))
+0.0  285.117  285.117  1141.648
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.186, datetime.datetime(2015, 2, 8, 12, 17, 52))
+0.0  285.186  285.186  1141.717
+(u'video', u'save_user_state', None, 0.0, 285.0, datetime.datetime(2015, 2, 8, 12, 17, 52))
+0.0  285.186  285.186  1141.717
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.186, datetime.datetime(2015, 2, 8, 12, 17, 52))
+0.0  285.186  285.186  1141.717
+(u'video', u'save_user_state', None, 0.0, 285.0, datetime.datetime(2015, 2, 8, 12, 17, 53))
+0.0  285.186  285.186  1141.717
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.277, datetime.datetime(2015, 2, 8, 12, 17, 53))
+0.0  285.277  285.277  1141.717
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.352, datetime.datetime(2015, 2, 8, 12, 17, 53))
+0.0  285.352  285.352  1141.792
+(u'video', u'save_user_state', None, 0.0, 285.0, datetime.datetime(2015, 2, 8, 12, 17, 54))
+0.0  285.352  285.352  1141.792
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.49, datetime.datetime(2015, 2, 8, 12, 17, 54))
+0.0  285.49  285.49  1141.93
+(u'video', u'save_user_state', None, 0.0, 285.0, datetime.datetime(2015, 2, 8, 12, 17, 55))
+0.0  285.49  285.49  1141.93
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.588, datetime.datetime(2015, 2, 8, 12, 17, 55))
+0.0  285.588  285.588  1141.93
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.695, datetime.datetime(2015, 2, 8, 12, 17, 55))
+0.0  285.695  285.695  1142.037
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.277, datetime.datetime(2015, 2, 8, 12, 17, 55))
+0.0  285.277  285.277  1142.037
+(u'video', u'save_user_state', None, 0.0, 285.0, datetime.datetime(2015, 2, 8, 12, 17, 56))
+0.0  285.277  285.277  1142.037
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.762, datetime.datetime(2015, 2, 8, 12, 17, 56))
+0.0  285.762  285.762  1142.037
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.695, datetime.datetime(2015, 2, 8, 12, 17, 56))
+0.0  285.695  285.695  1142.104
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.352, datetime.datetime(2015, 2, 8, 12, 17, 56))
+0.0  285.352  285.352  1142.447
+(u'video', u'save_user_state', None, 0.0, 285.0, datetime.datetime(2015, 2, 8, 12, 17, 57))
+0.0  285.352  285.352  1142.447
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.862, datetime.datetime(2015, 2, 8, 12, 17, 57))
+0.0  285.862  285.862  1142.447
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.979, datetime.datetime(2015, 2, 8, 12, 17, 57))
+0.0  285.979  285.979  1142.564
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.932, datetime.datetime(2015, 2, 8, 12, 17, 57))
+0.0  285.932  285.932  1142.564
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.932, datetime.datetime(2015, 2, 8, 12, 17, 57))
+0.0  285.932  285.932  1142.564
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.979, datetime.datetime(2015, 2, 8, 12, 17, 58))
+0.0  285.979  285.979  1142.564
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 285.979, datetime.datetime(2015, 2, 8, 12, 17, 58))
+0.0  285.979  285.979  1142.564
+(u'video', u'save_user_state', None, 0.0, 285.0, datetime.datetime(2015, 2, 8, 12, 17, 58))
+0.0  285.979  285.979  1142.564
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 286.221, datetime.datetime(2015, 2, 8, 12, 17, 59))
+0.0  286.221  286.221  1142.564
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 286.221, datetime.datetime(2015, 2, 8, 12, 17, 59))
+0.0  286.221  286.221  1142.564
+(u'video', u'save_user_state', None, 0.0, 286.0, datetime.datetime(2015, 2, 8, 12, 17, 59))
+0.0  286.221  286.221  1142.564
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 286.298, datetime.datetime(2015, 2, 8, 12, 17, 59))
+0.0  286.298  286.298  1142.564
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 286.457, datetime.datetime(2015, 2, 8, 12, 17, 59))
+0.0  286.457  286.457  1142.723
+(u'video', u'save_user_state', None, 0.0, 286.0, datetime.datetime(2015, 2, 8, 12, 18))
+0.0  286.457  286.457  1142.723
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 286.457, datetime.datetime(2015, 2, 8, 12, 18))
+0.0  286.457  286.457  1142.723
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 286.457, datetime.datetime(2015, 2, 8, 12, 18))
+0.0  286.457  286.457  1142.723
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 286.767, datetime.datetime(2015, 2, 8, 12, 18))
+0.0  286.767  286.767  1143.033
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 286.124, datetime.datetime(2015, 2, 8, 12, 18, 1))
+0.0  286.124  286.124  1143.033
+(u'video', u'save_user_state', None, 0.0, 287.0, datetime.datetime(2015, 2, 8, 12, 18, 1))
+0.0  286.124  286.124  1143.033
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.02, datetime.datetime(2015, 2, 8, 12, 18, 1))
+0.0  287.02  287.02  1143.929
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 286.887, datetime.datetime(2015, 2, 8, 12, 18, 1))
+0.0  286.887  286.887  1143.929
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.02, datetime.datetime(2015, 2, 8, 12, 18, 2))
+0.0  287.02  287.02  1143.929
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.254, datetime.datetime(2015, 2, 8, 12, 18, 2))
+0.0  287.254  287.254  1144.163
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.02, datetime.datetime(2015, 2, 8, 12, 18, 2))
+0.0  287.02  287.02  1144.163
+(u'video', u'save_user_state', None, 0.0, 287.0, datetime.datetime(2015, 2, 8, 12, 18, 2))
+0.0  287.02  287.02  1144.163
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.254, datetime.datetime(2015, 2, 8, 12, 18, 3))
+0.0  287.254  287.254  1144.163
+(u'video', u'save_user_state', None, 0.0, 287.0, datetime.datetime(2015, 2, 8, 12, 18, 3))
+0.0  287.254  287.254  1144.163
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 286.887, datetime.datetime(2015, 2, 8, 12, 18, 3))
+0.0  286.887  286.887  1144.53
+(u'video', u'save_user_state', None, 0.0, 287.0, datetime.datetime(2015, 2, 8, 12, 18, 3))
+0.0  286.887  286.887  1144.53
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.46, datetime.datetime(2015, 2, 8, 12, 18, 4))
+0.0  287.46  287.46  1145.103
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.46, datetime.datetime(2015, 2, 8, 12, 18, 4))
+0.0  287.46  287.46  1145.103
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.565, datetime.datetime(2015, 2, 8, 12, 18, 4))
+0.0  287.565  287.565  1145.208
+(u'video', u'save_user_state', None, 0.0, 287.0, datetime.datetime(2015, 2, 8, 12, 18, 4))
+0.0  287.565  287.565  1145.208
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.565, datetime.datetime(2015, 2, 8, 12, 18, 4))
+0.0  287.565  287.565  1145.208
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.628, datetime.datetime(2015, 2, 8, 12, 18, 4))
+0.0  287.628  287.628  1145.271
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.254, datetime.datetime(2015, 2, 8, 12, 18, 5))
+0.0  287.254  287.254  1145.271
+(u'video', u'save_user_state', None, 0.0, 287.0, datetime.datetime(2015, 2, 8, 12, 18, 5))
+0.0  287.254  287.254  1145.271
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.628, datetime.datetime(2015, 2, 8, 12, 18, 5))
+0.0  287.628  287.628  1145.271
+(u'video', u'save_user_state', None, 0.0, 287.0, datetime.datetime(2015, 2, 8, 12, 18, 5))
+0.0  287.628  287.628  1145.271
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.825, datetime.datetime(2015, 2, 8, 12, 18, 5))
+0.0  287.825  287.825  1145.468
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.89, datetime.datetime(2015, 2, 8, 12, 18, 6))
+0.0  287.89  287.89  1145.468
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.825, datetime.datetime(2015, 2, 8, 12, 18, 6))
+0.0  287.825  287.825  1145.533
+(u'video', u'save_user_state', None, 0.0, 287.0, datetime.datetime(2015, 2, 8, 12, 18, 6))
+0.0  287.825  287.825  1145.533
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.96, datetime.datetime(2015, 2, 8, 12, 18, 7))
+0.0  287.96  287.96  1145.533
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.96, datetime.datetime(2015, 2, 8, 12, 18, 7))
+0.0  287.96  287.96  1145.533
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 287.756, datetime.datetime(2015, 2, 8, 12, 18, 7))
+0.0  287.756  287.756  1145.533
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.034, datetime.datetime(2015, 2, 8, 12, 18, 7))
+0.0  288.034  288.034  1145.811
+(u'video', u'save_user_state', None, 0.0, 288.0, datetime.datetime(2015, 2, 8, 12, 18, 7))
+0.0  288.034  288.034  1145.811
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.122, datetime.datetime(2015, 2, 8, 12, 18, 8))
+0.0  288.122  288.122  1145.899
+(u'video', u'save_user_state', None, 0.0, 288.0, datetime.datetime(2015, 2, 8, 12, 18, 8))
+0.0  288.122  288.122  1145.899
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.122, datetime.datetime(2015, 2, 8, 12, 18, 8))
+0.0  288.122  288.122  1145.899
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.26, datetime.datetime(2015, 2, 8, 12, 18, 9))
+0.0  288.26  288.26  1146.037
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.26, datetime.datetime(2015, 2, 8, 12, 18, 9))
+0.0  288.26  288.26  1146.037
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.355, datetime.datetime(2015, 2, 8, 12, 18, 10))
+0.0  288.355  288.355  1146.037
+(u'video', u'save_user_state', None, 0.0, 287.0, datetime.datetime(2015, 2, 8, 12, 18, 10))
+0.0  288.355  288.355  1146.037
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.393, datetime.datetime(2015, 2, 8, 12, 18, 10))
+0.0  288.393  288.393  1146.075
+(u'video', u'save_user_state', None, 0.0, 288.0, datetime.datetime(2015, 2, 8, 12, 18, 10))
+0.0  288.393  288.393  1146.075
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.393, datetime.datetime(2015, 2, 8, 12, 18, 11))
+0.0  288.393  288.393  1146.075
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.355, datetime.datetime(2015, 2, 8, 12, 18, 11))
+0.0  288.355  288.355  1146.075
+(u'video', u'save_user_state', None, 0.0, 288.0, datetime.datetime(2015, 2, 8, 12, 18, 11))
+0.0  288.355  288.355  1146.075
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.555, datetime.datetime(2015, 2, 8, 12, 18, 11))
+0.0  288.555  288.555  1146.275
+(u'video', u'save_user_state', None, 0.0, 288.0, datetime.datetime(2015, 2, 8, 12, 18, 12))
+0.0  288.555  288.555  1146.275
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.625, datetime.datetime(2015, 2, 8, 12, 18, 12))
+0.0  288.625  288.625  1146.345
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.555, datetime.datetime(2015, 2, 8, 12, 18, 12))
+0.0  288.555  288.555  1146.415
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.625, datetime.datetime(2015, 2, 8, 12, 18, 12))
+0.0  288.625  288.625  1146.415
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.676, datetime.datetime(2015, 2, 8, 12, 18, 12))
+0.0  288.676  288.676  1146.466
+(u'video', u'save_user_state', None, 0.0, 288.0, datetime.datetime(2015, 2, 8, 12, 18, 13))
+0.0  288.676  288.676  1146.466
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.77, datetime.datetime(2015, 2, 8, 12, 18, 13))
+0.0  288.77  288.77  1146.56
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.676, datetime.datetime(2015, 2, 8, 12, 18, 13))
+0.0  288.676  288.676  1146.654
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.77, datetime.datetime(2015, 2, 8, 12, 18, 13))
+0.0  288.77  288.77  1146.654
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.842, datetime.datetime(2015, 2, 8, 12, 18, 13))
+0.0  288.842  288.842  1146.654
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.924, datetime.datetime(2015, 2, 8, 12, 18, 14))
+0.0  288.924  288.924  1146.736
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 288.924, datetime.datetime(2015, 2, 8, 12, 18, 14))
+0.0  288.924  288.924  1146.736
+(u'video', u'save_user_state', None, 0.0, 288.0, datetime.datetime(2015, 2, 8, 12, 18, 14))
+0.0  288.924  288.924  1146.736
+(u'video', u'save_user_state', None, 0.0, 289.0, datetime.datetime(2015, 2, 8, 12, 18, 14))
+0.0  288.924  288.924  1146.736
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 289.09, datetime.datetime(2015, 2, 8, 12, 18, 15))
+0.0  289.09  289.09  1146.736
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 289.184, datetime.datetime(2015, 2, 8, 12, 18, 15))
+0.0  289.184  289.184  1146.83
+(u'video', u'save_user_state', None, 0.0, 289.0, datetime.datetime(2015, 2, 8, 12, 18, 15))
+0.0  289.184  289.184  1146.83
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 289.33, datetime.datetime(2015, 2, 8, 12, 18, 15))
+0.0  289.33  289.33  1146.83
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 289.54, datetime.datetime(2015, 2, 8, 12, 18, 15))
+0.0  289.54  289.54  1147.04
+(u'video', u'save_user_state', None, 0.0, 289.0, datetime.datetime(2015, 2, 8, 12, 18, 15))
+0.0  289.54  289.54  1147.04
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 289.33, datetime.datetime(2015, 2, 8, 12, 18, 15))
+0.0  289.33  289.33  1147.04
+(u'video', u'save_user_state', None, 0.0, 289.0, datetime.datetime(2015, 2, 8, 12, 18, 15))
+0.0  289.33  289.33  1147.04
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 289.49, datetime.datetime(2015, 2, 8, 12, 18, 15))
+0.0  289.49  289.49  1147.04
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 289.66, datetime.datetime(2015, 2, 8, 12, 18, 16))
+0.0  289.66  289.66  1147.04
+(u'video', u'save_user_state', None, 0.0, 289.0, datetime.datetime(2015, 2, 8, 12, 18, 16))
+0.0  289.66  289.66  1147.04
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 289.59, datetime.datetime(2015, 2, 8, 12, 18, 16))
+0.0  289.59  289.59  1147.11
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 289.66, datetime.datetime(2015, 2, 8, 12, 18, 16))
+0.0  289.66  289.66  1147.18
+(u'video', u'save_user_state', None, 0.0, 289.0, datetime.datetime(2015, 2, 8, 12, 18, 16))
+0.0  289.66  289.66  1147.18
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 289.689, datetime.datetime(2015, 2, 8, 12, 18, 16))
+0.0  289.689  289.689  1147.209
+(u'video', u'save_user_state', None, 0.0, 289.0, datetime.datetime(2015, 2, 8, 12, 18, 16))
+0.0  289.689  289.689  1147.209
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 289.814, datetime.datetime(2015, 2, 8, 12, 18, 16))
+0.0  289.814  289.814  1147.334
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 289.878, datetime.datetime(2015, 2, 8, 12, 18, 16))
+0.0  289.878  289.878  1147.334
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.01, datetime.datetime(2015, 2, 8, 12, 18, 17))
+0.0  290.01  290.01  1147.466
+(u'video', u'save_user_state', None, 0.0, 290.0, datetime.datetime(2015, 2, 8, 12, 18, 17))
+0.0  290.01  290.01  1147.466
+(u'video', u'save_user_state', None, 0.0, 289.0, datetime.datetime(2015, 2, 8, 12, 18, 17))
+0.0  290.01  290.01  1147.466
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 289.96, datetime.datetime(2015, 2, 8, 12, 18, 17))
+0.0  289.96  289.96  1147.516
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.072, datetime.datetime(2015, 2, 8, 12, 18, 17))
+0.0  290.072  290.072  1147.628
+(u'video', u'save_user_state', None, 0.0, 290.0, datetime.datetime(2015, 2, 8, 12, 18, 17))
+0.0  290.072  290.072  1147.628
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.24, datetime.datetime(2015, 2, 8, 12, 18, 18))
+0.0  290.24  290.24  1147.796
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.24, datetime.datetime(2015, 2, 8, 12, 18, 18))
+0.0  290.24  290.24  1147.796
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.142, datetime.datetime(2015, 2, 8, 12, 18, 18))
+0.0  290.142  290.142  1147.796
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.24, datetime.datetime(2015, 2, 8, 12, 18, 18))
+0.0  290.24  290.24  1147.796
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.373, datetime.datetime(2015, 2, 8, 12, 18, 18))
+0.0  290.373  290.373  1147.796
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.44, datetime.datetime(2015, 2, 8, 12, 18, 19))
+0.0  290.44  290.44  1147.863
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.625, datetime.datetime(2015, 2, 8, 12, 18, 19))
+0.0  290.625  290.625  1148.048
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.44, datetime.datetime(2015, 2, 8, 12, 18, 19))
+0.0  290.44  290.44  1148.233
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.54, datetime.datetime(2015, 2, 8, 12, 18, 19))
+0.0  290.54  290.54  1148.333
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.54, datetime.datetime(2015, 2, 8, 12, 18, 19))
+0.0  290.54  290.54  1148.333
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.69, datetime.datetime(2015, 2, 8, 12, 18, 19))
+0.0  290.69  290.69  1148.483
+(u'video', u'save_user_state', None, 0.0, 290.0, datetime.datetime(2015, 2, 8, 12, 18, 20))
+0.0  290.69  290.69  1148.483
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.142, datetime.datetime(2015, 2, 8, 12, 18, 20))
+0.0  290.142  290.142  1149.031
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.803, datetime.datetime(2015, 2, 8, 12, 18, 20))
+0.0  290.803  290.803  1149.031
+(u'video', u'save_user_state', None, 0.0, 290.0, datetime.datetime(2015, 2, 8, 12, 18, 20))
+0.0  290.803  290.803  1149.031
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.69, datetime.datetime(2015, 2, 8, 12, 18, 20))
+0.0  290.69  290.69  1149.031
+(u'video', u'save_user_state', None, 0.0, 290.0, datetime.datetime(2015, 2, 8, 12, 18, 20))
+0.0  290.69  290.69  1149.031
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.803, datetime.datetime(2015, 2, 8, 12, 18, 20))
+0.0  290.803  290.803  1149.031
+(u'video', u'save_user_state', None, 0.0, 290.0, datetime.datetime(2015, 2, 8, 12, 18, 20))
+0.0  290.803  290.803  1149.031
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 291.077, datetime.datetime(2015, 2, 8, 12, 18, 21))
+0.0  291.077  291.077  1149.305
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 291.077, datetime.datetime(2015, 2, 8, 12, 18, 21))
+0.0  291.077  291.077  1149.305
+(u'video', u'save_user_state', None, 0.0, 291.0, datetime.datetime(2015, 2, 8, 12, 18, 21))
+0.0  291.077  291.077  1149.305
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 291.228, datetime.datetime(2015, 2, 8, 12, 18, 21))
+0.0  291.228  291.228  1149.305
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.925, datetime.datetime(2015, 2, 8, 12, 18, 21))
+0.0  290.925  290.925  1149.608
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.984, datetime.datetime(2015, 2, 8, 12, 18, 21))
+0.0  290.984  290.984  1149.667
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 290.984, datetime.datetime(2015, 2, 8, 12, 18, 21))
+0.0  290.984  290.984  1149.667
+(u'video', u'save_user_state', None, 0.0, 291.0, datetime.datetime(2015, 2, 8, 12, 18, 21))
+0.0  290.984  290.984  1149.667
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 291.228, datetime.datetime(2015, 2, 8, 12, 18, 21))
+0.0  291.228  291.228  1149.911
+(u'video', u'save_user_state', None, 0.0, 291.0, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.228  291.228  1149.911
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 291.366, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.366  291.366  1149.911
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 291.562, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.562  291.562  1149.911
+(u'video', u'save_user_state', None, 0.0, 291.0, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.562  291.562  1149.911
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 291.76, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.76  291.76  1150.109
+(u'video', u'save_user_state', None, 0.0, 291.0, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.76  291.76  1150.109
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 291.925, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.925  291.925  1150.109
+(u'video', u'save_user_state', None, 0.0, 291.0, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.925  291.925  1150.109
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 291.366, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.366  291.366  1150.109
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 291.16, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.16  291.16  1150.109
+(u'video', u'save_user_state', None, 0.0, 291.0, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.16  291.16  1150.109
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 291.562, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.562  291.562  1150.511
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 291.634, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.634  291.634  1150.511
+(u'video', u'save_user_state', None, 0.0, 291.0, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.634  291.634  1150.511
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 291.692, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.692  291.692  1150.511
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 291.843, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.843  291.843  1150.662
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 291.925, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.925  291.925  1150.744
+(u'video', u'save_user_state', None, 0.0, 291.0, datetime.datetime(2015, 2, 8, 12, 18, 22))
+0.0  291.925  291.925  1150.744
+(u'video', u'save_user_state', None, 0.0, 292.0, datetime.datetime(2015, 2, 8, 12, 18, 23))
+0.0  291.925  291.925  1150.744
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 292.131, datetime.datetime(2015, 2, 8, 12, 18, 23))
+0.0  292.131  292.131  1150.95
+(u'video', u'save_user_state', None, 0.0, 292.0, datetime.datetime(2015, 2, 8, 12, 18, 23))
+0.0  292.131  292.131  1150.95
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 292.26, datetime.datetime(2015, 2, 8, 12, 18, 23))
+0.0  292.26  292.26  1150.95
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 292.492, datetime.datetime(2015, 2, 8, 12, 18, 23))
+0.0  292.492  292.492  1150.95
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 291.993, datetime.datetime(2015, 2, 8, 12, 18, 23))
+0.0  291.993  291.993  1151.449
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 292.059, datetime.datetime(2015, 2, 8, 12, 18, 23))
+0.0  292.059  292.059  1151.449
+(u'video', u'save_user_state', None, 0.0, 292.0, datetime.datetime(2015, 2, 8, 12, 18, 23))
+0.0  292.059  292.059  1151.449
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 292.192, datetime.datetime(2015, 2, 8, 12, 18, 23))
+0.0  292.192  292.192  1151.582
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 292.26, datetime.datetime(2015, 2, 8, 12, 18, 23))
+0.0  292.26  292.26  1151.65
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 292.345, datetime.datetime(2015, 2, 8, 12, 18, 23))
+0.0  292.345  292.345  1151.735
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 292.345, datetime.datetime(2015, 2, 8, 12, 18, 23))
+0.0  292.345  292.345  1151.735
+(u'video', u'save_user_state', None, 0.0, 292.0, datetime.datetime(2015, 2, 8, 12, 18, 23))
+0.0  292.345  292.345  1151.735
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 292.64, datetime.datetime(2015, 2, 8, 12, 18, 23))
+0.0  292.64  292.64  1152.03
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 293.237, datetime.datetime(2015, 2, 8, 12, 18, 24))
+0.0  293.237  293.237  1152.627
+(u'video', u'save_user_state', None, 0.0, 293.0, datetime.datetime(2015, 2, 8, 12, 18, 24))
+0.0  293.237  293.237  1152.627
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 293.581, datetime.datetime(2015, 2, 8, 12, 18, 24))
+0.0  293.581  293.581  1152.971
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 293.581, datetime.datetime(2015, 2, 8, 12, 18, 24))
+0.0  293.581  293.581  1152.971
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 293.698, datetime.datetime(2015, 2, 8, 12, 18, 24))
+0.0  293.698  293.698  1152.971
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 293.785, datetime.datetime(2015, 2, 8, 12, 18, 24))
+0.0  293.785  293.785  1153.058
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 293.785, datetime.datetime(2015, 2, 8, 12, 18, 24))
+0.0  293.785  293.785  1153.058
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 292.764, datetime.datetime(2015, 2, 8, 12, 18, 24))
+0.0  292.764  292.764  1154.079
+(u'video', u'save_user_state', None, 0.0, 293.0, datetime.datetime(2015, 2, 8, 12, 18, 24))
+0.0  292.764  292.764  1154.079
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 293.237, datetime.datetime(2015, 2, 8, 12, 18, 24))
+0.0  293.237  293.237  1154.079
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 292.492, datetime.datetime(2015, 2, 8, 12, 18, 24))
+0.0  292.492  292.492  1154.079
+(u'video', u'save_user_state', None, 0.0, 293.0, datetime.datetime(2015, 2, 8, 12, 18, 24))
+0.0  292.492  292.492  1154.079
+(u'video', u'save_user_state', None, 0.0, 292.0, datetime.datetime(2015, 2, 8, 12, 18, 24))
+0.0  292.492  292.492  1154.079
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 292.94, datetime.datetime(2015, 2, 8, 12, 18, 24))
+0.0  292.94  292.94  1154.527
+(u'video', u'save_user_state', None, 0.0, 292.0, datetime.datetime(2015, 2, 8, 12, 18, 24))
+0.0  292.94  292.94  1154.527
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 293.101, datetime.datetime(2015, 2, 8, 12, 18, 24))
+0.0  293.101  293.101  1154.527
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 293.867, datetime.datetime(2015, 2, 8, 12, 18, 25))
+0.0  293.867  293.867  1154.527
+(u'video', u'save_user_state', None, 0.0, 293.0, datetime.datetime(2015, 2, 8, 12, 18, 25))
+0.0  293.867  293.867  1154.527
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 293.933, datetime.datetime(2015, 2, 8, 12, 18, 25))
+0.0  293.933  293.933  1154.527
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 294.12, datetime.datetime(2015, 2, 8, 12, 18, 25))
+0.0  294.12  294.12  1154.714
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 294.194, datetime.datetime(2015, 2, 8, 12, 18, 25))
+0.0  294.194  294.194  1154.788
+(u'video', u'save_user_state', None, 0.0, 294.0, datetime.datetime(2015, 2, 8, 12, 18, 25))
+0.0  294.194  294.194  1154.788
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 293.933, datetime.datetime(2015, 2, 8, 12, 18, 25))
+0.0  293.933  293.933  1154.788
+(u'video', u'save_user_state', None, 0.0, 294.0, datetime.datetime(2015, 2, 8, 12, 18, 25))
+0.0  293.933  293.933  1154.788
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 294.306, datetime.datetime(2015, 2, 8, 12, 18, 25))
+0.0  294.306  294.306  1155.161
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 294.306, datetime.datetime(2015, 2, 8, 12, 18, 26))
+0.0  294.306  294.306  1155.161
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 294.376, datetime.datetime(2015, 2, 8, 12, 18, 26))
+0.0  294.376  294.376  1155.161
+(u'video', u'save_user_state', None, 0.0, 294.0, datetime.datetime(2015, 2, 8, 12, 18, 26))
+0.0  294.376  294.376  1155.161
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 294.594, datetime.datetime(2015, 2, 8, 12, 18, 26))
+0.0  294.594  294.594  1155.379
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 294.376, datetime.datetime(2015, 2, 8, 12, 18, 26))
+0.0  294.376  294.376  1155.379
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 294.461, datetime.datetime(2015, 2, 8, 12, 18, 26))
+0.0  294.461  294.461  1155.379
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 294.523, datetime.datetime(2015, 2, 8, 12, 18, 26))
+0.0  294.523  294.523  1155.379
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 294.666, datetime.datetime(2015, 2, 8, 12, 18, 27))
+0.0  294.666  294.666  1155.522
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 294.729, datetime.datetime(2015, 2, 8, 12, 18, 27))
+0.0  294.729  294.729  1155.585
+(u'video', u'save_user_state', None, 0.0, 294.0, datetime.datetime(2015, 2, 8, 12, 18, 27))
+0.0  294.729  294.729  1155.585
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 294.729, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  294.729  294.729  1155.585
+(u'video', u'save_user_state', None, 0.0, 294.0, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  294.729  294.729  1155.585
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 294.902, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  294.902  294.902  1155.585
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 294.971, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  294.971  294.971  1155.585
+(u'video', u'save_user_state', None, 0.0, 295.0, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  294.971  294.971  1155.585
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 295.118, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  295.118  295.118  1155.732
+(u'video', u'save_user_state', None, 0.0, 295.0, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  295.118  295.118  1155.732
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 295.196, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  295.196  295.196  1155.732
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 295.262, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  295.262  295.262  1155.798
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 295.334, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  295.334  295.334  1155.87
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 295.334, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  295.334  295.334  1155.87
+(u'video', u'save_user_state', None, 0.0, 295.0, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  295.334  295.334  1155.87
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 294.902, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  294.902  294.902  1155.87
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 295.047, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  295.047  295.047  1156.015
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 295.118, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  295.118  295.118  1156.015
+(u'video', u'save_user_state', None, 0.0, 294.0, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  295.118  295.118  1156.015
+(u'video', u'save_user_state', None, 0.0, 295.0, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  295.118  295.118  1156.015
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 295.408, datetime.datetime(2015, 2, 8, 12, 18, 28))
+0.0  295.408  295.408  1156.015
+(u'video', u'save_user_state', None, 0.0, 295.0, datetime.datetime(2015, 2, 8, 12, 18, 29))
+0.0  295.408  295.408  1156.015
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 295.576, datetime.datetime(2015, 2, 8, 12, 18, 29))
+0.0  295.576  295.576  1156.183
+(u'video', u'save_user_state', None, 0.0, 295.0, datetime.datetime(2015, 2, 8, 12, 18, 29))
+0.0  295.576  295.576  1156.183
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 295.729, datetime.datetime(2015, 2, 8, 12, 18, 29))
+0.0  295.729  295.729  1156.183
+(u'video', u'save_user_state', None, 0.0, 295.0, datetime.datetime(2015, 2, 8, 12, 18, 29))
+0.0  295.729  295.729  1156.183
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 295.941, datetime.datetime(2015, 2, 8, 12, 18, 29))
+0.0  295.941  295.941  1156.395
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 295.479, datetime.datetime(2015, 2, 8, 12, 18, 29))
+0.0  295.479  295.479  1156.857
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 295.649, datetime.datetime(2015, 2, 8, 12, 18, 29))
+0.0  295.649  295.649  1157.027
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 295.797, datetime.datetime(2015, 2, 8, 12, 18, 29))
+0.0  295.797  295.797  1157.027
+(u'video', u'save_user_state', None, 0.0, 295.0, datetime.datetime(2015, 2, 8, 12, 18, 29))
+0.0  295.797  295.797  1157.027
+(u'video', u'save_user_state', None, 0.0, 296.0, datetime.datetime(2015, 2, 8, 12, 18, 30))
+0.0  295.797  295.797  1157.027
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 296.011, datetime.datetime(2015, 2, 8, 12, 18, 30))
+0.0  296.011  296.011  1157.027
+(u'video', u'save_user_state', None, 0.0, 295.0, datetime.datetime(2015, 2, 8, 12, 18, 30))
+0.0  296.011  296.011  1157.027
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 296.133, datetime.datetime(2015, 2, 8, 12, 18, 30))
+0.0  296.133  296.133  1157.149
+(u'video', u'save_user_state', None, 0.0, 296.0, datetime.datetime(2015, 2, 8, 12, 18, 30))
+0.0  296.133  296.133  1157.149
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 295.729, datetime.datetime(2015, 2, 8, 12, 18, 30))
+0.0  295.729  295.729  1157.149
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 296.232, datetime.datetime(2015, 2, 8, 12, 18, 30))
+0.0  296.232  296.232  1157.149
+(u'video', u'save_user_state', None, 0.0, 296.0, datetime.datetime(2015, 2, 8, 12, 18, 30))
+0.0  296.232  296.232  1157.149
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 296.279, datetime.datetime(2015, 2, 8, 12, 18, 31))
+0.0  296.279  296.279  1157.149
+(u'video', u'save_user_state', None, 0.0, 296.0, datetime.datetime(2015, 2, 8, 12, 18, 31))
+0.0  296.279  296.279  1157.149
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 296.432, datetime.datetime(2015, 2, 8, 12, 18, 31))
+0.0  296.432  296.432  1157.149
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 296.504, datetime.datetime(2015, 2, 8, 12, 18, 31))
+0.0  296.504  296.504  1157.149
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 296.573, datetime.datetime(2015, 2, 8, 12, 18, 31))
+0.0  296.573  296.573  1157.149
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 296.504, datetime.datetime(2015, 2, 8, 12, 18, 31))
+0.0  296.504  296.504  1157.149
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 296.648, datetime.datetime(2015, 2, 8, 12, 18, 31))
+0.0  296.648  296.648  1157.293
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 296.648, datetime.datetime(2015, 2, 8, 12, 18, 32))
+0.0  296.648  296.648  1157.293
+(u'video', u'save_user_state', None, 0.0, 296.0, datetime.datetime(2015, 2, 8, 12, 18, 32))
+0.0  296.648  296.648  1157.293
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 296.767, datetime.datetime(2015, 2, 8, 12, 18, 32))
+0.0  296.767  296.767  1157.412
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 296.432, datetime.datetime(2015, 2, 8, 12, 18, 32))
+0.0  296.432  296.432  1157.412
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 296.849, datetime.datetime(2015, 2, 8, 12, 18, 32))
+0.0  296.849  296.849  1157.412
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 296.931, datetime.datetime(2015, 2, 8, 12, 18, 32))
+0.0  296.931  296.931  1157.412
+(u'video', u'save_user_state', None, 0.0, 296.0, datetime.datetime(2015, 2, 8, 12, 18, 32))
+0.0  296.931  296.931  1157.412
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 296.999, datetime.datetime(2015, 2, 8, 12, 18, 33))
+0.0  296.999  296.999  1157.412
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.069, datetime.datetime(2015, 2, 8, 12, 18, 33))
+0.0  297.069  297.069  1157.412
+(u'video', u'save_user_state', None, 0.0, 296.0, datetime.datetime(2015, 2, 8, 12, 18, 33))
+0.0  297.069  297.069  1157.412
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.216, datetime.datetime(2015, 2, 8, 12, 18, 33))
+0.0  297.216  297.216  1157.412
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.344, datetime.datetime(2015, 2, 8, 12, 18, 33))
+0.0  297.344  297.344  1157.54
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.344, datetime.datetime(2015, 2, 8, 12, 18, 33))
+0.0  297.344  297.344  1157.54
+(u'video', u'save_user_state', None, 0.0, 297.0, datetime.datetime(2015, 2, 8, 12, 18, 33))
+0.0  297.344  297.344  1157.54
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.144, datetime.datetime(2015, 2, 8, 12, 18, 33))
+0.0  297.144  297.144  1157.74
+(u'video', u'save_user_state', None, 0.0, 297.0, datetime.datetime(2015, 2, 8, 12, 18, 34))
+0.0  297.144  297.144  1157.74
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.573, datetime.datetime(2015, 2, 8, 12, 18, 34))
+0.0  297.573  297.573  1158.169
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.216, datetime.datetime(2015, 2, 8, 12, 18, 34))
+0.0  297.216  297.216  1158.169
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.64, datetime.datetime(2015, 2, 8, 12, 18, 34))
+0.0  297.64  297.64  1158.169
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.707, datetime.datetime(2015, 2, 8, 12, 18, 34))
+0.0  297.707  297.707  1158.236
+(u'video', u'save_user_state', None, 0.0, 297.0, datetime.datetime(2015, 2, 8, 12, 18, 34))
+0.0  297.707  297.707  1158.236
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.834, datetime.datetime(2015, 2, 8, 12, 18, 34))
+0.0  297.834  297.834  1158.363
+(u'video', u'save_user_state', None, 0.0, 297.0, datetime.datetime(2015, 2, 8, 12, 18, 34))
+0.0  297.834  297.834  1158.363
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.499, datetime.datetime(2015, 2, 8, 12, 18, 34))
+0.0  297.499  297.499  1158.698
+(u'video', u'save_user_state', None, 0.0, 297.0, datetime.datetime(2015, 2, 8, 12, 18, 34))
+0.0  297.499  297.499  1158.698
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.431, datetime.datetime(2015, 2, 8, 12, 18, 34))
+0.0  297.431  297.431  1158.766
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.903, datetime.datetime(2015, 2, 8, 12, 18, 35))
+0.0  297.903  297.903  1158.766
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.978, datetime.datetime(2015, 2, 8, 12, 18, 35))
+0.0  297.978  297.978  1158.841
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 298.073, datetime.datetime(2015, 2, 8, 12, 18, 35))
+0.0  298.073  298.073  1158.936
+(u'video', u'save_user_state', None, 0.0, 298.0, datetime.datetime(2015, 2, 8, 12, 18, 35))
+0.0  298.073  298.073  1158.936
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.978, datetime.datetime(2015, 2, 8, 12, 18, 35))
+0.0  297.978  297.978  1158.936
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.764, datetime.datetime(2015, 2, 8, 12, 18, 35))
+0.0  297.764  297.764  1159.15
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 298.146, datetime.datetime(2015, 2, 8, 12, 18, 35))
+0.0  298.146  298.146  1159.532
+(u'video', u'save_user_state', None, 0.0, 298.0, datetime.datetime(2015, 2, 8, 12, 18, 36))
+0.0  298.146  298.146  1159.532
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 297.978, datetime.datetime(2015, 2, 8, 12, 18, 36))
+0.0  297.978  297.978  1159.7
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 298.146, datetime.datetime(2015, 2, 8, 12, 18, 36))
+0.0  298.146  298.146  1159.868
+(u'video', u'save_user_state', None, 0.0, 298.0, datetime.datetime(2015, 2, 8, 12, 18, 36))
+0.0  298.146  298.146  1159.868
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 298.506, datetime.datetime(2015, 2, 8, 12, 18, 36))
+0.0  298.506  298.506  1159.868
+(u'video', u'save_user_state', None, 0.0, 298.0, datetime.datetime(2015, 2, 8, 12, 18, 36))
+0.0  298.506  298.506  1159.868
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 298.467, datetime.datetime(2015, 2, 8, 12, 18, 36))
+0.0  298.467  298.467  1159.907
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 298.598, datetime.datetime(2015, 2, 8, 12, 18, 37))
+0.0  298.598  298.598  1159.907
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 298.665, datetime.datetime(2015, 2, 8, 12, 18, 37))
+0.0  298.665  298.665  1159.907
+(u'video', u'save_user_state', None, 0.0, 298.0, datetime.datetime(2015, 2, 8, 12, 18, 37))
+0.0  298.665  298.665  1159.907
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 298.939, datetime.datetime(2015, 2, 8, 12, 18, 37))
+0.0  298.939  298.939  1160.181
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 298.939, datetime.datetime(2015, 2, 8, 12, 18, 37))
+0.0  298.939  298.939  1160.181
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 299.087, datetime.datetime(2015, 2, 8, 12, 18, 37))
+0.0  299.087  299.087  1160.329
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 298.146, datetime.datetime(2015, 2, 8, 12, 18, 37))
+0.0  298.146  298.146  1161.27
+(u'video', u'save_user_state', None, 0.0, 299.0, datetime.datetime(2015, 2, 8, 12, 18, 37))
+0.0  298.146  298.146  1161.27
+(u'video', u'save_user_state', None, 0.0, 298.0, datetime.datetime(2015, 2, 8, 12, 18, 37))
+0.0  298.146  298.146  1161.27
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 298.665, datetime.datetime(2015, 2, 8, 12, 18, 37))
+0.0  298.665  298.665  1161.27
+(u'video', u'save_user_state', None, 0.0, 298.0, datetime.datetime(2015, 2, 8, 12, 18, 37))
+0.0  298.665  298.665  1161.27
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 298.146, datetime.datetime(2015, 2, 8, 12, 18, 37))
+0.0  298.146  298.146  1161.789
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 299.009, datetime.datetime(2015, 2, 8, 12, 18, 37))
+0.0  299.009  299.009  1161.789
+(u'video', u'save_user_state', None, 0.0, 299.0, datetime.datetime(2015, 2, 8, 12, 18, 37))
+0.0  299.009  299.009  1161.789
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 299.232, datetime.datetime(2015, 2, 8, 12, 18, 38))
+0.0  299.232  299.232  1162.012
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 299.232, datetime.datetime(2015, 2, 8, 12, 18, 38))
+0.0  299.232  299.232  1162.012
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 299.304, datetime.datetime(2015, 2, 8, 12, 18, 38))
+0.0  299.304  299.304  1162.012
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 299.37, datetime.datetime(2015, 2, 8, 12, 18, 38))
+0.0  299.37  299.37  1162.012
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 299.44, datetime.datetime(2015, 2, 8, 12, 18, 38))
+0.0  299.44  299.44  1162.082
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 299.5, datetime.datetime(2015, 2, 8, 12, 18, 38))
+0.0  299.5  299.5  1162.142
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 299.566, datetime.datetime(2015, 2, 8, 12, 18, 38))
+0.0  299.566  299.566  1162.208
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 299.566, datetime.datetime(2015, 2, 8, 12, 18, 38))
+0.0  299.566  299.566  1162.208
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 299.659, datetime.datetime(2015, 2, 8, 12, 18, 38))
+0.0  299.659  299.659  1162.208
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 299.659, datetime.datetime(2015, 2, 8, 12, 18, 38))
+0.0  299.659  299.659  1162.208
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 299.156, datetime.datetime(2015, 2, 8, 12, 18, 38))
+0.0  299.156  299.156  1162.711
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 299.37, datetime.datetime(2015, 2, 8, 12, 18, 38))
+0.0  299.37  299.37  1162.925
+(u'video', u'save_user_state', None, 0.0, 299.0, datetime.datetime(2015, 2, 8, 12, 18, 38))
+0.0  299.37  299.37  1162.925
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 299.5, datetime.datetime(2015, 2, 8, 12, 18, 38))
+0.0  299.5  299.5  1162.925
+(u'video', u'save_user_state', None, 0.0, 299.0, datetime.datetime(2015, 2, 8, 12, 18, 38))
+0.0  299.5  299.5  1162.925
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 299.659, datetime.datetime(2015, 2, 8, 12, 18, 38))
+0.0  299.659  299.659  1163.084
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 300.116, datetime.datetime(2015, 2, 8, 12, 18, 39))
+0.0  300.116  300.116  1163.541
+(u'video', u'save_user_state', None, 0.0, 300.0, datetime.datetime(2015, 2, 8, 12, 18, 39))
+0.0  300.116  300.116  1163.541
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 300.341, datetime.datetime(2015, 2, 8, 12, 18, 39))
+0.0  300.341  300.341  1163.541
+(u'video', u'save_user_state', None, 0.0, 300.0, datetime.datetime(2015, 2, 8, 12, 18, 39))
+0.0  300.341  300.341  1163.541
+(u'video', u'save_user_state', None, 0.0, 299.0, datetime.datetime(2015, 2, 8, 12, 18, 39))
+0.0  300.341  300.341  1163.541
+(u'video', u'save_user_state', None, 0.0, 300.0, datetime.datetime(2015, 2, 8, 12, 18, 39))
+0.0  300.341  300.341  1163.541
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 300.341, datetime.datetime(2015, 2, 8, 12, 18, 39))
+0.0  300.341  300.341  1163.541
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 300.433, datetime.datetime(2015, 2, 8, 12, 18, 39))
+0.0  300.433  300.433  1163.541
+(u'video', u'save_user_state', None, 0.0, 300.0, datetime.datetime(2015, 2, 8, 12, 18, 40))
+0.0  300.433  300.433  1163.541
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 300.74, datetime.datetime(2015, 2, 8, 12, 18, 40))
+0.0  300.74  300.74  1163.848
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 300.506, datetime.datetime(2015, 2, 8, 12, 18, 40))
+0.0  300.506  300.506  1164.082
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 300.668, datetime.datetime(2015, 2, 8, 12, 18, 40))
+0.0  300.668  300.668  1164.244
+(u'video', u'save_user_state', None, 0.0, 300.0, datetime.datetime(2015, 2, 8, 12, 18, 40))
+0.0  300.668  300.668  1164.244
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 300.812, datetime.datetime(2015, 2, 8, 12, 18, 41))
+0.0  300.812  300.812  1164.388
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 300.884, datetime.datetime(2015, 2, 8, 12, 18, 41))
+0.0  300.884  300.884  1164.46
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 300.884, datetime.datetime(2015, 2, 8, 12, 18, 41))
+0.0  300.884  300.884  1164.46
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 300.979, datetime.datetime(2015, 2, 8, 12, 18, 41))
+0.0  300.979  300.979  1164.46
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 300.812, datetime.datetime(2015, 2, 8, 12, 18, 41))
+0.0  300.812  300.812  1164.627
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 300.979, datetime.datetime(2015, 2, 8, 12, 18, 41))
+0.0  300.979  300.979  1164.794
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 301.052, datetime.datetime(2015, 2, 8, 12, 18, 42))
+0.0  301.052  301.052  1164.794
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 301.159, datetime.datetime(2015, 2, 8, 12, 18, 42))
+0.0  301.159  301.159  1164.901
+(u'video', u'save_user_state', None, 0.0, 301.0, datetime.datetime(2015, 2, 8, 12, 18, 42))
+0.0  301.159  301.159  1164.901
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 301.343, datetime.datetime(2015, 2, 8, 12, 18, 42))
+0.0  301.343  301.343  1164.901
+(u'video', u'save_user_state', None, 0.0, 301.0, datetime.datetime(2015, 2, 8, 12, 18, 42))
+0.0  301.343  301.343  1164.901
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 301.491, datetime.datetime(2015, 2, 8, 12, 18, 43))
+0.0  301.491  301.491  1165.049
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 301.491, datetime.datetime(2015, 2, 8, 12, 18, 43))
+0.0  301.491  301.491  1165.049
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 301.668, datetime.datetime(2015, 2, 8, 12, 18, 43))
+0.0  301.668  301.668  1165.226
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 301.343, datetime.datetime(2015, 2, 8, 12, 18, 43))
+0.0  301.343  301.343  1165.226
+(u'video', u'save_user_state', None, 0.0, 301.0, datetime.datetime(2015, 2, 8, 12, 18, 43))
+0.0  301.343  301.343  1165.226
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 301.668, datetime.datetime(2015, 2, 8, 12, 18, 43))
+0.0  301.668  301.668  1165.226
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 301.159, datetime.datetime(2015, 2, 8, 12, 18, 43))
+0.0  301.159  301.159  1165.735
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 301.803, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  301.803  301.803  1166.379
+(u'video', u'save_user_state', None, 0.0, 301.0, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  301.803  301.803  1166.379
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 301.88, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  301.88  301.88  1166.456
+(u'video', u'save_user_state', None, 0.0, 301.0, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  301.88  301.88  1166.456
+(u'video', u'save_user_state', None, 0.0, 302.0, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  301.88  301.88  1166.456
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.043, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  302.043  302.043  1166.456
+(u'video', u'save_user_state', None, 0.0, 302.0, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  302.043  302.043  1166.456
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.27, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  302.27  302.27  1166.683
+(u'video', u'save_user_state', None, 0.0, 302.0, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  302.27  302.27  1166.683
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.27, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  302.27  302.27  1166.683
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 301.803, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  301.803  301.803  1167.15
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 301.88, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  301.88  301.88  1167.15
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.043, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  302.043  302.043  1167.313
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.118, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  302.118  302.118  1167.388
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.191, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  302.191  302.191  1167.461
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.191, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  302.191  302.191  1167.461
+(u'video', u'save_user_state', None, 0.0, 302.0, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  302.191  302.191  1167.461
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.27, datetime.datetime(2015, 2, 8, 12, 18, 44))
+0.0  302.27  302.27  1167.54
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.458, datetime.datetime(2015, 2, 8, 12, 18, 45))
+0.0  302.458  302.458  1167.728
+(u'video', u'save_user_state', None, 0.0, 302.0, datetime.datetime(2015, 2, 8, 12, 18, 45))
+0.0  302.458  302.458  1167.728
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.538, datetime.datetime(2015, 2, 8, 12, 18, 45))
+0.0  302.538  302.538  1167.728
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.677, datetime.datetime(2015, 2, 8, 12, 18, 45))
+0.0  302.677  302.677  1167.867
+(u'video', u'save_user_state', None, 0.0, 302.0, datetime.datetime(2015, 2, 8, 12, 18, 45))
+0.0  302.677  302.677  1167.867
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.382, datetime.datetime(2015, 2, 8, 12, 18, 45))
+0.0  302.382  302.382  1168.162
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.538, datetime.datetime(2015, 2, 8, 12, 18, 45))
+0.0  302.538  302.538  1168.318
+(u'video', u'save_user_state', None, 0.0, 302.0, datetime.datetime(2015, 2, 8, 12, 18, 45))
+0.0  302.538  302.538  1168.318
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.606, datetime.datetime(2015, 2, 8, 12, 18, 45))
+0.0  302.606  302.606  1168.318
+(u'video', u'save_user_state', None, 0.0, 302.0, datetime.datetime(2015, 2, 8, 12, 18, 45))
+0.0  302.606  302.606  1168.318
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.677, datetime.datetime(2015, 2, 8, 12, 18, 45))
+0.0  302.677  302.677  1168.318
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.766, datetime.datetime(2015, 2, 8, 12, 18, 45))
+0.0  302.766  302.766  1168.318
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.839, datetime.datetime(2015, 2, 8, 12, 18, 45))
+0.0  302.839  302.839  1168.391
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.913, datetime.datetime(2015, 2, 8, 12, 18, 46))
+0.0  302.913  302.913  1168.465
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.008, datetime.datetime(2015, 2, 8, 12, 18, 46))
+0.0  303.008  303.008  1168.465
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.839, datetime.datetime(2015, 2, 8, 12, 18, 46))
+0.0  302.839  302.839  1168.634
+(u'video', u'save_user_state', None, 0.0, 302.0, datetime.datetime(2015, 2, 8, 12, 18, 46))
+0.0  302.839  302.839  1168.634
+(u'video', u'save_user_state', None, 0.0, 303.0, datetime.datetime(2015, 2, 8, 12, 18, 46))
+0.0  302.839  302.839  1168.634
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.15, datetime.datetime(2015, 2, 8, 12, 18, 46))
+0.0  303.15  303.15  1168.945
+(u'video', u'save_user_state', None, 0.0, 303.0, datetime.datetime(2015, 2, 8, 12, 18, 46))
+0.0  303.15  303.15  1168.945
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.248, datetime.datetime(2015, 2, 8, 12, 18, 46))
+0.0  303.248  303.248  1168.945
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.32, datetime.datetime(2015, 2, 8, 12, 18, 46))
+0.0  303.32  303.32  1168.945
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.396, datetime.datetime(2015, 2, 8, 12, 18, 47))
+0.0  303.396  303.396  1169.021
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.15, datetime.datetime(2015, 2, 8, 12, 18, 47))
+0.0  303.15  303.15  1169.267
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.471, datetime.datetime(2015, 2, 8, 12, 18, 47))
+0.0  303.471  303.471  1169.588
+(u'video', u'save_user_state', None, 0.0, 303.0, datetime.datetime(2015, 2, 8, 12, 18, 47))
+0.0  303.471  303.471  1169.588
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.471, datetime.datetime(2015, 2, 8, 12, 18, 47))
+0.0  303.471  303.471  1169.588
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.537, datetime.datetime(2015, 2, 8, 12, 18, 47))
+0.0  303.537  303.537  1169.588
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.603, datetime.datetime(2015, 2, 8, 12, 18, 47))
+0.0  303.603  303.603  1169.654
+(u'video', u'save_user_state', None, 0.0, 303.0, datetime.datetime(2015, 2, 8, 12, 18, 48))
+0.0  303.603  303.603  1169.654
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.67, datetime.datetime(2015, 2, 8, 12, 18, 48))
+0.0  303.67  303.67  1169.721
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.749, datetime.datetime(2015, 2, 8, 12, 18, 48))
+0.0  303.749  303.749  1169.8
+(u'video', u'save_user_state', None, 0.0, 303.0, datetime.datetime(2015, 2, 8, 12, 18, 49))
+0.0  303.749  303.749  1169.8
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 302.606, datetime.datetime(2015, 2, 8, 12, 18, 49))
+0.0  302.606  302.606  1169.8
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.843, datetime.datetime(2015, 2, 8, 12, 18, 49))
+0.0  303.843  303.843  1169.8
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.904, datetime.datetime(2015, 2, 8, 12, 18, 49))
+0.0  303.904  303.904  1169.8
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.843, datetime.datetime(2015, 2, 8, 12, 18, 49))
+0.0  303.843  303.843  1169.8
+(u'video', u'save_user_state', None, 0.0, 303.0, datetime.datetime(2015, 2, 8, 12, 18, 50))
+0.0  303.843  303.843  1169.8
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.048, datetime.datetime(2015, 2, 8, 12, 18, 50))
+0.0  304.048  304.048  1169.8
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.118, datetime.datetime(2015, 2, 8, 12, 18, 50))
+0.0  304.118  304.118  1169.8
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.98, datetime.datetime(2015, 2, 8, 12, 18, 50))
+0.0  303.98  303.98  1169.8
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 303.98, datetime.datetime(2015, 2, 8, 12, 18, 50))
+0.0  303.98  303.98  1169.8
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.118, datetime.datetime(2015, 2, 8, 12, 18, 50))
+0.0  304.118  304.118  1169.938
+(u'video', u'save_user_state', None, 0.0, 304.0, datetime.datetime(2015, 2, 8, 12, 18, 51))
+0.0  304.118  304.118  1169.938
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.288, datetime.datetime(2015, 2, 8, 12, 18, 51))
+0.0  304.288  304.288  1169.938
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.437, datetime.datetime(2015, 2, 8, 12, 18, 51))
+0.0  304.437  304.437  1170.087
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.288, datetime.datetime(2015, 2, 8, 12, 18, 51))
+0.0  304.288  304.288  1170.087
+(u'video', u'save_user_state', None, 0.0, 304.0, datetime.datetime(2015, 2, 8, 12, 18, 51))
+0.0  304.288  304.288  1170.087
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.361, datetime.datetime(2015, 2, 8, 12, 18, 51))
+0.0  304.361  304.361  1170.087
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.437, datetime.datetime(2015, 2, 8, 12, 18, 51))
+0.0  304.437  304.437  1170.087
+(u'video', u'save_user_state', None, 0.0, 304.0, datetime.datetime(2015, 2, 8, 12, 18, 52))
+0.0  304.437  304.437  1170.087
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.652, datetime.datetime(2015, 2, 8, 12, 18, 52))
+0.0  304.652  304.652  1170.302
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.19, datetime.datetime(2015, 2, 8, 12, 18, 52))
+0.0  304.19  304.19  1170.764
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.509, datetime.datetime(2015, 2, 8, 12, 18, 52))
+0.0  304.509  304.509  1171.083
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.578, datetime.datetime(2015, 2, 8, 12, 18, 52))
+0.0  304.578  304.578  1171.083
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.726, datetime.datetime(2015, 2, 8, 12, 18, 53))
+0.0  304.726  304.726  1171.231
+(u'video', u'save_user_state', None, 0.0, 304.0, datetime.datetime(2015, 2, 8, 12, 18, 54))
+0.0  304.726  304.726  1171.231
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.88, datetime.datetime(2015, 2, 8, 12, 18, 55))
+0.0  304.88  304.88  1171.385
+(u'video', u'save_user_state', None, 0.0, 304.0, datetime.datetime(2015, 2, 8, 12, 18, 57))
+0.0  304.88  304.88  1171.385
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.726, datetime.datetime(2015, 2, 8, 12, 18, 57))
+0.0  304.726  304.726  1171.539
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.88, datetime.datetime(2015, 2, 8, 12, 18, 57))
+0.0  304.88  304.88  1171.539
+(u'video', u'save_user_state', None, 0.0, 304.0, datetime.datetime(2015, 2, 8, 12, 18, 57))
+0.0  304.88  304.88  1171.539
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 304.509, datetime.datetime(2015, 2, 8, 12, 18, 57))
+0.0  304.509  304.509  1171.91
+(u'video', u'save_user_state', None, 0.0, 305.0, datetime.datetime(2015, 2, 8, 12, 18, 58))
+0.0  304.509  304.509  1171.91
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 305.106, datetime.datetime(2015, 2, 8, 12, 18, 58))
+0.0  305.106  305.106  1171.91
+(u'video', u'save_user_state', None, 0.0, 304.0, datetime.datetime(2015, 2, 8, 12, 18, 58))
+0.0  305.106  305.106  1171.91
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 305.02, datetime.datetime(2015, 2, 8, 12, 18, 58))
+0.0  305.02  305.02  1171.996
+(u'video', u'save_user_state', None, 0.0, 305.0, datetime.datetime(2015, 2, 8, 12, 18, 59))
+0.0  305.02  305.02  1171.996
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 305.212, datetime.datetime(2015, 2, 8, 12, 18, 59))
+0.0  305.212  305.212  1172.188
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 305.212, datetime.datetime(2015, 2, 8, 12, 19))
+0.0  305.212  305.212  1172.188
+(u'video', u'save_user_state', None, 0.0, 305.0, datetime.datetime(2015, 2, 8, 12, 19))
+0.0  305.212  305.212  1172.188
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 305.372, datetime.datetime(2015, 2, 8, 12, 19, 1))
+0.0  305.372  305.372  1172.348
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 305.372, datetime.datetime(2015, 2, 8, 12, 19, 1))
+0.0  305.372  305.372  1172.348
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 305.458, datetime.datetime(2015, 2, 8, 12, 19, 2))
+0.0  305.458  305.458  1172.434
+(u'video', u'save_user_state', None, 0.0, 305.0, datetime.datetime(2015, 2, 8, 12, 19, 3))
+0.0  305.458  305.458  1172.434
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 305.54, datetime.datetime(2015, 2, 8, 12, 19, 3))
+0.0  305.54  305.54  1172.516
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 305.54, datetime.datetime(2015, 2, 8, 12, 19, 3))
+0.0  305.54  305.54  1172.516
+(u'video', u'save_user_state', None, 0.0, 305.0, datetime.datetime(2015, 2, 8, 12, 19, 4))
+0.0  305.54  305.54  1172.516
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 305.705, datetime.datetime(2015, 2, 8, 12, 19, 4))
+0.0  305.705  305.705  1172.681
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 305.173, datetime.datetime(2015, 2, 8, 12, 19, 4))
+0.0  305.173  305.173  1172.681
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 305.705, datetime.datetime(2015, 2, 8, 12, 19, 4))
+0.0  305.705  305.705  1172.681
+(u'video', u'save_user_state', None, 0.0, 305.0, datetime.datetime(2015, 2, 8, 12, 19, 5))
+0.0  305.705  305.705  1172.681
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 305.02, datetime.datetime(2015, 2, 8, 12, 19, 5))
+0.0  305.02  305.02  1172.681
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 305.812, datetime.datetime(2015, 2, 8, 12, 19, 5))
+0.0  305.812  305.812  1173.473
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 305.812, datetime.datetime(2015, 2, 8, 12, 19, 5))
+0.0  305.812  305.812  1173.473
+(u'navigation', u'page_close', u'd108e65eb1f740efa2505cc2804ea7cf', None, None, datetime.datetime(2015, 2, 8, 12, 19, 8))
+0.0  305.812  339.0  1206.661
+(u'video', u'save_user_state', None, 0.0, 339.0, datetime.datetime(2015, 2, 8, 12, 19, 9))
+0.0  305.812  339.0  1206.661
+(u'video', u'show_transcript', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 0.0, datetime.datetime(2015, 2, 8, 12, 19, 32))
+0.0  305.812  339.0  1206.661
+(u'video', u'load_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 0.0, datetime.datetime(2015, 2, 8, 12, 19, 35))
+0.0  0.0  0.0  1206.661
+(u'video', u'transcript_translation', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 0.0, datetime.datetime(2015, 2, 8, 12, 19, 37))
+0.0  0.0  0.0  1206.661
+(u'video', u'save_user_state', None, 0.0, 0.0, datetime.datetime(2015, 2, 8, 12, 26, 41))
+0.0  0.0  0.0  1206.661
+(u'video', u'show_transcript', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 0.0, datetime.datetime(2015, 2, 8, 13, 14, 30))
+0.0  0.0  0.0  1206.661
+(u'video', u'transcript_translation', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 0.0, datetime.datetime(2015, 2, 8, 13, 14, 30))
+0.0  0.0  0.0  1206.661
+(u'video', u'load_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 0.0, datetime.datetime(2015, 2, 8, 13, 14, 30))
+0.0  0.0  0.0  1206.661
+(u'video', u'save_user_state', None, 0.0, 0.0, datetime.datetime(2015, 2, 8, 13, 14, 33))
+0.0  0.0  0.0  1206.661
+(u'video', u'save_user_state', None, 0.0, 0.0, datetime.datetime(2015, 2, 8, 13, 17, 12))
+0.0  0.0  0.0  1206.661
+(u'video', u'show_transcript', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 0.0, datetime.datetime(2015, 2, 8, 13, 17, 7))
+0.0  0.0  0.0  1206.661
+(u'video', u'transcript_translation', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 0.0, datetime.datetime(2015, 2, 8, 13, 17, 7))
+0.0  0.0  0.0  1206.661
+(u'video', u'load_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 0.0, datetime.datetime(2015, 2, 8, 13, 17, 9))
+0.0  0.0  0.0  1206.661
+(u'video', u'save_user_state', None, 0.0, 0.0, datetime.datetime(2015, 2, 8, 13, 17, 12))
+0.0  0.0  0.0  1206.661
+(u'video', u'save_user_state', None, 0.0, 0.0, datetime.datetime(2015, 2, 8, 13, 17, 30))
+0.0  0.0  0.0  1206.661
+(u'video', u'show_transcript', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 0.0, datetime.datetime(2015, 2, 9, 9, 10, 52))
+0.0  0.0  0.0  1206.661
+(u'video', u'save_user_state', None, 0.0, 0.0, datetime.datetime(2015, 2, 9, 9, 10, 53))
+0.0  0.0  0.0  1206.661
+(u'video', u'load_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 0.0, datetime.datetime(2015, 2, 9, 9, 10, 55))
+0.0  0.0  0.0  1206.661
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 339.0, datetime.datetime(2015, 2, 9, 9, 11, 23))
+0.0  339.0  339.0  1206.661
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 12.001, datetime.datetime(2015, 2, 9, 9, 18, 53))
+0.0  12.001  12.001  1533.66
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 19.961, datetime.datetime(2015, 2, 9, 9, 19, 10))
+0.0  19.961  19.961  1533.66
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 124.941, datetime.datetime(2015, 2, 9, 9, 21, 11))
+0.0  124.941  124.941  1533.66
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 245.081, datetime.datetime(2015, 2, 9, 9, 25, 21))
+0.0  245.081  245.081  1533.66
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 227.921, datetime.datetime(2015, 2, 9, 9, 26, 30))
+0.0  227.921  227.921  1533.66
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 228.18, datetime.datetime(2015, 2, 9, 9, 26, 44))
+0.0  228.18  228.18  1533.66
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 406.581, datetime.datetime(2015, 2, 9, 9, 30, 55))
+0.0  406.581  406.581  1712.061
+(u'video', u'save_user_state', None, 0.0, 406.0, datetime.datetime(2015, 2, 9, 9, 30, 56))
+0.0  406.581  406.581  1712.061
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 406.581, datetime.datetime(2015, 2, 9, 9, 32, 21))
+0.0  406.581  406.581  1712.061
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 406.96, datetime.datetime(2015, 2, 9, 9, 32, 22))
+0.0  406.96  406.96  1712.061
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 174.841, datetime.datetime(2015, 2, 9, 9, 32, 35))
+0.0  174.841  174.841  1712.061
+(u'video', u'save_user_state', None, 0.0, 174.0, datetime.datetime(2015, 2, 9, 9, 32, 35))
+0.0  174.841  174.841  1712.061
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 174.841, datetime.datetime(2015, 2, 9, 9, 32, 36))
+0.0  174.841  174.841  1712.061
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 174.941, datetime.datetime(2015, 2, 9, 9, 32, 36))
+0.0  174.941  174.941  1712.061
+(u'video', u'save_user_state', None, 0.0, 167.0, datetime.datetime(2015, 2, 9, 9, 32, 44))
+0.0  174.941  174.941  1712.061
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 167.12, datetime.datetime(2015, 2, 9, 9, 32, 44))
+0.0  167.12  167.12  1712.061
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 167.12, datetime.datetime(2015, 2, 9, 9, 32, 44))
+0.0  167.12  167.12  1712.061
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 167.441, datetime.datetime(2015, 2, 9, 9, 32, 44))
+0.0  167.441  167.441  1712.061
+(u'video', u'seek_video', u'67a8559582864d6a8148e2ef5c997e8f', 212.061, 251.0, datetime.datetime(2015, 2, 9, 9, 33, 38))
+0.0  251.0  167.441  1712.061
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 212.301, datetime.datetime(2015, 2, 9, 9, 33, 38))
+0.0  212.301  212.301  1712.061
+(u'video', u'seek_video', u'67a8559582864d6a8148e2ef5c997e8f', 262.901, 284.0, datetime.datetime(2015, 2, 9, 9, 33, 50))
+0.0  284.0  212.301  1712.061
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 262.901, datetime.datetime(2015, 2, 9, 9, 33, 50))
+0.0  262.901  262.901  1712.061
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 487.061, datetime.datetime(2015, 2, 9, 9, 37, 14))
+0.0  487.061  487.061  1936.221
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 487.061, datetime.datetime(2015, 2, 9, 9, 37, 15))
+0.0  487.061  487.061  1936.221
+(u'video', u'save_user_state', None, 0.0, 487.0, datetime.datetime(2015, 2, 9, 9, 37, 15))
+0.0  487.061  487.061  1936.221
+(u'video', u'save_user_state', None, 0.0, 506.0, datetime.datetime(2015, 2, 9, 9, 37, 33))
+0.0  487.061  487.061  1936.221
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 506.961, datetime.datetime(2015, 2, 9, 9, 37, 33))
+0.0  506.961  506.961  1956.121
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 506.961, datetime.datetime(2015, 2, 9, 9, 37, 34))
+0.0  506.961  506.961  1956.121
+(u'video', u'seek_video', u'67a8559582864d6a8148e2ef5c997e8f', 510.681, 469.0, datetime.datetime(2015, 2, 9, 9, 37, 37))
+0.0  469.0  506.961  1956.121
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 510.681, datetime.datetime(2015, 2, 9, 9, 37, 38))
+0.0  510.681  510.681  1956.121
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 472.901, datetime.datetime(2015, 2, 9, 9, 37, 41))
+0.0  472.901  472.901  1956.121
+(u'video', u'save_user_state', None, 0.0, 472.0, datetime.datetime(2015, 2, 9, 9, 37, 41))
+0.0  472.901  472.901  1956.121
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 472.901, datetime.datetime(2015, 2, 9, 9, 37, 42))
+0.0  472.901  472.901  1956.121
+(u'video', u'pause_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 658.921, datetime.datetime(2015, 2, 9, 9, 40, 48))
+0.0  658.921  658.921  2142.141
+(u'video', u'play_video', u'67a8559582864d6a8148e2ef5c997e8f', 0.0, 658.921, datetime.datetime(2015, 2, 9, 9, 40, 48))
+0.0  658.921  658.921  2142.141
+(u'video', u'save_user_state', None, 0.0, 658.0, datetime.datetime(2015, 2, 9, 9, 40, 48))
+0.0  658.921  658.921  2142.141
+(u'navigation', u'page_close', u'd108e65eb1f740efa2505cc2804ea7cf', None, None, datetime.datetime(2015, 2, 9, 9, 45, 12))
+0.0  658.921  922.0  2405.22
+(u'video', u'save_user_state', None, 0.0, 922.0, datetime.datetime(2015, 2, 9, 9, 45, 13))
+0.0  658.921  922.0  2405.22
+Total time spent by ricky on this video: 2405.22
+Time Frame 0 to 3	:: count:  1	  time spent:  4.0
+Time Frame 4 to 7	:: count:  1	  time spent:  4.0
+Time Frame 8 to 11	:: count:  1	  time spent:  4.0
+Time Frame 12 to 15	:: count:  2	  time spent:  7.999
+Time Frame 16 to 19	:: count:  2	  time spent:  8.0
+Time Frame 20 to 23	:: count:  2	  time spent:  8.0
+Time Frame 24 to 27	:: count:  2	  time spent:  8.0
+Time Frame 28 to 31	:: count:  2	  time spent:  8.0
+Time Frame 32 to 35	:: count:  2	  time spent:  8.0
+Time Frame 36 to 39	:: count:  2	  time spent:  8.0
+Time Frame 40 to 43	:: count:  2	  time spent:  8.0
+Time Frame 44 to 47	:: count:  2	  time spent:  8.0
+Time Frame 48 to 51	:: count:  2	  time spent:  8.0
+Time Frame 52 to 55	:: count:  2	  time spent:  8.0
+Time Frame 56 to 59	:: count:  2	  time spent:  8.0
+Time Frame 60 to 63	:: count:  2	  time spent:  8.0
+Time Frame 64 to 67	:: count:  2	  time spent:  8.0
+Time Frame 68 to 71	:: count:  2	  time spent:  8.0
+Time Frame 72 to 75	:: count:  2	  time spent:  8.0
+Time Frame 76 to 79	:: count:  2	  time spent:  8.0
+Time Frame 80 to 83	:: count:  2	  time spent:  8.0
+Time Frame 84 to 87	:: count:  2	  time spent:  8.0
+Time Frame 88 to 91	:: count:  2	  time spent:  8.0
+Time Frame 92 to 95	:: count:  2	  time spent:  8.0
+Time Frame 96 to 99	:: count:  2	  time spent:  8.0
+Time Frame 100 to 103	:: count:  2	  time spent:  8.0
+Time Frame 104 to 107	:: count:  2	  time spent:  8.0
+Time Frame 108 to 111	:: count:  2	  time spent:  8.0
+Time Frame 112 to 115	:: count:  2	  time spent:  8.0
+Time Frame 116 to 119	:: count:  2	  time spent:  8.0
+Time Frame 120 to 123	:: count:  2	  time spent:  8.0
+Time Frame 124 to 127	:: count:  2	  time spent:  8.0
+Time Frame 128 to 131	:: count:  2	  time spent:  8.0
+Time Frame 132 to 135	:: count:  2	  time spent:  8.0
+Time Frame 136 to 139	:: count:  2	  time spent:  8.0
+Time Frame 140 to 143	:: count:  2	  time spent:  8.0
+Time Frame 144 to 147	:: count:  2	  time spent:  8.0
+Time Frame 148 to 151	:: count:  2	  time spent:  8.0
+Time Frame 152 to 155	:: count:  2	  time spent:  8.0
+Time Frame 156 to 159	:: count:  2	  time spent:  8.0
+Time Frame 160 to 163	:: count:  2	  time spent:  8.0
+Time Frame 164 to 167	:: count:  2	  time spent:  8.0
+Time Frame 168 to 171	:: count:  2	  time spent:  8.0
+Time Frame 172 to 175	:: count:  2	  time spent:  0.0
+Time Frame 176 to 179	:: count:  2	  time spent:  8.0
+Time Frame 180 to 183	:: count:  2	  time spent:  8.0
+Time Frame 184 to 187	:: count:  2	  time spent:  8.0
+Time Frame 188 to 191	:: count:  2	  time spent:  8.0
+Time Frame 192 to 195	:: count:  2	  time spent:  8.0
+Time Frame 196 to 199	:: count:  2	  time spent:  8.0
+Time Frame 200 to 203	:: count:  2	  time spent:  8.0
+Time Frame 204 to 207	:: count:  2	  time spent:  8.0
+Time Frame 208 to 211	:: count:  2	  time spent:  8.0
+Time Frame 212 to 215	:: count:  2	  time spent:  8.0
+Time Frame 216 to 219	:: count:  2	  time spent:  8.0
+Time Frame 220 to 223	:: count:  2	  time spent:  8.0
+Time Frame 224 to 227	:: count:  2	  time spent:  8.0
+Time Frame 228 to 231	:: count:  3	  time spent:  11.82
+Time Frame 232 to 235	:: count:  3	  time spent:  12.0
+Time Frame 236 to 239	:: count:  3	  time spent:  12.0
+Time Frame 240 to 243	:: count:  3	  time spent:  12.0
+Time Frame 244 to 247	:: count:  3	  time spent:  4.0
+Time Frame 248 to 251	:: count:  2	  time spent:  9.716
+Time Frame 252 to 255	:: count:  3	  time spent:  13.045
+Time Frame 256 to 259	:: count:  4	  time spent:  16.0
+Time Frame 260 to 263	:: count:  4	  time spent:  17.099
+Time Frame 264 to 267	:: count:  5	  time spent:  20.0
+Time Frame 268 to 271	:: count:  5	  time spent:  20.0
+Time Frame 272 to 275	:: count:  5	  time spent:  20.0
+Time Frame 276 to 279	:: count:  5	  time spent:  20.0
+Time Frame 280 to 283	:: count:  6	  time spent:  12.071
+Time Frame 284 to 287	:: count:  5	  time spent:  12.244
+Time Frame 288 to 291	:: count:  5	  time spent:  12.164
+Time Frame 292 to 295	:: count:  5	  time spent:  12.17
+Time Frame 296 to 299	:: count:  5	  time spent:  12.5
+Time Frame 300 to 303	:: count:  5	  time spent:  12.02
+Time Frame 304 to 307	:: count:  6	  time spent:  14.98
+Time Frame 308 to 311	:: count:  6	  time spent:  23.678
+Time Frame 312 to 315	:: count:  5	  time spent:  20.0
+Time Frame 316 to 319	:: count:  5	  time spent:  20.0
+Time Frame 320 to 323	:: count:  5	  time spent:  20.0
+Time Frame 324 to 327	:: count:  5	  time spent:  20.0
+Time Frame 328 to 331	:: count:  5	  time spent:  20.0
+Time Frame 332 to 335	:: count:  5	  time spent:  20.0
+Time Frame 336 to 339	:: count:  5	  time spent:  18.0
+Time Frame 340 to 343	:: count:  3	  time spent:  12.0
+Time Frame 344 to 347	:: count:  3	  time spent:  12.0
+Time Frame 348 to 351	:: count:  3	  time spent:  12.0
+Time Frame 352 to 355	:: count:  3	  time spent:  12.0
+Time Frame 356 to 359	:: count:  3	  time spent:  12.0
+Time Frame 360 to 363	:: count:  3	  time spent:  12.0
+Time Frame 364 to 367	:: count:  3	  time spent:  12.0
+Time Frame 368 to 371	:: count:  3	  time spent:  12.0
+Time Frame 372 to 375	:: count:  3	  time spent:  12.0
+Time Frame 376 to 379	:: count:  3	  time spent:  12.0
+Time Frame 380 to 383	:: count:  3	  time spent:  12.0
+Time Frame 384 to 387	:: count:  3	  time spent:  12.0
+Time Frame 388 to 391	:: count:  3	  time spent:  12.0
+Time Frame 392 to 395	:: count:  3	  time spent:  12.0
+Time Frame 396 to 399	:: count:  3	  time spent:  12.0
+Time Frame 400 to 403	:: count:  3	  time spent:  12.0
+Time Frame 404 to 407	:: count:  3	  time spent:  4.0
+Time Frame 408 to 411	:: count:  2	  time spent:  8.0
+Time Frame 412 to 415	:: count:  2	  time spent:  8.0
+Time Frame 416 to 419	:: count:  2	  time spent:  8.0
+Time Frame 420 to 423	:: count:  2	  time spent:  8.0
+Time Frame 424 to 427	:: count:  2	  time spent:  8.0
+Time Frame 428 to 431	:: count:  2	  time spent:  8.0
+Time Frame 432 to 435	:: count:  2	  time spent:  8.0
+Time Frame 436 to 439	:: count:  2	  time spent:  8.0
+Time Frame 440 to 443	:: count:  2	  time spent:  8.0
+Time Frame 444 to 447	:: count:  2	  time spent:  8.0
+Time Frame 448 to 451	:: count:  2	  time spent:  8.0
+Time Frame 452 to 455	:: count:  2	  time spent:  8.0
+Time Frame 456 to 459	:: count:  2	  time spent:  8.0
+Time Frame 460 to 463	:: count:  2	  time spent:  8.0
+Time Frame 464 to 467	:: count:  2	  time spent:  8.0
+Time Frame 468 to 471	:: count:  2	  time spent:  8.0
+Time Frame 472 to 475	:: count:  3	  time spent:  11.099
+Time Frame 476 to 479	:: count:  3	  time spent:  12.0
+Time Frame 480 to 483	:: count:  3	  time spent:  12.0
+Time Frame 484 to 487	:: count:  3	  time spent:  12.0
+Time Frame 488 to 491	:: count:  3	  time spent:  12.0
+Time Frame 492 to 495	:: count:  3	  time spent:  12.0
+Time Frame 496 to 499	:: count:  3	  time spent:  12.0
+Time Frame 500 to 503	:: count:  3	  time spent:  12.0
+Time Frame 504 to 507	:: count:  3	  time spent:  10.961
+Time Frame 508 to 511	:: count:  2	  time spent:  4.0
+Time Frame 512 to 515	:: count:  2	  time spent:  8.0
+Time Frame 516 to 519	:: count:  2	  time spent:  8.0
+Time Frame 520 to 523	:: count:  2	  time spent:  8.0
+Time Frame 524 to 527	:: count:  2	  time spent:  8.0
+Time Frame 528 to 531	:: count:  2	  time spent:  8.0
+Time Frame 532 to 535	:: count:  2	  time spent:  8.0
+Time Frame 536 to 539	:: count:  2	  time spent:  8.0
+Time Frame 540 to 543	:: count:  2	  time spent:  8.0
+Time Frame 544 to 547	:: count:  2	  time spent:  8.0
+Time Frame 548 to 551	:: count:  2	  time spent:  8.0
+Time Frame 552 to 555	:: count:  2	  time spent:  8.0
+Time Frame 556 to 559	:: count:  2	  time spent:  8.0
+Time Frame 560 to 563	:: count:  2	  time spent:  8.0
+Time Frame 564 to 567	:: count:  2	  time spent:  8.0
+Time Frame 568 to 571	:: count:  2	  time spent:  8.0
+Time Frame 572 to 575	:: count:  2	  time spent:  8.0
+Time Frame 576 to 579	:: count:  2	  time spent:  8.0
+Time Frame 580 to 583	:: count:  2	  time spent:  8.0
+Time Frame 584 to 587	:: count:  2	  time spent:  8.0
+Time Frame 588 to 591	:: count:  2	  time spent:  8.0
+Time Frame 592 to 595	:: count:  2	  time spent:  8.0
+Time Frame 596 to 599	:: count:  2	  time spent:  8.0
+Time Frame 600 to 603	:: count:  2	  time spent:  8.0
+Time Frame 604 to 607	:: count:  2	  time spent:  8.0
+Time Frame 608 to 611	:: count:  2	  time spent:  8.0
+Time Frame 612 to 615	:: count:  2	  time spent:  8.0
+Time Frame 616 to 619	:: count:  2	  time spent:  9.916
+Time Frame 620 to 623	:: count:  3	  time spent:  12.0
+Time Frame 624 to 627	:: count:  3	  time spent:  12.0
+Time Frame 628 to 631	:: count:  3	  time spent:  12.0
+Time Frame 632 to 635	:: count:  3	  time spent:  12.0
+Time Frame 636 to 639	:: count:  3	  time spent:  12.0
+Time Frame 640 to 643	:: count:  3	  time spent:  12.0
+Time Frame 644 to 647	:: count:  3	  time spent:  12.0
+Time Frame 648 to 651	:: count:  3	  time spent:  12.0
+Time Frame 652 to 655	:: count:  3	  time spent:  12.0
+Time Frame 656 to 659	:: count:  3	  time spent:  12.0
+Time Frame 660 to 663	:: count:  3	  time spent:  12.0
+Time Frame 664 to 667	:: count:  3	  time spent:  12.0
+Time Frame 668 to 671	:: count:  3	  time spent:  12.0
+Time Frame 672 to 675	:: count:  3	  time spent:  12.0
+Time Frame 676 to 679	:: count:  3	  time spent:  12.0
+Time Frame 680 to 683	:: count:  3	  time spent:  12.0
+Time Frame 684 to 687	:: count:  3	  time spent:  12.0
+Time Frame 688 to 691	:: count:  3	  time spent:  12.0
+Time Frame 692 to 695	:: count:  3	  time spent:  12.0
+Time Frame 696 to 699	:: count:  3	  time spent:  12.0
+Time Frame 700 to 703	:: count:  3	  time spent:  12.0
+Time Frame 704 to 707	:: count:  3	  time spent:  12.0
+Time Frame 708 to 711	:: count:  3	  time spent:  12.0
+Time Frame 712 to 715	:: count:  3	  time spent:  12.0
+Time Frame 716 to 719	:: count:  3	  time spent:  12.0
+Time Frame 720 to 723	:: count:  3	  time spent:  12.0
+Time Frame 724 to 727	:: count:  3	  time spent:  12.0
+Time Frame 728 to 731	:: count:  3	  time spent:  12.0
+Time Frame 732 to 735	:: count:  2	  time spent:  8.532
+Time Frame 736 to 739	:: count:  2	  time spent:  8.0
+Time Frame 740 to 743	:: count:  2	  time spent:  8.0
+Time Frame 744 to 747	:: count:  2	  time spent:  8.0
+Time Frame 748 to 751	:: count:  2	  time spent:  8.0
+Time Frame 752 to 755	:: count:  2	  time spent:  8.0
+Time Frame 756 to 759	:: count:  2	  time spent:  8.0
+Time Frame 760 to 763	:: count:  2	  time spent:  8.0
+Time Frame 764 to 767	:: count:  2	  time spent:  8.0
+Time Frame 768 to 771	:: count:  2	  time spent:  8.0
+Time Frame 772 to 775	:: count:  2	  time spent:  8.0
+Time Frame 776 to 779	:: count:  2	  time spent:  8.0
+Time Frame 780 to 783	:: count:  2	  time spent:  8.0
+Time Frame 784 to 787	:: count:  2	  time spent:  8.0
+Time Frame 788 to 791	:: count:  2	  time spent:  8.0
+Time Frame 792 to 795	:: count:  2	  time spent:  8.0
+Time Frame 796 to 799	:: count:  2	  time spent:  8.0
+Time Frame 800 to 803	:: count:  2	  time spent:  8.0
+Time Frame 804 to 807	:: count:  2	  time spent:  8.0
+Time Frame 808 to 811	:: count:  2	  time spent:  8.0
+Time Frame 812 to 815	:: count:  2	  time spent:  8.0
+Time Frame 816 to 819	:: count:  2	  time spent:  8.0
+Time Frame 820 to 823	:: count:  2	  time spent:  8.0
+Time Frame 824 to 827	:: count:  2	  time spent:  8.0
+Time Frame 828 to 831	:: count:  2	  time spent:  8.0
+Time Frame 832 to 835	:: count:  2	  time spent:  8.0
+Time Frame 836 to 839	:: count:  2	  time spent:  8.0
+Time Frame 840 to 843	:: count:  2	  time spent:  8.0
+Time Frame 844 to 847	:: count:  2	  time spent:  8.0
+Time Frame 848 to 851	:: count:  2	  time spent:  8.0
+Time Frame 852 to 855	:: count:  2	  time spent:  8.0
+Time Frame 856 to 859	:: count:  2	  time spent:  8.0
+Time Frame 860 to 863	:: count:  2	  time spent:  8.0
+Time Frame 864 to 867	:: count:  2	  time spent:  8.0
+Time Frame 868 to 871	:: count:  2	  time spent:  8.0
+Time Frame 872 to 875	:: count:  2	  time spent:  8.0
+Time Frame 876 to 879	:: count:  2	  time spent:  8.0
+Time Frame 880 to 883	:: count:  2	  time spent:  8.0
+Time Frame 884 to 887	:: count:  2	  time spent:  8.0
+Time Frame 888 to 891	:: count:  2	  time spent:  8.0
+Time Frame 892 to 895	:: count:  2	  time spent:  8.0
+Time Frame 896 to 899	:: count:  2	  time spent:  8.0
+Time Frame 900 to 903	:: count:  2	  time spent:  8.0
+Time Frame 904 to 907	:: count:  2	  time spent:  8.0
+Time Frame 908 to 911	:: count:  2	  time spent:  8.0
+Time Frame 912 to 915	:: count:  2	  time spent:  8.0
+Time Frame 916 to 919	:: count:  2	  time spent:  8.0
+Time Frame 920 to 923	:: count:  1	  time spent:  6.0
+Time Frame 924 to 927	:: count:  1	  time spent:  4.0
+Time Frame 928 to 931	:: count:  1	  time spent:  4.0
+Time Frame 932 to 935	:: count:  1	  time spent:  4.0
+Time Frame 936 to 939	:: count:  1	  time spent:  4.0
+Time Frame 940 to 943	:: count:  1	  time spent:  4.0
+Time Frame 944 to 947	:: count:  1	  time spent:  4.0
+Time Frame 948 to 951	:: count:  1	  time spent:  4.0
+Time Frame 952 to 955	:: count:  1	  time spent:  4.0
+Time Frame 956 to 959	:: count:  1	  time spent:  4.0
+Time Frame 960 to 963	:: count:  1	  time spent:  4.0
+Time Frame 964 to 967	:: count:  1	  time spent:  4.0
+Time Frame 968 to 971	:: count:  0	  time spent:  0.702
+Time Frame 972 to 975	:: count:  0	  time spent:  0.0

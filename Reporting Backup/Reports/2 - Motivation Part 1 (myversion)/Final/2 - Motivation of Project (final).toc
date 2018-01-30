@@ -1,0 +1,22 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {1}{What our project is on}{2}{0}{1}
+\beamer@sectionintoc {2}{What our project is on}{3}{0}{2}
+\beamer@sectionintoc {3}{What our project is on}{4}{0}{3}
+\beamer@sectionintoc {4}{What our project is on}{5}{0}{4}
+\beamer@sectionintoc {5}{Motivation of the edX InSight Project}{6}{0}{5}
+\beamer@sectionintoc {6}{Motivation of the edX InSight Project}{7}{0}{6}
+\beamer@sectionintoc {7}{Motivation of the edX InSight Project}{8}{0}{7}
+\beamer@sectionintoc {8}{Motivation of the edX InSight Project}{9}{0}{8}
+\beamer@sectionintoc {9}{Motivation of the edX InSight Project}{10}{0}{9}
+\beamer@sectionintoc {10}{Motivation of the edX InSight Project}{11}{0}{10}
+\beamer@sectionintoc {11}{Motivation of the edX InSight Project}{12}{0}{11}
+\beamer@sectionintoc {12}{Motivation of the edX InSight Project}{13}{0}{12}
+\beamer@sectionintoc {13}{Motivation of the edX InSight Project}{14}{0}{13}
+\beamer@sectionintoc {14}{Motivation of the edX InSight Project}{15}{0}{14}
+\beamer@sectionintoc {15}{Motivation of the edX InSight Project}{16}{0}{15}
+\beamer@sectionintoc {16}{Motivation of the edX InSight Project}{17}{0}{16}
+\beamer@subsectionintoc {16}{1}{Motivation of the edX InSight Project}{18}{0}{16}
+\beamer@subsectionintoc {16}{2}{Motivation of the edX InSight Project}{19}{0}{16}
+\beamer@sectionintoc {17}{Motivation of the edX InSight Project}{20}{0}{17}
+\beamer@sectionintoc {18}{Motivation of the edX InSight Project}{21}{0}{18}
+\beamer@subsectionintoc {18}{1}{Motivation of the edX InSight Project}{22}{0}{18}

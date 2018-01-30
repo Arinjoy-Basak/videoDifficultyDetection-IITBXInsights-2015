@@ -1,0 +1,39 @@
+\begin{titlepage}
+ \begin{center}
+
+\Huge
+\textbf{Data Analytics - Detection of difficulty areas in
+videos based on student viewing activity} \\
+\vspace{30pt}
+Summer Internship 2015
+\vspace{30pt}
+
+\LARGE
+Submitted in fulfilment of internship Project
+\vspace{30pt}
+
+\centering
+%\begin{figure}[H]
+\includegraphics[width=5cm]{./iitb_logo.jpg}
+%\end{figure}
+
+\begin{small}
+Department of Computer Science and Engineering\\
+Indian Institute of Technology, Bombay\\
+Mumbai\\
+\end{small}
+
+\vfill
+\textbf{By}\\
+\textbf{Arinjoy Basak, Data Analytics Group}\\
+\vfill
+
+Project Mentor and Guide: Sukla Nag\\
+Principal investigator: Dr. D. B. Phatak
+\vfill
+
+\Large
+Last Updated: \today
+\end{center}
+\end{titlepage}
+

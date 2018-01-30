@@ -1,0 +1,159 @@
+	\documentclass[12pt]{article}
+\usepackage[margin=1in, a4paper]{geometry}
+
+\title{Document Template in Latex}
+\author{Firuza Aibara}
+
+ \ifx\pdftexversion\undefined
+ \usepackage[dvips]{graphicx}
+ \else
+ 
+ \usepackage[pdftex]{graphicx}
+ \DeclareGraphicsRule{*}{mps}{*}{}
+ \fi
+\usepackage{url}
+\usepackage{chapterbib}
+\usepackage{hyperref}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{color}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\leftmark}
+\rhead{}
+\lfoot{Author1, Author2}
+\cfoot{\today}
+\rfoot{\thepage}
+
+\renewcommand{\bibname}{References}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\begin{document}
+
+\begin{titlepage}
+ \begin{center}
+\Huge
+\textbf{Document Name} \\
+\vfill
+\LARGE
+\textbf{Author1, Author2, ... Author 3}\\
+\vfill
+\Large
+Last Updated: \today
+\end{center}
+\end{titlepage}
+
+ \pagebreak \textcolor{white}{text} \pagebreak
+\thispagestyle{empty}
+
+\pagebreak
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\listoffigures
+
+\pagebreak
+
+\listoftables
+
+\pagebreak
+
+\tableofcontents
+
+\pagebreak
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+
+\section{Introduction}
+Paste appropriate content from here. 
+
+The following is an example of inserting an image which is shown in Figure ~\ref{fig:Image1} 
+
+\begin{figure}[hb]
+ \centering
+ \includegraphics[width=12cm]{./Image1.jpg}
+ \caption{Name of the Figure\label{fig:Image1}}
+\end{figure}
+
+\section{Another Section Name}
+Write text here
+
+\subsection{Subsection of the current section}
+Write text here. This is an example of citation 
+
+\subsubsection{Sub-sub-section of the current Subsection}
+Write text here.  
+
+\subsubsection{Another Sub-sub-section of the current Subsection}
+Write text here.   
+
+\subsection{Another Subsection of the current section}
+Write text here
+\subsubsection{Sub-Sub-section}
+Write text here
+
+Example of bulleted list
+\begin{itemize}
+ \item write point 1 here \cite{SRS1998}\cite{SimpleCCP-Windows}
+ \item write point 2 here
+ \item write point 3 here
+\end{itemize}
+
+Example of Numbered list
+\begin{enumerate}
+ \item Write point 1 here
+ \item Write point 2 here
+ \item write point 3 here
+\end{enumerate}
+
+\section{Section name}
+Write text here
+
+\pagebreak
+
+\section{Another Section name}
+Write text here. Example of table.
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|p{4cm}|}
+ \hline
+ \textbf{No.} & \textbf{Company} & \textbf{Operating System} \\
+ \hline
+ 1 & Nokia & Symbian (S60, S40) \\
+ \hline
+ 2 & Microsoft & Windows \\
+ \hline
+ 3 & Apple Inc. & IOS \\
+ \hline
+ 4 & Blackberry & Blackberry \\
+ \hline
+\end{tabular}
+ \caption{Mobile Operating Systems}
+ \end{center}
+\end{table}
+
+\subsection{Subsection}
+Write text here
+
+
+\section{Fifth Section name}
+Write text here
+
+\subsection{Subsection}
+Write text here
+
+\subsubsection{Sub-Sub-section}
+Write text here
+
+\bibliographystyle{ieeetr}
+\bibliography{biblio}
+
+\end{document}

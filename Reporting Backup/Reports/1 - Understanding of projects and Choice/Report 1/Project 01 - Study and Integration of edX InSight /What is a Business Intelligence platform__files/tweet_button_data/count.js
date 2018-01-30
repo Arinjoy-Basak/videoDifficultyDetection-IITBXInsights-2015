@@ -1,0 +1,1 @@
+/**/__twttr.receiveCount({"count":0,"url":"http:\/\/www.covaligroup.com\/blog\/bid\/54927\/What-is-a-Business-Intelligence-platform\/"});

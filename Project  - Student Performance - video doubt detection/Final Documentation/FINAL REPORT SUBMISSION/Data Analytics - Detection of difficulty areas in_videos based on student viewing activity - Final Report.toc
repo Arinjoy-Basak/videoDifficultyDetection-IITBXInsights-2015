@@ -1,0 +1,17 @@
+\contentsline {chapter}{\numberline {1}Detection of difficulty areas in videos based on student activity}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction and outline of the chapter}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Discussing the problem statement}{1}{section.1.2}
+\contentsline {section}{\numberline {1.3}Basic outline of the idea}{2}{section.1.3}
+\contentsline {section}{\numberline {1.4}The Project Flow}{3}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Source of data for the model}{3}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Processing the data}{4}{subsection.1.4.2}
+\contentsline {subsubsection}{\numberline {1.4.2.1}Extracting and Cleaning the required data}{4}{subsubsection.1.4.2.1}
+\contentsline {subsubsection}{\numberline {1.4.2.2}Video length extraction using Google YouTube API}{6}{subsubsection.1.4.2.2}
+\contentsline {subsubsection}{\numberline {1.4.2.3}Redundancy removal and Error correction}{8}{subsubsection.1.4.2.3}
+\contentsline {subsection}{\numberline {1.4.3}Creation and prototyping of the data module}{9}{subsection.1.4.3}
+\contentsline {subsection}{\numberline {1.4.4}Final Implementation and visualization}{15}{subsection.1.4.4}
+\contentsline {subsubsection}{\numberline {1.4.4.1}Extracting the data from Hive tables}{15}{subsubsection.1.4.4.1}
+\contentsline {subsubsection}{\numberline {1.4.4.2}Filtering of events per user and per video}{16}{subsubsection.1.4.4.2}
+\contentsline {subsubsection}{\numberline {1.4.4.3}Processing and generation of results for final summary table}{17}{subsubsection.1.4.4.3}
+\contentsline {section}{\numberline {1.5}Future Work}{19}{section.1.5}
+\contentsline {section}{\numberline {1.6}Technologies Used}{19}{section.1.6}

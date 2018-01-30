@@ -1,0 +1,58 @@
+#TODO
+
+Convert the current program to sparkSQL
+	1) get tasks in mapreduce
+	2) get them to work
+		So, possible:
+		1) mapper gets the video and user tuples and passes to the first reducer.
+		2) first reducer will group the tasks together in a list and pass to the next processor layer(?required)
+		3) processor will be the same as the task in python written earlier
+		4) store these tuples in the table (or update them if already there) --- or save them, and in case we have to get the updated stats,
+		we run the grouped queries.
+	3) get the data from the hive table UserSessionOldLog and store the results in the result Hive table (VideoDifficultyDetails)
+		The task of getting the data using queries and displaying it on the graphs is the Ankit's responsibility.
+
+Submit by 26th (friday) atleast.
+
+Get presentation and documentation done.
+
+FOR NOW:
+Install and run spark 1.2.1 successfully, and practice a few mapreduce tasks. Then, try and implement the above task.
+
+While installing spark, install sbt. If problem, then install according to Jay's mail link. If building sbt is a problem because sbt-launch is corrupt, get a new version of sbt-launch from here: http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.13.6/sbt-launch.jar 
+
+Also, to test if  spark is connected to hive, or if hive says it can't access spark assembly, then try running: SPARK_HIVE=true sbt/sbt assembly
+
+TO connect hive to mysql for metastore, remove the thriftstore line from the configuration file.
+Final query: sbt/sbt -Phive -Phive-thriftserver -Phadoop-2.6 -Dhadoop.version=2.6.0 assembly
+after : sbt/sbt clean to clean up the current build.
+
+Also, copy the hive-site.xml file to spark conf folder and then build it. Any changes should be in both of them.
+sudo sbt/sbt -Phive -Pyarn -Phadoop-2.6 -Dhadoop.version=2.6.0 assembly (no thrift server)
+
+add the hive metastore uris property for the thrift server. (see properties)
+to the hive-site.xml location in hive and in spark conf/ folder.
+
+in hdfs, allow access to the /tmp folder on hdfs: hdfs dfs -chmod -R +777 /tmp
+
+Then start hive --service metastore &, and press enter to leave it running.
+The start running the scripts. Hive Metastore is ready and running to be accessed.
+
+Erros having cannot initialise ***.HiveMetaStoreClient: start the hive metastore service first!
+
+
+TO ACCESS THE DATA FROM THE USERSESSIONOLDLOG:
+==============================================
+
+1. Need to access the data from the hive. Data is already in sql. So, use sqoop to transfer it for one time to the local machine's hdfs.
+2. Install sqoop, and change build.xml to show the latest version of hadoop being used. version 1.4.5, and build from tar gz using ant.
+3. Then execute the sqoop command to get the data into HDFS as a file.
+4. Jay is writing a luigi task to get the data from the HDFS into Hive with the proper column format, and through partitions.
+5. Once the data is loaded into Hive, an additional column is created which gives the date partitions of the data (basically, a query with a date column giving stardate>something and enddate<something)
+6. This column is being written by the task itself. He will give the task, and will run it here (after installing luigi) to get the data into the table for one time.
+7. Then, I will write the (luigi) task to get the data from Hive, process it , and write the results back to the target.
+	(see luigi.readthedocs.org/.... luigi/contrib/spark.html) the sample Luigi task.
+8. Questions:
+i) Work on local machine or VM?: VM - create new folder, and start the work. Keep your own installation with you.
+ii) Spark or luigi task?: Spark program - luigi task won't be so complicated. It will probably call the functionality as a luigi task. Once task is written, we will take it to luigi.
+iii) Table?: it's on 10.105.22.97 in Hive, to be populated by Jay. Ask him for the schema... and probably the partitioning of the table will be done internally. Ask about how to write queries for that to access the data from the Hive tables accordingly.

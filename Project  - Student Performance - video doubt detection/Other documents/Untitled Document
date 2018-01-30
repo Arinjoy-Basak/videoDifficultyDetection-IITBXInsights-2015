@@ -1,0 +1,25 @@
+mysql> select t.*, CV.videoUTubeId , CV.videolength from (select moduleSysName, count(eventName) eventCount from UserSessionOldLog where courseName='CS101.1x' and moduleSysName is not null and eventType ='video' group by moduleSysName order by eventCount desc limit 50) t, (select * from CourseVideos where courseName='CS101.1x') CV where t.moduleSysName=CV.videoSysName  order by eventCount desc limit 10;
++----------------------------------+------------+--------------+-------------+
+| moduleSysName                    | eventCount | videoUTubeId | videolength |
++----------------------------------+------------+--------------+-------------+
+| 67a8559582864d6a8148e2ef5c997e8f |      41420 | fWXQu-xpBOk  |         976 |
+| 641407821f3a44ee9530a3ea900e2e80 |      38017 | UaB1KqHWX-k  |         349 |
+| a43751d47a934a9da245f28a94e1759e |      37898 | 2zHCJ_DX-ZI  |         741 |
+| e03113c234f14a848f725a44f8d1265d |      35421 | SatvhYjF59E  |         898 |
+| a3d6a7442ff949409f2d34dddea9a984 |      31044 | n5a1dFlP_1I  |         586 |
+| 8caa9cdac6b744518ce80d2b618bf6f8 |      30204 | -70ZWSGc6i4  |         897 |
+| cfb296bd686b408bb997fb14696235fa |      29151 | I55ivUATY4E  |         899 |
+| 8f892e4415d548308b9519e909ebc673 |      28915 | TlVt39EHolA  |        1333 |
+| bd155f3df2254815ac1f6812f9b4e4bd |      28164 | w3MFP6aLodg  |         691 |
+| 4f62458015584c0bbf904ce09caacc5d |      21660 | sMR7FOxWdck  |         745 |
++----------------------------------+------------+--------------+-------------+
+-- Top 10 videos in CS101.1x
+
+--Top 50 viewers of each video.
+
+select userName, count(eventName) watched
+from UserSessionOldLog
+where courseName='CS101.1x' and
+	moduleSysName='67a8559582864d6a8148e2ef5c997e8f' and eventType='video'
+group by userName order by watched desc limit 50;
+

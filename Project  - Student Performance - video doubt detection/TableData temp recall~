@@ -1,0 +1,1117 @@
+mysql> select t.*, CV.videoUTubeId , CV.videolength from (select moduleSysName, count(eventName) eventCount from UserSessionOldLog where courseName='CS101.1x' and moduleSysName is not null and eventType ='video' group by moduleSysName order by eventCount desc limit 50) t, (select * from CourseVideos where courseName='CS101.1x') CV where t.moduleSysName=CV.videoSysName  order by eventCount desc limit 10;
++----------------------------------+------------+--------------+-------------+
+| moduleSysName                    | eventCount | videoUTubeId | videolength |
++----------------------------------+------------+--------------+-------------+
+| 67a8559582864d6a8148e2ef5c997e8f |      41420 | fWXQu-xpBOk  |         976 |
+| 641407821f3a44ee9530a3ea900e2e80 |      38017 | UaB1KqHWX-k  |         349 |
+| a43751d47a934a9da245f28a94e1759e |      37898 | 2zHCJ_DX-ZI  |         741 |
+| e03113c234f14a848f725a44f8d1265d |      35421 | SatvhYjF59E  |         898 |
+| a3d6a7442ff949409f2d34dddea9a984 |      31044 | n5a1dFlP_1I  |         586 |
+| 8caa9cdac6b744518ce80d2b618bf6f8 |      30204 | -70ZWSGc6i4  |         897 |
+| cfb296bd686b408bb997fb14696235fa |      29151 | I55ivUATY4E  |         899 |
+| 8f892e4415d548308b9519e909ebc673 |      28915 | TlVt39EHolA  |        1333 |
+| bd155f3df2254815ac1f6812f9b4e4bd |      28164 | w3MFP6aLodg  |         691 |
+| 4f62458015584c0bbf904ce09caacc5d |      21660 | sMR7FOxWdck  |         745 |
++----------------------------------+------------+--------------+-------------+
+-- Top 10 videos in CS101.1x
+
+--Top 50 viewers of each video.
+
+select userName, count(eventName) watched
+from UserSessionOldLog
+where courseName='CS101.1x' and
+	moduleSysName='67a8559582864d6a8148e2ef5c997e8f' and eventType='video'
+group by userName order by watched desc limit 50;
+
++-------------------+---------+
+| userName          | watched |
++-------------------+---------+
+| AnitaB            |    4065 |
+| SANDIP_JANA       |    3616 |
+| firuza            |    1152 |
+| SARA              |     757 |
+| yashika           |     749 |
+| Ph03n1x           |     645 |
+| Shivani1996       |     577 |
+| ricky             |     430 |
+| Smriti            |     354 |
+| MdAshfaqHussain   |     345 |
+| nikhilnj96        |     342 |
+| sanjana9          |     301 |
+| RajShah           |     257 |
+| sushant           |     256 |
+| VarmaGCS          |     245 |
+| LizaDas           |     242 |
+| dewangp5          |     229 |
+| GirishB           |     227 |
+| akanksha01        |     225 |
+| Learn2015         |     209 |
+| morning           |     200 |
+| koushikreddy      |     198 |
+| Anitha94          |     187 |
+| Preetham1         |     186 |
+| Madhurima540      |     179 |
+| SaniaAnjum        |     178 |
+| rehansam21        |     173 |
+| Arun_K            |     166 |
+| deepak_kumar      |     156 |
+| SupriyaSankpal    |     154 |
+| Janvhi            |     144 |
+| AnandAlok         |     144 |
+| udaypatil         |     142 |
+| loose             |     142 |
+| krishna_bagaria   |     140 |
+| rusty3699         |     139 |
+| subramanyamr      |     139 |
+| dbp               |     125 |
+| manojsewak        |     125 |
+| prabaht123        |     121 |
+| sandeepvarma      |     120 |
+| ayushsomani       |     119 |
+| canon             |     119 |
+| AvinashP          |     117 |
+| vanitha           |     113 |
+| vigy123           |     113 |
+| ashishmalik       |     112 |
+| meghanabuddharaju |     109 |
+| adi               |     108 |
+| rachitb08         |     107 |
++-------------------+---------+
+50 rows in set (11.05 sec)
+
+
+
+
+
+
+
+
+create table TimeSpent(
+	videoId varchar(255),
+	userId varchar(50),
+	totalTimeSpent float,
+	PRIMARY KEY (videoId, userId)
+);
+
+create table TimeFrameAccess(
+	videoId varchar(255),
+	userId varchar(50),
+	timeFrame int(11),
+	countOfAccess int(20),
+	timeSpent float,
+	PRIMARY KEY (videoId, userId, timeFrame)
+);
+
+
+
+
+
+mysql> select eventType, eventName, moduleSysName, eventSource, oldVideoTime, currVideoTime, createDateTime from UserSessionOldLog where userName='ricky' and (eventType in ('video') and moduleSysName='67a8559582864d6a8148e2ef5c997e8f' or eventType in ('video', 'navigation') and eventName in ('page_close', 'save_user_state') ) order by createDateTime;
++------------+------------------------+----------------------------------+-------------+--------------+---------------+---------------------+
+| eventType  | eventName              | moduleSysName                    | eventSource | oldVideoTime | currVideoTime | createDateTime      |
++------------+------------------------+----------------------------------+-------------+--------------+---------------+---------------------+
+
+
+
+--XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+| navigation | page_close             | 83edde56613f410984363bdb6b16b613 | browser     |         NULL |          NULL | 2015-02-05 09:19:25 |
+| navigation | page_close             | e4abe8a7d8fb480b8958543d573b356f | browser     |         NULL |          NULL | 2015-02-05 09:27:08 |
+| video      | save_user_state        | NULL                             | server      |            0 |           347 | 2015-02-05 09:39:27 |
+| navigation | page_close             | 5773a6ab6319440aa5889ae38e578402 | browser     |         NULL |          NULL | 2015-02-05 09:42:45 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-05 09:42:49 |
+| navigation | page_close             | 6adae97399e5443c9560a2bd02a10314 | browser     |         NULL |          NULL | 2015-02-05 09:43:13 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-05 09:43:22 |
+| video      | save_user_state        | NULL                             | server      |            0 |           145 | 2015-02-05 09:48:58 |
+| video      | save_user_state        | NULL                             | server      |            0 |           261 | 2015-02-05 09:53:07 |
+| video      | save_user_state        | NULL                             | server      |            0 |           585 | 2015-02-05 10:15:44 |
+| navigation | page_close             | f0c2821e384a4a85b44a07575129b755 | browser     |         NULL |          NULL | 2015-02-05 10:15:50 |
+| video      | save_user_state        | NULL                             | server      |            0 |           585 | 2015-02-05 10:15:50 |
+| navigation | page_close             | 5773a6ab6319440aa5889ae38e578402 | browser     |         NULL |          NULL | 2015-02-06 11:36:54 |
+| navigation | page_close             | 5773a6ab6319440aa5889ae38e578402 | browser     |         NULL |          NULL | 2015-02-06 11:41:53 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-06 11:41:58 |
+| video      | save_user_state        | NULL                             | server      |            0 |           182 | 2015-02-06 11:45:27 |
+| video      | save_user_state        | NULL                             | server      |            0 |           252 | 2015-02-06 11:50:47 |
+| video      | save_user_state        | NULL                             | server      |            0 |           340 | 2015-02-06 11:52:31 |
+| navigation | page_close             | eeea132794aa4e0481e94a069cab3e10 | browser     |         NULL |          NULL | 2015-02-06 12:00:19 |
+| video      | save_user_state        | NULL                             | server      |            0 |           740 | 2015-02-06 12:00:19 |
+| video      | save_user_state        | NULL                             | server      |            0 |           897 | 2015-02-06 12:15:40 |
+| navigation | page_close             | 06713e09244b462ca480e03ce88bb6a3 | browser     |         NULL |          NULL | 2015-02-06 12:15:41 |
+| video      | save_user_state        | NULL                             | server      |            0 |           897 | 2015-02-06 12:15:41 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-06 12:25:34 |
+| video      | save_user_state        | NULL                             | server      |            0 |           585 | 2015-02-06 12:37:42 |
+| navigation | page_close             | 5773a6ab6319440aa5889ae38e578402 | browser     |         NULL |          NULL | 2015-02-07 11:28:24 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-07 11:28:27 |
+| navigation | page_close             | 97395d60fa094ff8a17770fa89739dce | browser     |         NULL |          NULL | 2015-02-07 11:28:40 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-07 11:28:42 |
+| navigation | page_close             | ba24809f572846458e1c78e09411863a | browser     |         NULL |          NULL | 2015-02-07 11:29:08 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-07 11:29:10 |
+| navigation | page_close             | 97395d60fa094ff8a17770fa89739dce | browser     |         NULL |          NULL | 2015-02-07 11:33:06 |
+| video      | save_user_state        | NULL                             | server      |            0 |           193 | 2015-02-07 11:33:06 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-07 11:33:09 |
+| video      | save_user_state        | NULL                             | server      |            0 |           169 | 2015-02-07 11:39:38 |
+| video      | save_user_state        | NULL                             | server      |            0 |           259 | 2015-02-07 11:43:02 |
+| video      | save_user_state        | NULL                             | server      |            0 |           320 | 2015-02-07 11:44:59 |
+| video      | save_user_state        | NULL                             | server      |            0 |           429 | 2015-02-07 11:49:03 |
+| video      | save_user_state        | NULL                             | server      |            0 |           451 | 2015-02-07 11:50:03 |
+| video      | save_user_state        | NULL                             | server      |            0 |           588 | 2015-02-07 11:58:51 |
+| video      | save_user_state        | NULL                             | server      |            0 |           598 | 2015-02-07 11:59:48 |
+| video      | save_user_state        | NULL                             | server      |            0 |           744 | 2015-02-07 12:02:47 |
+| navigation | page_close             | 5d5f32c8ab204f2a95c34b07bf276de5 | browser     |         NULL |          NULL | 2015-02-07 12:03:04 |
+| video      | save_user_state        | NULL                             | server      |            0 |           295 | 2015-02-07 12:08:29 |
+| video      | save_user_state        | NULL                             | server      |            0 |           565 | 2015-02-07 12:14:00 |
+| video      | save_user_state        | NULL                             | server      |            0 |           628 | 2015-02-07 12:15:43 |
+| video      | save_user_state        | NULL                             | server      |            0 |           630 | 2015-02-07 12:16:07 |
+| video      | save_user_state        | NULL                             | server      |            0 |           633 | 2015-02-07 12:16:40 |
+| video      | save_user_state        | NULL                             | server      |            0 |           731 | 2015-02-07 12:20:21 |
+| video      | save_user_state        | NULL                             | server      |            0 |           749 | 2015-02-07 12:21:36 |
+| video      | save_user_state        | NULL                             | server      |            0 |           780 | 2015-02-07 12:23:05 |
+| video      | save_user_state        | NULL                             | server      |            0 |           823 | 2015-02-07 12:23:49 |
+| video      | save_user_state        | NULL                             | server      |            0 |           872 | 2015-02-07 12:26:31 |
+| navigation | page_close             | 5773a6ab6319440aa5889ae38e578402 | browser     |         NULL |          NULL | 2015-02-08 11:46:40 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-08 11:46:44 |
+| navigation | page_close             | 93c7eb88973146489f83cc1fd855a9f7 | browser     |         NULL |          NULL | 2015-02-08 11:50:21 |
+| video      | save_user_state        | NULL                             | server      |            0 |           886 | 2015-02-08 11:50:28 |
+--XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+| video      | load_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |             0 | 2015-02-08 11:50:46 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |             0 | 2015-02-08 11:50:50 |
+| video      | show_transcript        | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |             0 | 2015-02-08 11:50:52 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       15.2828 | 2015-02-08 11:51:06 |
+| video      | save_user_state        | NULL                             | server      |            0 |            15 | 2015-02-08 11:51:07 |
+| video      | save_user_state        | NULL                             | server      |            0 |           119 | 2015-02-08 11:53:18 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       131.633 | 2015-02-08 11:54:09 |
+| video      | save_user_state        | NULL                             | server      |            0 |           131 | 2015-02-08 11:54:19 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       131.633 | 2015-02-08 11:54:28 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       204.138 | 2015-02-08 11:55:46 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       204.138 | 2015-02-08 11:56:34 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       249.716 | 2015-02-08 11:56:43 |
+| video      | save_user_state        | NULL                             | server      |            0 |           280 | 2015-02-08 11:58:59 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       280.914 | 2015-02-08 11:59:06 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       311.678 | 2015-02-08 11:59:37 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       311.678 | 2015-02-08 11:59:52 |
+| video      | seek_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |      423.321 |           386 | 2015-02-08 12:01:50 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       388.288 | 2015-02-08 12:01:55 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       423.321 | 2015-02-08 12:01:56 |
+| video      | seek_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |       388.02 |           353 | 2015-02-08 12:02:03 |
+| video      | seek_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |       680.48 |           642 | 2015-02-08 12:07:35 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       680.748 | 2015-02-08 12:07:36 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       732.532 | 2015-02-08 12:08:47 |
+| video      | seek_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |      718.184 |           611 | 2015-02-08 12:09:08 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       618.084 | 2015-02-08 12:09:11 |
+| video      | seek_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |      732.532 |           700 | 2015-02-08 12:09:13 |
+| video      | seek_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |      678.378 |           642 | 2015-02-08 12:11:00 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       968.702 | 2015-02-08 12:16:28 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |           252 | 2015-02-08 12:16:29 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       254.955 | 2015-02-08 12:16:32 |
+| video      | save_user_state        | NULL                             | server      |            0 |           282 | 2015-02-08 12:16:34 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       282.949 | 2015-02-08 12:17:39 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        283.39 | 2015-02-08 12:17:40 |
+| video      | save_user_state        | NULL                             | server      |            0 |           283 | 2015-02-08 12:17:42 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       283.557 | 2015-02-08 12:17:42 |
+| video      | save_user_state        | NULL                             | server      |            0 |           282 | 2015-02-08 12:17:42 |
+| video      | save_user_state        | NULL                             | server      |            0 |           283 | 2015-02-08 12:17:42 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        283.69 | 2015-02-08 12:17:43 |
+| video      | save_user_state        | NULL                             | server      |            0 |           283 | 2015-02-08 12:17:43 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        283.62 | 2015-02-08 12:17:43 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        283.32 | 2015-02-08 12:17:44 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        283.39 | 2015-02-08 12:17:44 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       283.761 | 2015-02-08 12:17:44 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       283.761 | 2015-02-08 12:17:44 |
+| video      | save_user_state        | NULL                             | server      |            0 |           283 | 2015-02-08 12:17:44 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        283.69 | 2015-02-08 12:17:44 |
+| video      | save_user_state        | NULL                             | server      |            0 |           283 | 2015-02-08 12:17:44 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       283.761 | 2015-02-08 12:17:44 |
+| video      | save_user_state        | NULL                             | server      |            0 |           283 | 2015-02-08 12:17:45 |
+| video      | save_user_state        | NULL                             | server      |            0 |           284 | 2015-02-08 12:17:45 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.101 | 2015-02-08 12:17:45 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.028 | 2015-02-08 12:17:45 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.101 | 2015-02-08 12:17:45 |
+| video      | save_user_state        | NULL                             | server      |            0 |           284 | 2015-02-08 12:17:46 |
+| video      | save_user_state        | NULL                             | server      |            0 |           284 | 2015-02-08 12:17:46 |
+| video      | save_user_state        | NULL                             | server      |            0 |           284 | 2015-02-08 12:17:46 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.184 | 2015-02-08 12:17:46 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.184 | 2015-02-08 12:17:46 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.229 | 2015-02-08 12:17:46 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.285 | 2015-02-08 12:17:46 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.028 | 2015-02-08 12:17:47 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.351 | 2015-02-08 12:17:47 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.437 | 2015-02-08 12:17:47 |
+| video      | save_user_state        | NULL                             | server      |            0 |           284 | 2015-02-08 12:17:47 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.351 | 2015-02-08 12:17:47 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.529 | 2015-02-08 12:17:48 |
+| video      | save_user_state        | NULL                             | server      |            0 |           284 | 2015-02-08 12:17:48 |
+| video      | save_user_state        | NULL                             | server      |            0 |           284 | 2015-02-08 12:17:48 |
+| video      | save_user_state        | NULL                             | server      |            0 |           284 | 2015-02-08 12:17:48 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.611 | 2015-02-08 12:17:48 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.529 | 2015-02-08 12:17:48 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.611 | 2015-02-08 12:17:48 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.723 | 2015-02-08 12:17:49 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.823 | 2015-02-08 12:17:49 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.897 | 2015-02-08 12:17:49 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.723 | 2015-02-08 12:17:49 |
+| video      | save_user_state        | NULL                             | server      |            0 |           284 | 2015-02-08 12:17:49 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.965 | 2015-02-08 12:17:50 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.965 | 2015-02-08 12:17:50 |
+| video      | save_user_state        | NULL                             | server      |            0 |           285 | 2015-02-08 12:17:50 |
+| video      | save_user_state        | NULL                             | server      |            0 |           284 | 2015-02-08 12:17:50 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       284.897 | 2015-02-08 12:17:50 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        285.04 | 2015-02-08 12:17:51 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.117 | 2015-02-08 12:17:51 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.186 | 2015-02-08 12:17:52 |
+| video      | save_user_state        | NULL                             | server      |            0 |           285 | 2015-02-08 12:17:52 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.186 | 2015-02-08 12:17:52 |
+| video      | save_user_state        | NULL                             | server      |            0 |           285 | 2015-02-08 12:17:53 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.277 | 2015-02-08 12:17:53 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.352 | 2015-02-08 12:17:53 |
+| video      | save_user_state        | NULL                             | server      |            0 |           285 | 2015-02-08 12:17:54 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        285.49 | 2015-02-08 12:17:54 |
+| video      | save_user_state        | NULL                             | server      |            0 |           285 | 2015-02-08 12:17:55 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.588 | 2015-02-08 12:17:55 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.695 | 2015-02-08 12:17:55 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.277 | 2015-02-08 12:17:55 |
+| video      | save_user_state        | NULL                             | server      |            0 |           285 | 2015-02-08 12:17:56 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.762 | 2015-02-08 12:17:56 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.695 | 2015-02-08 12:17:56 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.352 | 2015-02-08 12:17:56 |
+| video      | save_user_state        | NULL                             | server      |            0 |           285 | 2015-02-08 12:17:57 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.862 | 2015-02-08 12:17:57 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.979 | 2015-02-08 12:17:57 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.932 | 2015-02-08 12:17:57 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.932 | 2015-02-08 12:17:57 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.979 | 2015-02-08 12:17:58 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       285.979 | 2015-02-08 12:17:58 |
+| video      | save_user_state        | NULL                             | server      |            0 |           285 | 2015-02-08 12:17:58 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       286.221 | 2015-02-08 12:17:59 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       286.221 | 2015-02-08 12:17:59 |
+| video      | save_user_state        | NULL                             | server      |            0 |           286 | 2015-02-08 12:17:59 |
+| video      | save_user_state        | NULL                             | server      |            0 |           286 | 2015-02-08 12:17:59 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       286.298 | 2015-02-08 12:17:59 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       286.457 | 2015-02-08 12:17:59 |
+| video      | save_user_state        | NULL                             | server      |            0 |           286 | 2015-02-08 12:18:00 |
+| video      | save_user_state        | NULL                             | server      |            0 |           286 | 2015-02-08 12:18:00 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       286.457 | 2015-02-08 12:18:00 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       286.457 | 2015-02-08 12:18:00 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       286.767 | 2015-02-08 12:18:00 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       286.124 | 2015-02-08 12:18:01 |
+| video      | save_user_state        | NULL                             | server      |            0 |           287 | 2015-02-08 12:18:01 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        287.02 | 2015-02-08 12:18:01 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       286.887 | 2015-02-08 12:18:01 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        287.02 | 2015-02-08 12:18:02 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       287.254 | 2015-02-08 12:18:02 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        287.02 | 2015-02-08 12:18:02 |
+| video      | save_user_state        | NULL                             | server      |            0 |           287 | 2015-02-08 12:18:02 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       287.254 | 2015-02-08 12:18:03 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       287.254 | 2015-02-08 12:18:03 |
+| video      | save_user_state        | NULL                             | server      |            0 |           287 | 2015-02-08 12:18:03 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       286.887 | 2015-02-08 12:18:03 |
+| video      | save_user_state        | NULL                             | server      |            0 |           287 | 2015-02-08 12:18:03 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        287.46 | 2015-02-08 12:18:04 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        287.46 | 2015-02-08 12:18:04 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       287.565 | 2015-02-08 12:18:04 |
+| video      | save_user_state        | NULL                             | server      |            0 |           287 | 2015-02-08 12:18:04 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       287.565 | 2015-02-08 12:18:04 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       287.628 | 2015-02-08 12:18:04 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       287.254 | 2015-02-08 12:18:05 |
+| video      | save_user_state        | NULL                             | server      |            0 |           287 | 2015-02-08 12:18:05 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       287.628 | 2015-02-08 12:18:05 |
+| video      | save_user_state        | NULL                             | server      |            0 |           287 | 2015-02-08 12:18:05 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       287.825 | 2015-02-08 12:18:05 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        287.89 | 2015-02-08 12:18:06 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       287.825 | 2015-02-08 12:18:06 |
+| video      | save_user_state        | NULL                             | server      |            0 |           287 | 2015-02-08 12:18:06 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        287.96 | 2015-02-08 12:18:07 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        287.96 | 2015-02-08 12:18:07 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       287.756 | 2015-02-08 12:18:07 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       288.034 | 2015-02-08 12:18:07 |
+| video      | save_user_state        | NULL                             | server      |            0 |           288 | 2015-02-08 12:18:07 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       288.122 | 2015-02-08 12:18:08 |
+| video      | save_user_state        | NULL                             | server      |            0 |           288 | 2015-02-08 12:18:08 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       288.122 | 2015-02-08 12:18:08 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        288.26 | 2015-02-08 12:18:09 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        288.26 | 2015-02-08 12:18:09 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       288.355 | 2015-02-08 12:18:10 |
+| video      | save_user_state        | NULL                             | server      |            0 |           287 | 2015-02-08 12:18:10 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       288.393 | 2015-02-08 12:18:10 |
+| video      | save_user_state        | NULL                             | server      |            0 |           288 | 2015-02-08 12:18:10 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       288.393 | 2015-02-08 12:18:11 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       288.355 | 2015-02-08 12:18:11 |
+| video      | save_user_state        | NULL                             | server      |            0 |           288 | 2015-02-08 12:18:11 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       288.555 | 2015-02-08 12:18:11 |
+| video      | save_user_state        | NULL                             | server      |            0 |           288 | 2015-02-08 12:18:12 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       288.625 | 2015-02-08 12:18:12 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       288.555 | 2015-02-08 12:18:12 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       288.625 | 2015-02-08 12:18:12 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       288.676 | 2015-02-08 12:18:12 |
+| video      | save_user_state        | NULL                             | server      |            0 |           288 | 2015-02-08 12:18:13 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        288.77 | 2015-02-08 12:18:13 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       288.676 | 2015-02-08 12:18:13 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        288.77 | 2015-02-08 12:18:13 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       288.842 | 2015-02-08 12:18:13 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       288.924 | 2015-02-08 12:18:14 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       288.924 | 2015-02-08 12:18:14 |
+| video      | save_user_state        | NULL                             | server      |            0 |           288 | 2015-02-08 12:18:14 |
+| video      | save_user_state        | NULL                             | server      |            0 |           289 | 2015-02-08 12:18:14 |
+| video      | save_user_state        | NULL                             | server      |            0 |           289 | 2015-02-08 12:18:14 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        289.09 | 2015-02-08 12:18:15 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       289.184 | 2015-02-08 12:18:15 |
+| video      | save_user_state        | NULL                             | server      |            0 |           289 | 2015-02-08 12:18:15 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        289.33 | 2015-02-08 12:18:15 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        289.54 | 2015-02-08 12:18:15 |
+| video      | save_user_state        | NULL                             | server      |            0 |           289 | 2015-02-08 12:18:15 |
+| video      | save_user_state        | NULL                             | server      |            0 |           289 | 2015-02-08 12:18:15 |
+| video      | save_user_state        | NULL                             | server      |            0 |           289 | 2015-02-08 12:18:15 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        289.33 | 2015-02-08 12:18:15 |
+| video      | save_user_state        | NULL                             | server      |            0 |           289 | 2015-02-08 12:18:15 |
+| video      | save_user_state        | NULL                             | server      |            0 |           289 | 2015-02-08 12:18:15 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        289.49 | 2015-02-08 12:18:15 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        289.66 | 2015-02-08 12:18:16 |
+| video      | save_user_state        | NULL                             | server      |            0 |           289 | 2015-02-08 12:18:16 |
+| video      | save_user_state        | NULL                             | server      |            0 |           289 | 2015-02-08 12:18:16 |
+| video      | save_user_state        | NULL                             | server      |            0 |           289 | 2015-02-08 12:18:16 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        289.59 | 2015-02-08 12:18:16 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        289.66 | 2015-02-08 12:18:16 |
+| video      | save_user_state        | NULL                             | server      |            0 |           289 | 2015-02-08 12:18:16 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       289.689 | 2015-02-08 12:18:16 |
+| video      | save_user_state        | NULL                             | server      |            0 |           289 | 2015-02-08 12:18:16 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       289.814 | 2015-02-08 12:18:16 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       289.878 | 2015-02-08 12:18:16 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        290.01 | 2015-02-08 12:18:17 |
+| video      | save_user_state        | NULL                             | server      |            0 |           290 | 2015-02-08 12:18:17 |
+| video      | save_user_state        | NULL                             | server      |            0 |           289 | 2015-02-08 12:18:17 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        289.96 | 2015-02-08 12:18:17 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       290.072 | 2015-02-08 12:18:17 |
+| video      | save_user_state        | NULL                             | server      |            0 |           290 | 2015-02-08 12:18:17 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        290.24 | 2015-02-08 12:18:18 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        290.24 | 2015-02-08 12:18:18 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       290.142 | 2015-02-08 12:18:18 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        290.24 | 2015-02-08 12:18:18 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       290.373 | 2015-02-08 12:18:18 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        290.44 | 2015-02-08 12:18:19 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       290.625 | 2015-02-08 12:18:19 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        290.44 | 2015-02-08 12:18:19 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        290.54 | 2015-02-08 12:18:19 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        290.54 | 2015-02-08 12:18:19 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        290.69 | 2015-02-08 12:18:19 |
+| video      | save_user_state        | NULL                             | server      |            0 |           290 | 2015-02-08 12:18:19 |
+| video      | save_user_state        | NULL                             | server      |            0 |           290 | 2015-02-08 12:18:20 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       290.142 | 2015-02-08 12:18:20 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       290.803 | 2015-02-08 12:18:20 |
+| video      | save_user_state        | NULL                             | server      |            0 |           290 | 2015-02-08 12:18:20 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        290.69 | 2015-02-08 12:18:20 |
+| video      | save_user_state        | NULL                             | server      |            0 |           290 | 2015-02-08 12:18:20 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       290.803 | 2015-02-08 12:18:20 |
+| video      | save_user_state        | NULL                             | server      |            0 |           290 | 2015-02-08 12:18:20 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       291.077 | 2015-02-08 12:18:21 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       291.077 | 2015-02-08 12:18:21 |
+| video      | save_user_state        | NULL                             | server      |            0 |           291 | 2015-02-08 12:18:21 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       291.228 | 2015-02-08 12:18:21 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       290.925 | 2015-02-08 12:18:21 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       290.984 | 2015-02-08 12:18:21 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       290.984 | 2015-02-08 12:18:21 |
+| video      | save_user_state        | NULL                             | server      |            0 |           291 | 2015-02-08 12:18:21 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       291.228 | 2015-02-08 12:18:21 |
+| video      | save_user_state        | NULL                             | server      |            0 |           291 | 2015-02-08 12:18:22 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       291.366 | 2015-02-08 12:18:22 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       291.562 | 2015-02-08 12:18:22 |
+| video      | save_user_state        | NULL                             | server      |            0 |           291 | 2015-02-08 12:18:22 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        291.76 | 2015-02-08 12:18:22 |
+| video      | save_user_state        | NULL                             | server      |            0 |           291 | 2015-02-08 12:18:22 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       291.925 | 2015-02-08 12:18:22 |
+| video      | save_user_state        | NULL                             | server      |            0 |           291 | 2015-02-08 12:18:22 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       291.366 | 2015-02-08 12:18:22 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        291.16 | 2015-02-08 12:18:22 |
+| video      | save_user_state        | NULL                             | server      |            0 |           291 | 2015-02-08 12:18:22 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       291.562 | 2015-02-08 12:18:22 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       291.634 | 2015-02-08 12:18:22 |
+| video      | save_user_state        | NULL                             | server      |            0 |           291 | 2015-02-08 12:18:22 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       291.692 | 2015-02-08 12:18:22 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       291.843 | 2015-02-08 12:18:22 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       291.925 | 2015-02-08 12:18:22 |
+| video      | save_user_state        | NULL                             | server      |            0 |           291 | 2015-02-08 12:18:22 |
+| video      | save_user_state        | NULL                             | server      |            0 |           292 | 2015-02-08 12:18:23 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       292.131 | 2015-02-08 12:18:23 |
+| video      | save_user_state        | NULL                             | server      |            0 |           292 | 2015-02-08 12:18:23 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        292.26 | 2015-02-08 12:18:23 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       292.492 | 2015-02-08 12:18:23 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       291.993 | 2015-02-08 12:18:23 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       292.059 | 2015-02-08 12:18:23 |
+| video      | save_user_state        | NULL                             | server      |            0 |           292 | 2015-02-08 12:18:23 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       292.192 | 2015-02-08 12:18:23 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        292.26 | 2015-02-08 12:18:23 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       292.345 | 2015-02-08 12:18:23 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       292.345 | 2015-02-08 12:18:23 |
+| video      | save_user_state        | NULL                             | server      |            0 |           292 | 2015-02-08 12:18:23 |
+| video      | save_user_state        | NULL                             | server      |            0 |           292 | 2015-02-08 12:18:23 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        292.64 | 2015-02-08 12:18:23 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       293.237 | 2015-02-08 12:18:24 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       293.237 | 2015-02-08 12:18:24 |
+| video      | save_user_state        | NULL                             | server      |            0 |           293 | 2015-02-08 12:18:24 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       293.581 | 2015-02-08 12:18:24 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       293.581 | 2015-02-08 12:18:24 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       293.698 | 2015-02-08 12:18:24 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       293.785 | 2015-02-08 12:18:24 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       293.785 | 2015-02-08 12:18:24 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       292.764 | 2015-02-08 12:18:24 |
+| video      | save_user_state        | NULL                             | server      |            0 |           293 | 2015-02-08 12:18:24 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       293.237 | 2015-02-08 12:18:24 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       292.492 | 2015-02-08 12:18:24 |
+| video      | save_user_state        | NULL                             | server      |            0 |           293 | 2015-02-08 12:18:24 |
+| video      | save_user_state        | NULL                             | server      |            0 |           293 | 2015-02-08 12:18:24 |
+| video      | save_user_state        | NULL                             | server      |            0 |           292 | 2015-02-08 12:18:24 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        292.94 | 2015-02-08 12:18:24 |
+| video      | save_user_state        | NULL                             | server      |            0 |           292 | 2015-02-08 12:18:24 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       293.101 | 2015-02-08 12:18:24 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       293.867 | 2015-02-08 12:18:25 |
+| video      | save_user_state        | NULL                             | server      |            0 |           293 | 2015-02-08 12:18:25 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       293.933 | 2015-02-08 12:18:25 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        294.12 | 2015-02-08 12:18:25 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       294.194 | 2015-02-08 12:18:25 |
+| video      | save_user_state        | NULL                             | server      |            0 |           294 | 2015-02-08 12:18:25 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       293.933 | 2015-02-08 12:18:25 |
+| video      | save_user_state        | NULL                             | server      |            0 |           294 | 2015-02-08 12:18:25 |
+| video      | save_user_state        | NULL                             | server      |            0 |           294 | 2015-02-08 12:18:25 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       294.306 | 2015-02-08 12:18:25 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       294.306 | 2015-02-08 12:18:26 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       294.376 | 2015-02-08 12:18:26 |
+| video      | save_user_state        | NULL                             | server      |            0 |           294 | 2015-02-08 12:18:26 |
+| video      | save_user_state        | NULL                             | server      |            0 |           294 | 2015-02-08 12:18:26 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       294.594 | 2015-02-08 12:18:26 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       294.376 | 2015-02-08 12:18:26 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       294.461 | 2015-02-08 12:18:26 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       294.523 | 2015-02-08 12:18:26 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       294.666 | 2015-02-08 12:18:27 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       294.729 | 2015-02-08 12:18:27 |
+| video      | save_user_state        | NULL                             | server      |            0 |           294 | 2015-02-08 12:18:27 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       294.729 | 2015-02-08 12:18:28 |
+| video      | save_user_state        | NULL                             | server      |            0 |           294 | 2015-02-08 12:18:28 |
+| video      | save_user_state        | NULL                             | server      |            0 |           294 | 2015-02-08 12:18:28 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       294.902 | 2015-02-08 12:18:28 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       294.971 | 2015-02-08 12:18:28 |
+| video      | save_user_state        | NULL                             | server      |            0 |           295 | 2015-02-08 12:18:28 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       295.118 | 2015-02-08 12:18:28 |
+| video      | save_user_state        | NULL                             | server      |            0 |           295 | 2015-02-08 12:18:28 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       295.196 | 2015-02-08 12:18:28 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       295.262 | 2015-02-08 12:18:28 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       295.334 | 2015-02-08 12:18:28 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       295.334 | 2015-02-08 12:18:28 |
+| video      | save_user_state        | NULL                             | server      |            0 |           295 | 2015-02-08 12:18:28 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       294.902 | 2015-02-08 12:18:28 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       295.047 | 2015-02-08 12:18:28 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       295.118 | 2015-02-08 12:18:28 |
+| video      | save_user_state        | NULL                             | server      |            0 |           294 | 2015-02-08 12:18:28 |
+| video      | save_user_state        | NULL                             | server      |            0 |           295 | 2015-02-08 12:18:28 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       295.408 | 2015-02-08 12:18:28 |
+| video      | save_user_state        | NULL                             | server      |            0 |           295 | 2015-02-08 12:18:29 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       295.576 | 2015-02-08 12:18:29 |
+| video      | save_user_state        | NULL                             | server      |            0 |           295 | 2015-02-08 12:18:29 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       295.729 | 2015-02-08 12:18:29 |
+| video      | save_user_state        | NULL                             | server      |            0 |           295 | 2015-02-08 12:18:29 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       295.941 | 2015-02-08 12:18:29 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       295.479 | 2015-02-08 12:18:29 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       295.649 | 2015-02-08 12:18:29 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       295.797 | 2015-02-08 12:18:29 |
+| video      | save_user_state        | NULL                             | server      |            0 |           295 | 2015-02-08 12:18:29 |
+| video      | save_user_state        | NULL                             | server      |            0 |           296 | 2015-02-08 12:18:30 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       296.011 | 2015-02-08 12:18:30 |
+| video      | save_user_state        | NULL                             | server      |            0 |           295 | 2015-02-08 12:18:30 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       296.133 | 2015-02-08 12:18:30 |
+| video      | save_user_state        | NULL                             | server      |            0 |           296 | 2015-02-08 12:18:30 |
+| video      | save_user_state        | NULL                             | server      |            0 |           296 | 2015-02-08 12:18:30 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       295.729 | 2015-02-08 12:18:30 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       296.232 | 2015-02-08 12:18:30 |
+| video      | save_user_state        | NULL                             | server      |            0 |           296 | 2015-02-08 12:18:30 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       296.279 | 2015-02-08 12:18:31 |
+| video      | save_user_state        | NULL                             | server      |            0 |           296 | 2015-02-08 12:18:31 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       296.432 | 2015-02-08 12:18:31 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       296.504 | 2015-02-08 12:18:31 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       296.573 | 2015-02-08 12:18:31 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       296.504 | 2015-02-08 12:18:31 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       296.648 | 2015-02-08 12:18:31 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       296.648 | 2015-02-08 12:18:32 |
+| video      | save_user_state        | NULL                             | server      |            0 |           296 | 2015-02-08 12:18:32 |
+| video      | save_user_state        | NULL                             | server      |            0 |           296 | 2015-02-08 12:18:32 |
+| video      | save_user_state        | NULL                             | server      |            0 |           296 | 2015-02-08 12:18:32 |
+| video      | save_user_state        | NULL                             | server      |            0 |           296 | 2015-02-08 12:18:32 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       296.767 | 2015-02-08 12:18:32 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       296.432 | 2015-02-08 12:18:32 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       296.849 | 2015-02-08 12:18:32 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       296.931 | 2015-02-08 12:18:32 |
+| video      | save_user_state        | NULL                             | server      |            0 |           296 | 2015-02-08 12:18:32 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       296.999 | 2015-02-08 12:18:33 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       297.069 | 2015-02-08 12:18:33 |
+| video      | save_user_state        | NULL                             | server      |            0 |           296 | 2015-02-08 12:18:33 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       297.216 | 2015-02-08 12:18:33 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       297.344 | 2015-02-08 12:18:33 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       297.344 | 2015-02-08 12:18:33 |
+| video      | save_user_state        | NULL                             | server      |            0 |           297 | 2015-02-08 12:18:33 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       297.144 | 2015-02-08 12:18:33 |
+| video      | save_user_state        | NULL                             | server      |            0 |           297 | 2015-02-08 12:18:33 |
+| video      | save_user_state        | NULL                             | server      |            0 |           297 | 2015-02-08 12:18:33 |
+| video      | save_user_state        | NULL                             | server      |            0 |           297 | 2015-02-08 12:18:34 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       297.573 | 2015-02-08 12:18:34 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       297.216 | 2015-02-08 12:18:34 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        297.64 | 2015-02-08 12:18:34 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       297.707 | 2015-02-08 12:18:34 |
+| video      | save_user_state        | NULL                             | server      |            0 |           297 | 2015-02-08 12:18:34 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       297.834 | 2015-02-08 12:18:34 |
+| video      | save_user_state        | NULL                             | server      |            0 |           297 | 2015-02-08 12:18:34 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       297.499 | 2015-02-08 12:18:34 |
+| video      | save_user_state        | NULL                             | server      |            0 |           297 | 2015-02-08 12:18:34 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       297.431 | 2015-02-08 12:18:34 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       297.903 | 2015-02-08 12:18:35 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       297.978 | 2015-02-08 12:18:35 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       298.073 | 2015-02-08 12:18:35 |
+| video      | save_user_state        | NULL                             | server      |            0 |           298 | 2015-02-08 12:18:35 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       297.978 | 2015-02-08 12:18:35 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       297.764 | 2015-02-08 12:18:35 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       298.146 | 2015-02-08 12:18:35 |
+| video      | save_user_state        | NULL                             | server      |            0 |           298 | 2015-02-08 12:18:36 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       297.978 | 2015-02-08 12:18:36 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       298.146 | 2015-02-08 12:18:36 |
+| video      | save_user_state        | NULL                             | server      |            0 |           298 | 2015-02-08 12:18:36 |
+| video      | save_user_state        | NULL                             | server      |            0 |           298 | 2015-02-08 12:18:36 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       298.506 | 2015-02-08 12:18:36 |
+| video      | save_user_state        | NULL                             | server      |            0 |           298 | 2015-02-08 12:18:36 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       298.467 | 2015-02-08 12:18:36 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       298.598 | 2015-02-08 12:18:37 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       298.665 | 2015-02-08 12:18:37 |
+| video      | save_user_state        | NULL                             | server      |            0 |           298 | 2015-02-08 12:18:37 |
+| video      | save_user_state        | NULL                             | server      |            0 |           298 | 2015-02-08 12:18:37 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       298.939 | 2015-02-08 12:18:37 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       298.939 | 2015-02-08 12:18:37 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       299.087 | 2015-02-08 12:18:37 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       298.146 | 2015-02-08 12:18:37 |
+| video      | save_user_state        | NULL                             | server      |            0 |           299 | 2015-02-08 12:18:37 |
+| video      | save_user_state        | NULL                             | server      |            0 |           298 | 2015-02-08 12:18:37 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       298.665 | 2015-02-08 12:18:37 |
+| video      | save_user_state        | NULL                             | server      |            0 |           298 | 2015-02-08 12:18:37 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       298.146 | 2015-02-08 12:18:37 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       299.009 | 2015-02-08 12:18:37 |
+| video      | save_user_state        | NULL                             | server      |            0 |           299 | 2015-02-08 12:18:37 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       299.232 | 2015-02-08 12:18:38 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       299.232 | 2015-02-08 12:18:38 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       299.304 | 2015-02-08 12:18:38 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        299.37 | 2015-02-08 12:18:38 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        299.44 | 2015-02-08 12:18:38 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |         299.5 | 2015-02-08 12:18:38 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       299.566 | 2015-02-08 12:18:38 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       299.566 | 2015-02-08 12:18:38 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       299.659 | 2015-02-08 12:18:38 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       299.659 | 2015-02-08 12:18:38 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       299.659 | 2015-02-08 12:18:38 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       299.156 | 2015-02-08 12:18:38 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        299.37 | 2015-02-08 12:18:38 |
+| video      | save_user_state        | NULL                             | server      |            0 |           299 | 2015-02-08 12:18:38 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |         299.5 | 2015-02-08 12:18:38 |
+| video      | save_user_state        | NULL                             | server      |            0 |           299 | 2015-02-08 12:18:38 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       299.659 | 2015-02-08 12:18:38 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       300.116 | 2015-02-08 12:18:39 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       300.116 | 2015-02-08 12:18:39 |
+| video      | save_user_state        | NULL                             | server      |            0 |           300 | 2015-02-08 12:18:39 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       300.341 | 2015-02-08 12:18:39 |
+| video      | save_user_state        | NULL                             | server      |            0 |           300 | 2015-02-08 12:18:39 |
+| video      | save_user_state        | NULL                             | server      |            0 |           300 | 2015-02-08 12:18:39 |
+| video      | save_user_state        | NULL                             | server      |            0 |           299 | 2015-02-08 12:18:39 |
+| video      | save_user_state        | NULL                             | server      |            0 |           300 | 2015-02-08 12:18:39 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       300.341 | 2015-02-08 12:18:39 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       300.433 | 2015-02-08 12:18:39 |
+| video      | save_user_state        | NULL                             | server      |            0 |           300 | 2015-02-08 12:18:40 |
+| video      | save_user_state        | NULL                             | server      |            0 |           300 | 2015-02-08 12:18:40 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        300.74 | 2015-02-08 12:18:40 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       300.506 | 2015-02-08 12:18:40 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       300.668 | 2015-02-08 12:18:40 |
+| video      | save_user_state        | NULL                             | server      |            0 |           300 | 2015-02-08 12:18:40 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       300.812 | 2015-02-08 12:18:41 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       300.884 | 2015-02-08 12:18:41 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       300.884 | 2015-02-08 12:18:41 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       300.979 | 2015-02-08 12:18:41 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       300.812 | 2015-02-08 12:18:41 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       300.979 | 2015-02-08 12:18:41 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       301.052 | 2015-02-08 12:18:42 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       301.159 | 2015-02-08 12:18:42 |
+| video      | save_user_state        | NULL                             | server      |            0 |           301 | 2015-02-08 12:18:42 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       301.343 | 2015-02-08 12:18:42 |
+| video      | save_user_state        | NULL                             | server      |            0 |           301 | 2015-02-08 12:18:42 |
+| video      | save_user_state        | NULL                             | server      |            0 |           301 | 2015-02-08 12:18:42 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       301.491 | 2015-02-08 12:18:43 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       301.491 | 2015-02-08 12:18:43 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       301.668 | 2015-02-08 12:18:43 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       301.343 | 2015-02-08 12:18:43 |
+| video      | save_user_state        | NULL                             | server      |            0 |           301 | 2015-02-08 12:18:43 |
+| video      | save_user_state        | NULL                             | server      |            0 |           301 | 2015-02-08 12:18:43 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       301.668 | 2015-02-08 12:18:43 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       301.159 | 2015-02-08 12:18:43 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       301.803 | 2015-02-08 12:18:44 |
+| video      | save_user_state        | NULL                             | server      |            0 |           301 | 2015-02-08 12:18:44 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        301.88 | 2015-02-08 12:18:44 |
+| video      | save_user_state        | NULL                             | server      |            0 |           301 | 2015-02-08 12:18:44 |
+| video      | save_user_state        | NULL                             | server      |            0 |           302 | 2015-02-08 12:18:44 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.043 | 2015-02-08 12:18:44 |
+| video      | save_user_state        | NULL                             | server      |            0 |           302 | 2015-02-08 12:18:44 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        302.27 | 2015-02-08 12:18:44 |
+| video      | save_user_state        | NULL                             | server      |            0 |           302 | 2015-02-08 12:18:44 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        302.27 | 2015-02-08 12:18:44 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       301.803 | 2015-02-08 12:18:44 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        301.88 | 2015-02-08 12:18:44 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.043 | 2015-02-08 12:18:44 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.118 | 2015-02-08 12:18:44 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.191 | 2015-02-08 12:18:44 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.191 | 2015-02-08 12:18:44 |
+| video      | save_user_state        | NULL                             | server      |            0 |           302 | 2015-02-08 12:18:44 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        302.27 | 2015-02-08 12:18:44 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.458 | 2015-02-08 12:18:45 |
+| video      | save_user_state        | NULL                             | server      |            0 |           302 | 2015-02-08 12:18:45 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.538 | 2015-02-08 12:18:45 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.677 | 2015-02-08 12:18:45 |
+| video      | save_user_state        | NULL                             | server      |            0 |           302 | 2015-02-08 12:18:45 |
+| video      | save_user_state        | NULL                             | server      |            0 |           302 | 2015-02-08 12:18:45 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.382 | 2015-02-08 12:18:45 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.538 | 2015-02-08 12:18:45 |
+| video      | save_user_state        | NULL                             | server      |            0 |           302 | 2015-02-08 12:18:45 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.606 | 2015-02-08 12:18:45 |
+| video      | save_user_state        | NULL                             | server      |            0 |           302 | 2015-02-08 12:18:45 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.677 | 2015-02-08 12:18:45 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.766 | 2015-02-08 12:18:45 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.839 | 2015-02-08 12:18:45 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.913 | 2015-02-08 12:18:46 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       303.008 | 2015-02-08 12:18:46 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.839 | 2015-02-08 12:18:46 |
+| video      | save_user_state        | NULL                             | server      |            0 |           302 | 2015-02-08 12:18:46 |
+| video      | save_user_state        | NULL                             | server      |            0 |           303 | 2015-02-08 12:18:46 |
+| video      | save_user_state        | NULL                             | server      |            0 |           303 | 2015-02-08 12:18:46 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        303.15 | 2015-02-08 12:18:46 |
+| video      | save_user_state        | NULL                             | server      |            0 |           303 | 2015-02-08 12:18:46 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       303.248 | 2015-02-08 12:18:46 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        303.32 | 2015-02-08 12:18:46 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       303.396 | 2015-02-08 12:18:47 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        303.15 | 2015-02-08 12:18:47 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       303.471 | 2015-02-08 12:18:47 |
+| video      | save_user_state        | NULL                             | server      |            0 |           303 | 2015-02-08 12:18:47 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       303.471 | 2015-02-08 12:18:47 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       303.537 | 2015-02-08 12:18:47 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       303.603 | 2015-02-08 12:18:47 |
+| video      | save_user_state        | NULL                             | server      |            0 |           303 | 2015-02-08 12:18:48 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        303.67 | 2015-02-08 12:18:48 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       303.749 | 2015-02-08 12:18:48 |
+| video      | save_user_state        | NULL                             | server      |            0 |           303 | 2015-02-08 12:18:49 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       302.606 | 2015-02-08 12:18:49 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       303.843 | 2015-02-08 12:18:49 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       303.904 | 2015-02-08 12:18:49 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       303.843 | 2015-02-08 12:18:49 |
+| video      | save_user_state        | NULL                             | server      |            0 |           303 | 2015-02-08 12:18:49 |
+| video      | save_user_state        | NULL                             | server      |            0 |           303 | 2015-02-08 12:18:50 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       304.048 | 2015-02-08 12:18:50 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       304.118 | 2015-02-08 12:18:50 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        303.98 | 2015-02-08 12:18:50 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        303.98 | 2015-02-08 12:18:50 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       304.118 | 2015-02-08 12:18:50 |
+| video      | save_user_state        | NULL                             | server      |            0 |           304 | 2015-02-08 12:18:50 |
+| video      | save_user_state        | NULL                             | server      |            0 |           304 | 2015-02-08 12:18:51 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       304.288 | 2015-02-08 12:18:51 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       304.437 | 2015-02-08 12:18:51 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       304.288 | 2015-02-08 12:18:51 |
+| video      | save_user_state        | NULL                             | server      |            0 |           304 | 2015-02-08 12:18:51 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       304.361 | 2015-02-08 12:18:51 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       304.437 | 2015-02-08 12:18:51 |
+| video      | save_user_state        | NULL                             | server      |            0 |           304 | 2015-02-08 12:18:52 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       304.652 | 2015-02-08 12:18:52 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        304.19 | 2015-02-08 12:18:52 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       304.509 | 2015-02-08 12:18:52 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       304.578 | 2015-02-08 12:18:52 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       304.726 | 2015-02-08 12:18:53 |
+| video      | save_user_state        | NULL                             | server      |            0 |           304 | 2015-02-08 12:18:54 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        304.88 | 2015-02-08 12:18:55 |
+| video      | save_user_state        | NULL                             | server      |            0 |           304 | 2015-02-08 12:18:56 |
+| video      | save_user_state        | NULL                             | server      |            0 |           304 | 2015-02-08 12:18:57 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       304.726 | 2015-02-08 12:18:57 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        304.88 | 2015-02-08 12:18:57 |
+| video      | save_user_state        | NULL                             | server      |            0 |           304 | 2015-02-08 12:18:57 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       304.509 | 2015-02-08 12:18:57 |
+| video      | save_user_state        | NULL                             | server      |            0 |           305 | 2015-02-08 12:18:58 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       305.106 | 2015-02-08 12:18:58 |
+| video      | save_user_state        | NULL                             | server      |            0 |           304 | 2015-02-08 12:18:58 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        305.02 | 2015-02-08 12:18:58 |
+| video      | save_user_state        | NULL                             | server      |            0 |           305 | 2015-02-08 12:18:58 |
+| video      | save_user_state        | NULL                             | server      |            0 |           305 | 2015-02-08 12:18:59 |
+| video      | save_user_state        | NULL                             | server      |            0 |           305 | 2015-02-08 12:18:59 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       305.212 | 2015-02-08 12:18:59 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       305.212 | 2015-02-08 12:19:00 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       305.212 | 2015-02-08 12:19:00 |
+| video      | save_user_state        | NULL                             | server      |            0 |           305 | 2015-02-08 12:19:00 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       305.372 | 2015-02-08 12:19:01 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       305.372 | 2015-02-08 12:19:01 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       305.458 | 2015-02-08 12:19:02 |
+| video      | save_user_state        | NULL                             | server      |            0 |           305 | 2015-02-08 12:19:02 |
+| video      | save_user_state        | NULL                             | server      |            0 |           305 | 2015-02-08 12:19:03 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        305.54 | 2015-02-08 12:19:03 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        305.54 | 2015-02-08 12:19:03 |
+| video      | save_user_state        | NULL                             | server      |            0 |           305 | 2015-02-08 12:19:04 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       305.705 | 2015-02-08 12:19:04 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       305.173 | 2015-02-08 12:19:04 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       305.705 | 2015-02-08 12:19:04 |
+| video      | save_user_state        | NULL                             | server      |            0 |           305 | 2015-02-08 12:19:05 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        305.02 | 2015-02-08 12:19:05 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       305.812 | 2015-02-08 12:19:05 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       305.812 | 2015-02-08 12:19:05 |
+| navigation | page_close             | d108e65eb1f740efa2505cc2804ea7cf | browser     |         NULL |          NULL | 2015-02-08 12:19:08 |
+
+
+--XXXXXXXXXXXXXX
+| video      | save_user_state        | NULL                             | server      |            0 |           339 | 2015-02-08 12:19:09 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-08 12:19:29 |
+--XXXXXXXXXXXXXXXXX
+
+| video      | show_transcript        | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |             0 | 2015-02-08 12:19:32 |
+| video      | load_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |             0 | 2015-02-08 12:19:35 |
+| video      | transcript_translation | 67a8559582864d6a8148e2ef5c997e8f | server      |            0 |             0 | 2015-02-08 12:19:37 |
+| navigation | page_close             | d108e65eb1f740efa2505cc2804ea7cf | browser     |         NULL |          NULL | 2015-02-08 12:19:55 |
+
+
+
+
+--XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+| navigation | page_close             | 5773a6ab6319440aa5889ae38e578402 | browser     |         NULL |          NULL | 2015-02-08 12:24:00 |
+| navigation | page_close             | 5773a6ab6319440aa5889ae38e578402 | browser     |         NULL |          NULL | 2015-02-08 12:26:23 |
+| navigation | page_close             | ab73419b9bfe42699e9ac3be2dde7db1 | browser     |         NULL |          NULL | 2015-02-08 12:26:38 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-08 12:26:41 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-08 12:26:55 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-08 12:31:02 |
+| navigation | page_close             | eeea132794aa4e0481e94a069cab3e10 | browser     |         NULL |          NULL | 2015-02-08 12:39:28 |
+| navigation | page_close             | 06713e09244b462ca480e03ce88bb6a3 | browser     |         NULL |          NULL | 2015-02-08 12:39:44 |
+| navigation | page_close             | ba24809f572846458e1c78e09411863a | browser     |         NULL |          NULL | 2015-02-08 12:39:54 |
+| video      | save_user_state        | NULL                             | server      |            0 |           193 | 2015-02-08 12:40:11 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-08 12:40:16 |
+| navigation | page_close             | 97395d60fa094ff8a17770fa89739dce | browser     |         NULL |          NULL | 2015-02-08 12:40:27 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-08 12:40:31 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-08 12:40:39 |
+| navigation | page_close             | 93c7eb88973146489f83cc1fd855a9f7 | browser     |         NULL |          NULL | 2015-02-08 12:56:39 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-08 12:56:56 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-08 12:57:18 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-08 12:57:27 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-08 12:57:38 |
+| video      | save_user_state        | NULL                             | server      |            0 |           886 | 2015-02-08 12:57:54 |
+| video      | save_user_state        | NULL                             | server      |            0 |             5 | 2015-02-08 12:58:10 |
+| video      | save_user_state        | NULL                             | server      |            0 |            37 | 2015-02-08 12:59:09 |
+| video      | save_user_state        | NULL                             | server      |            0 |           631 | 2015-02-08 13:09:55 |
+| video      | save_user_state        | NULL                             | server      |            0 |           729 | 2015-02-08 13:11:59 |
+| video      | save_user_state        | NULL                             | server      |            0 |           757 | 2015-02-08 13:13:31 |
+| video      | save_user_state        | NULL                             | server      |            0 |           777 | 2015-02-08 13:14:00 |
+| video      | save_user_state        | NULL                             | server      |            0 |           798 | 2015-02-08 13:14:21 |
+| navigation | page_close             | 93c7eb88973146489f83cc1fd855a9f7 | browser     |         NULL |          NULL | 2015-02-08 13:14:28 |
+| video      | save_user_state        | NULL                             | server      |            0 |           798 | 2015-02-08 13:14:28 |
+--XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+
+
+
+
+
+
+| video      | show_transcript        | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |             0 | 2015-02-08 13:14:30 |
+| video      | transcript_translation | 67a8559582864d6a8148e2ef5c997e8f | server      |            0 |             0 | 2015-02-08 13:14:30 |
+| video      | load_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |             0 | 2015-02-08 13:14:30 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-08 13:14:33 |
+| navigation | page_close             | d108e65eb1f740efa2505cc2804ea7cf | browser     |         NULL |          NULL | 2015-02-08 13:14:41 |
+
+
+
+
+
+
+
+
+--XXXXXXXXXXXXXXX
+| navigation | page_close             | ab73419b9bfe42699e9ac3be2dde7db1 | browser     |         NULL |          NULL | 2015-02-08 13:14:53 |
+| navigation | page_close             | 5773a6ab6319440aa5889ae38e578402 | browser     |         NULL |          NULL | 2015-02-08 13:15:22 |
+| navigation | page_close             | 06713e09244b462ca480e03ce88bb6a3 | browser     |         NULL |          NULL | 2015-02-08 13:15:34 |
+| navigation | page_close             | eeea132794aa4e0481e94a069cab3e10 | browser     |         NULL |          NULL | 2015-02-08 13:15:54 |
+| navigation | page_close             | 5773a6ab6319440aa5889ae38e578402 | browser     |         NULL |          NULL | 2015-02-08 13:16:57 |
+--XXXXXXXXXXXXXXX
+
+
+
+
+
+
+
+| video      | show_transcript        | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |             0 | 2015-02-08 13:17:07 |
+| video      | transcript_translation | 67a8559582864d6a8148e2ef5c997e8f | server      |            0 |             0 | 2015-02-08 13:17:07 |
+| video      | load_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |             0 | 2015-02-08 13:17:09 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-08 13:17:12 |
+| navigation | page_close             | d108e65eb1f740efa2505cc2804ea7cf | browser     |         NULL |          NULL | 2015-02-08 13:17:24 |
+
+
+
+
+
+
+
+
+
+
+
+
+--XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-08 13:17:30 |
+| video      | save_user_state        | NULL                             | server      |            0 |             2 | 2015-02-08 13:17:38 |
+| video      | save_user_state        | NULL                             | server      |            0 |           150 | 2015-02-08 13:20:12 |
+| video      | save_user_state        | NULL                             | server      |            0 |           152 | 2015-02-08 13:20:41 |
+| video      | save_user_state        | NULL                             | server      |            0 |           223 | 2015-02-08 13:22:29 |
+| navigation | page_close             | 5773a6ab6319440aa5889ae38e578402 | browser     |         NULL |          NULL | 2015-02-09 09:07:39 |
+| navigation | page_close             | 97395d60fa094ff8a17770fa89739dce | browser     |         NULL |          NULL | 2015-02-09 09:10:46 |
+--XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+
+
+
+
+
+
+
+| video      | show_transcript        | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |             0 | 2015-02-09 09:10:52 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-09 09:10:53 |
+| video      | load_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |             0 | 2015-02-09 09:10:55 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |           339 | 2015-02-09 09:11:23 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        12.001 | 2015-02-09 09:18:53 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        19.961 | 2015-02-09 09:19:10 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       124.941 | 2015-02-09 09:21:11 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       245.081 | 2015-02-09 09:25:21 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       245.081 | 2015-02-09 09:25:21 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       227.921 | 2015-02-09 09:26:30 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        228.18 | 2015-02-09 09:26:44 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       406.581 | 2015-02-09 09:30:55 |
+| video      | save_user_state        | NULL                             | server      |            0 |           406 | 2015-02-09 09:30:56 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       406.581 | 2015-02-09 09:32:21 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        406.96 | 2015-02-09 09:32:22 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       174.841 | 2015-02-09 09:32:35 |
+| video      | save_user_state        | NULL                             | server      |            0 |           174 | 2015-02-09 09:32:35 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       174.841 | 2015-02-09 09:32:36 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       174.941 | 2015-02-09 09:32:36 |
+| video      | save_user_state        | NULL                             | server      |            0 |           167 | 2015-02-09 09:32:44 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        167.12 | 2015-02-09 09:32:44 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |        167.12 | 2015-02-09 09:32:44 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       167.441 | 2015-02-09 09:32:44 |
+| video      | seek_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |      212.061 |           251 | 2015-02-09 09:33:38 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       212.301 | 2015-02-09 09:33:38 |
+| video      | seek_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |      262.901 |           284 | 2015-02-09 09:33:50 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       262.901 | 2015-02-09 09:33:50 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       487.061 | 2015-02-09 09:37:14 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       487.061 | 2015-02-09 09:37:15 |
+| video      | save_user_state        | NULL                             | server      |            0 |           487 | 2015-02-09 09:37:15 |
+| video      | save_user_state        | NULL                             | server      |            0 |           506 | 2015-02-09 09:37:33 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       506.961 | 2015-02-09 09:37:33 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       506.961 | 2015-02-09 09:37:34 |
+| video      | seek_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |      510.681 |           469 | 2015-02-09 09:37:37 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       510.681 | 2015-02-09 09:37:38 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       472.901 | 2015-02-09 09:37:41 |
+| video      | save_user_state        | NULL                             | server      |            0 |           472 | 2015-02-09 09:37:41 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       472.901 | 2015-02-09 09:37:42 |
+| video      | pause_video            | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       658.921 | 2015-02-09 09:40:48 |
+| video      | play_video             | 67a8559582864d6a8148e2ef5c997e8f | browser     |            0 |       658.921 | 2015-02-09 09:40:48 |
+| video      | save_user_state        | NULL                             | server      |            0 |           658 | 2015-02-09 09:40:48 |
+| navigation | page_close             | d108e65eb1f740efa2505cc2804ea7cf | browser     |         NULL |          NULL | 2015-02-09 09:45:12 |
+
+
+
+
+
+
+
+
+
+
+
+
+
+--XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+| video      | save_user_state        | NULL                             | server      |            0 |           922 | 2015-02-09 09:45:13 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-09 09:45:18 |
+| video      | save_user_state        | NULL                             | server      |            0 |           223 | 2015-02-09 09:45:36 |
+| video      | save_user_state        | NULL                             | server      |            0 |           233 | 2015-02-09 09:46:05 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-09 09:53:46 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-09 09:54:01 |
+| navigation | page_close             | 5773a6ab6319440aa5889ae38e578402 | browser     |         NULL |          NULL | 2015-02-10 12:27:59 |
+| navigation | page_close             | ab73419b9bfe42699e9ac3be2dde7db1 | browser     |         NULL |          NULL | 2015-02-10 12:28:35 |
+| video      | save_user_state        | NULL                             | server      |            0 |          1118 | 2015-02-10 13:02:19 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-10 13:12:33 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-10 13:12:47 |
+| navigation | page_close             | 5773a6ab6319440aa5889ae38e578402 | browser     |         NULL |          NULL | 2015-02-11 09:23:42 |
+| navigation | page_close             | 5d5f32c8ab204f2a95c34b07bf276de5 | browser     |         NULL |          NULL | 2015-02-11 09:26:23 |
+| navigation | page_close             | 5773a6ab6319440aa5889ae38e578402 | browser     |         NULL |          NULL | 2015-02-11 09:27:32 |
+| navigation | page_close             | e429e2d3faa148c6b527e1e521676558 | browser     |         NULL |          NULL | 2015-02-11 09:48:43 |
+| navigation | page_close             | 97395d60fa094ff8a17770fa89739dce | browser     |         NULL |          NULL | 2015-02-11 10:26:32 |
+| navigation | page_close             | 927caed7e6ca4d838f9061f01b19bd85 | browser     |         NULL |          NULL | 2015-02-12 07:20:16 |
+| navigation | page_close             | 93c7eb88973146489f83cc1fd855a9f7 | browser     |         NULL |          NULL | 2015-02-12 07:21:09 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-13 10:52:18 |
+| navigation | page_close             | f0c2821e384a4a85b44a07575129b755 | browser     |         NULL |          NULL | 2015-02-13 11:00:53 |
+| navigation | page_close             | 927caed7e6ca4d838f9061f01b19bd85 | browser     |         NULL |          NULL | 2015-02-13 11:49:25 |
+| navigation | page_close             | e92ef45985924fca8e8bf87458afc748 | browser     |         NULL |          NULL | 2015-02-16 10:26:32 |
+| navigation | page_close             | 927caed7e6ca4d838f9061f01b19bd85 | browser     |         NULL |          NULL | 2015-02-16 10:30:29 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-16 10:30:33 |
+| video      | save_user_state        | NULL                             | server      |            0 |            33 | 2015-02-16 10:31:33 |
+| video      | save_user_state        | NULL                             | server      |            0 |            47 | 2015-02-16 10:31:52 |
+| video      | save_user_state        | NULL                             | server      |            0 |           162 | 2015-02-16 10:33:50 |
+| video      | save_user_state        | NULL                             | server      |            0 |           176 | 2015-02-16 10:34:42 |
+| video      | save_user_state        | NULL                             | server      |            0 |           101 | 2015-02-16 10:35:50 |
+| video      | save_user_state        | NULL                             | server      |            0 |           117 | 2015-02-16 10:36:15 |
+| navigation | page_close             | fdba029c43af494abd2a7450ff6a8b36 | browser     |         NULL |          NULL | 2015-02-16 10:36:18 |
+| video      | save_user_state        | NULL                             | server      |            0 |           117 | 2015-02-16 10:36:18 |
+| navigation | page_close             | 927caed7e6ca4d838f9061f01b19bd85 | browser     |         NULL |          NULL | 2015-02-16 10:36:35 |
+| video      | save_user_state        | NULL                             | server      |            0 |           122 | 2015-02-16 13:50:55 |
+| video      | save_user_state        | NULL                             | server      |            0 |           767 | 2015-02-16 14:06:52 |
+| navigation | page_close             | fdba029c43af494abd2a7450ff6a8b36 | browser     |         NULL |          NULL | 2015-02-16 14:06:56 |
+| video      | save_user_state        | NULL                             | server      |            0 |           767 | 2015-02-16 14:06:56 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-16 14:07:25 |
+| video      | save_user_state        | NULL                             | server      |            0 |           102 | 2015-02-16 14:09:55 |
+| video      | save_user_state        | NULL                             | server      |            0 |           191 | 2015-02-16 14:12:55 |
+| video      | save_user_state        | NULL                             | server      |            0 |           334 | 2015-02-16 14:16:39 |
+| video      | save_user_state        | NULL                             | server      |            0 |           897 | 2015-02-16 14:28:16 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-17 12:14:56 |
+| video      | save_user_state        | NULL                             | server      |            0 |           100 | 2015-02-17 12:17:00 |
+| video      | save_user_state        | NULL                             | server      |            0 |           168 | 2015-02-17 12:18:39 |
+| video      | save_user_state        | NULL                             | server      |            0 |           265 | 2015-02-17 12:21:03 |
+| video      | save_user_state        | NULL                             | server      |            0 |           342 | 2015-02-17 12:22:51 |
+| video      | save_user_state        | NULL                             | server      |            0 |           354 | 2015-02-17 12:23:42 |
+| video      | save_user_state        | NULL                             | server      |            0 |           458 | 2015-02-17 12:26:37 |
+| video      | save_user_state        | NULL                             | server      |            0 |           616 | 2015-02-17 12:30:16 |
+| video      | save_user_state        | NULL                             | server      |            0 |           635 | 2015-02-17 12:31:16 |
+| video      | save_user_state        | NULL                             | server      |            0 |           646 | 2015-02-17 12:31:41 |
+| video      | save_user_state        | NULL                             | server      |            0 |           794 | 2015-02-17 12:34:26 |
+| video      | save_user_state        | NULL                             | server      |            0 |           190 | 2015-02-17 12:38:21 |
+| video      | save_user_state        | NULL                             | server      |            0 |           219 | 2015-02-17 12:40:41 |
+| video      | save_user_state        | NULL                             | server      |            0 |           226 | 2015-02-17 12:41:49 |
+| video      | save_user_state        | NULL                             | server      |            0 |           298 | 2015-02-17 12:45:05 |
+| video      | save_user_state        | NULL                             | server      |            0 |           320 | 2015-02-17 12:46:00 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-17 12:52:00 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-17 12:52:43 |
+| video      | save_user_state        | NULL                             | server      |            0 |           663 | 2015-02-17 12:55:12 |
+| navigation | page_close             | 7f5c64f1810949f1b9920a8e83770fef | browser     |         NULL |          NULL | 2015-02-18 11:26:34 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-18 11:26:37 |
+| video      | save_user_state        | NULL                             | server      |            0 |           271 | 2015-02-18 11:35:02 |
+| video      | save_user_state        | NULL                             | server      |            0 |           290 | 2015-02-18 11:35:27 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-18 11:35:39 |
+| video      | save_user_state        | NULL                             | server      |            0 |             6 | 2015-02-18 11:35:58 |
+| navigation | page_close             | eeea132794aa4e0481e94a069cab3e10 | browser     |         NULL |          NULL | 2015-02-18 11:36:42 |
+| video      | save_user_state        | NULL                             | server      |            0 |             6 | 2015-02-18 11:36:42 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-18 11:36:45 |
+| video      | save_user_state        | NULL                             | server      |            0 |           565 | 2015-02-18 11:42:08 |
+| navigation | page_close             | 8332ca0f9e774b2b93c6455db34caf5a | browser     |         NULL |          NULL | 2015-02-18 11:45:26 |
+| video      | save_user_state        | NULL                             | server      |            0 |           703 | 2015-02-18 11:45:27 |
+| video      | save_user_state        | NULL                             | server      |            0 |           167 | 2015-02-18 11:48:26 |
+| video      | save_user_state        | NULL                             | server      |            0 |           440 | 2015-02-18 11:54:31 |
+| video      | save_user_state        | NULL                             | server      |            0 |           506 | 2015-02-18 11:55:47 |
+| video      | save_user_state        | NULL                             | server      |            0 |           633 | 2015-02-18 11:58:21 |
+| navigation | page_close             | 424cb5815a884024b88239a22982d4fa | browser     |         NULL |          NULL | 2015-02-18 13:20:26 |
+| navigation | page_close             | 69e79228b2ee49988900ab45c555eedb | browser     |         NULL |          NULL | 2015-02-19 12:07:47 |
+| navigation | page_close             | 424cb5815a884024b88239a22982d4fa | browser     |         NULL |          NULL | 2015-02-19 12:07:59 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-19 12:08:01 |
+| navigation | page_close             | 69e79228b2ee49988900ab45c555eedb | browser     |         NULL |          NULL | 2015-02-20 07:37:39 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-20 07:37:42 |
+| video      | save_user_state        | NULL                             | server      |            0 |           226 | 2015-02-20 07:38:13 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-20 07:39:16 |
+| video      | save_user_state        | NULL                             | server      |            0 |           365 | 2015-02-20 07:44:33 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-20 07:44:44 |
+| video      | save_user_state        | NULL                             | server      |            0 |           376 | 2015-02-20 07:44:56 |
+| video      | save_user_state        | NULL                             | server      |            0 |           450 | 2015-02-20 07:46:06 |
+| video      | save_user_state        | NULL                             | server      |            0 |           575 | 2015-02-20 07:55:54 |
+| video      | save_user_state        | NULL                             | server      |            0 |           610 | 2015-02-20 07:56:51 |
+| navigation | page_close             | 8e0fc89397c844878dd555ba5327cbfd | browser     |         NULL |          NULL | 2015-02-20 07:58:16 |
+| video      | save_user_state        | NULL                             | server      |            0 |           662 | 2015-02-20 07:58:17 |
+| video      | save_user_state        | NULL                             | server      |            0 |           103 | 2015-02-20 08:00:13 |
+| video      | save_user_state        | NULL                             | server      |            0 |           499 | 2015-02-20 08:07:57 |
+| video      | save_user_state        | NULL                             | server      |            0 |           580 | 2015-02-20 08:11:46 |
+| navigation | page_close             | db7d70e0b9644cfcb9882f3d0ad5927d | browser     |         NULL |          NULL | 2015-02-20 08:17:25 |
+| video      | save_user_state        | NULL                             | server      |            0 |           890 | 2015-02-20 08:17:25 |
+| video      | save_user_state        | NULL                             | server      |            0 |             0 | 2015-02-20 08:17:28 |
+| video      | save_user_state        | NULL                             | server      |            0 |           752 | 2015-02-20 08:30:09 |
+| navigation | page_close             | 92fdb0f56c7b475da0eef1653bf69be5 | browser     |         NULL |          NULL | 2015-02-23 12:23:01 |
+| navigation | page_close             | f54b9a9b5221404096f84a1117276f39 | browser     |         NULL |          NULL | 2015-02-23 12:23:51 |
+| navigation | page_close             | cb2725772a1346af9b6269c6b5eee91a | browser     |         NULL |          NULL | 2015-02-23 12:50:34 |
+| navigation | page_close             | cafa1f27cde44c52ae16d8d299da5c12 | browser     |         NULL |          NULL | 2015-02-23 12:51:02 |
++------------+------------------------+----------------------------------+-------------+--------------+---------------+---------------------+
+841 rows in set (6.52 sec)
+--XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+
+
+So, further idea:
+
+Remove all the logs details from such results on the basis that:
+i) As soon as show transcript or load video event is detected for the moduleSysName, switch on a flag.
+ii) From there on, do the normal thing for all the log events of a video.
+iii) When the page_close event is seen, then switch off flag after getting the next save_user_state event .
+iv) As long as flag is off, ignore all the log events.
+-- DONE XXX
+
+
+
+
+
+
+Store the immediate previous log data in ovt and cvt always, for record comparison pairwise.
+--- DONE XXX
+
+
+
+
+
+v) Record the starting play_video event.
+	if the next play event is increasing, ignore. If decreasing, set current start to that point, and calculate the difference to upto that point.
+	if pause occurs, the calculate difference.
+	if ---DONE XXX
+	
+vi) As long as the video time is increasing, go on - when it suddenly decreases, then calculate the difference with previous time, and set current Time to new start. Else, ignore the logs... it is increasing, and video is playing. -- DONE XXX
+
+vii) When seek occurs, if the start of seek is higher than the previous play video time, then calculate diff. Else, ignore the previous time, and set current start to destination, if it was playing. If paused, simply set the new start to destination of seek. -- DONE XXX
+
+viii) When pause occurs, then calculate the difference between the start and point of pause. If pause is at a point lesser than the previous playing video, then set the current to new start, and calculate the difference with the last play video point. -- DONE XXX
+
+ix) in case of page_close, calculate the difference between the recent start time and the immediate next or immediate previous save_user_state current Time.
+	in case ovt and cvt are 0 both, then do not consider the time.. skip it. -- DONE XXX
+	
+x) in case stop occurs, cover the time from current start to the finish time, but do not set points. video is simply paused. -- DONE XXX
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- TODO
+v) As a further error check, if any video event has the time outside the corresponding videolength, then the event is a dud - do not include it it.
+vi)	If some event does not have the oVT and the cVT, and it is not a page_close event, then scrap it.
+
+
+
+Couple of data where even the data is not present for time, when it should be.......... userName Janvhi, save_user_state, oVT and cVT does not have any of the times for one of the tuples.
+
+
+
+
+
+all said and done, erros in 6 users's total time over 300 records. What to do? Slot time seems to be fine, and in any case, this was not required.
+as it can be calculated from the sum of the slot times of the individual users over the entire video.

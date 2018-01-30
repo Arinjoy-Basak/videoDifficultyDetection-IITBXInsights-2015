@@ -1,0 +1,12 @@
+| video                | hide_transcript         |
+| video                | load_video              |
+| video                | pause_video             |
+| video                | play_video              |
+| video                | save_user_state         |
+| video                | seek_video              |
+| video                | show_transcript         |
+| video                | speed_change_video      |
+| video                | stop_video              |
+| video                | transcript_download     |
+| video                | transcript_translation  |
+

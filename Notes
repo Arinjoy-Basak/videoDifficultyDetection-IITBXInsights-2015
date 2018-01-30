@@ -1,0 +1,62 @@
+Anaconda - a python distribution with a huge number of popular packages built in. (317 MB)
+
+Problem tree:
+
+Aim: Get edX analytics to work and run, so , needed to install edx and then the entire pipeline.
+|
+L------> edX analytics can be installed locally, and made to work on log files obtained separately
+			L---------installed via Ashwani's link.
+						Problem in pip--- too old, so options asked for are not in the old version.
+						L----So, trying to upgrade pip. (Not happening in any way whatsoever!)
+							eg:
+								i) Tried to upgrade it via pip (not happening)
+								ii) Tried to uninstall and reinstall it (via sudo apt-get python-pip and easy_install).. (not happening)
+								iii) trying it via get-pip.py from the PyPA website.... stuck at proxy authentication.
+									(SO...... 
+											
+											__    __   ________   __        _______
+										   |  |  |  | |   _____| |  |      |   ___ \
+										   |  |__|  | |  |__     |  |      |  |___| |
+										   |   __   | |   __|    |  |      |   ____/
+										   |  |  |  | |  |_____  |  |____  |  |
+										   |__|  |__| |________| |_______| |__|				Please.)
+										   
+SUCCESS!!!!
+
+pip installed and updated via  "sudo pip install --upgrade pip" !! Weed for everybody!!!
+
+So steps:
+i) 	Install pip through "sudo apt-get install python-pip" ---but that's not all!! It's version 1.0 (damn old shit...).
+ii)	Then, upgrade the thing: sudo pip install --upgrade pip
+iii) Then, proceed.
+
+unable to update npm for installation.
+
+So, downloaded the 0.12.4 package of node, ran:
+cp to local
+./configure
+make
+make install
+which node
+and then make develop in dashboard.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Error log: Wed 10 Jun 2015 01:11:45 PM IST 
+
+Problem: unable to launch data api from dashboard.
+
+Error: running ./manage.py runserver --settings=analyticsdataserver.settings.local_mysql gives a server error. on terminal, it shows as: ImproperlyConfigured: Error loading MySQLdb module
+
+Solution: install pip install mysql-python
+
+But this creates a problem. So bypassed proxy with mobile internet, and got EnvironmentError: mysql_config not found
+
+Solution: install libmysqlclient-dev
+
+sudo apt-get install libmysqlclient-dev
+
+Once that's done, run "./manage.py ...etc." again, and go to 127.0.0.1:8000.
+
+It should show the edx data analytics page for documentation.
+
+http://stackoverflow.com/questions/5178292/pip-install-mysql-python-fails-with-environmenterror-mysql-config-not-found this might help there.

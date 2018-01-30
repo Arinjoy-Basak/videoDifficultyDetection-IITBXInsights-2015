@@ -1,0 +1,80 @@
+TOPIC OF PROJECT:
+-----------------
+1. 'Blended MOOCs specifications and user documentation' 2. Data Analytics - Detection of difficulty areas 
+in videos based on student viewing activity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ and its notification to the instructors with aim to improving 
+content lucidity, and assessing video utilization by students.
+
+vishal@cse.iitb.ac.in
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The aim of this project is to be able to detect regions in videos that are seemingly problematic to the students, and alert
+the course instructor about such cases, so that he may appropriately address the issue. To be specific, the system we plan to
+design would assess all the videos under a particular course based on the number of accesses to it, the amount of time spent
+on it, and most importantly - the regions in the video that are repeatedly accessed and reviewed by the students, an activity
+that we attribute to being unable to understand a certain lesson or fact or axiom that is presented in that segment of the
+lecture video. Such occurrences and statistics are to be accumulated, mapped and filtered, and ultimately presented to the 
+instructors who would want their students to extract quality information from their courses. It is hence of their utmost 
+concern as to whether a certain part of the video is comparatively unintelligible to the masses involved in his course, 
+compared to the other videos - so that he may include further "bonus" lessons, extra exercises, or forum discussions on the
+same topic, as necessary, to clarify the issues one may have regarding the matter which is under question. In the worst case,
+the instructor might even have to replce the video with an improved version of the video, in which case, this new video would
+be brought under the same type of processing as the other ones.

@@ -1,0 +1,10 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {1}{Aim and Motivation}{3}{0}{1}
+\beamer@sectionintoc {2}{The Project itself}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{Technologies Used}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{Source of the data}{8}{0}{2}
+\beamer@subsectionintoc {2}{3}{Extracting and Processing the data}{9}{0}{2}
+\beamer@subsectionintoc {2}{4}{Creation and prototyping of the data module}{18}{0}{2}
+\beamer@subsectionintoc {2}{5}{Final implementation of the data model}{23}{0}{2}
+\beamer@sectionintoc {3}{Future Work}{35}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{36}{0}{4}
